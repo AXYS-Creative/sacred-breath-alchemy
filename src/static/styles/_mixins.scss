@@ -79,7 +79,7 @@ $min-breakpoints: (
   @if $thin {
     padding: 256px 148px;
   } @else {
-    padding: 196px 148px;
+    padding: 196px 80px;
   }
 
   @include mq-max("xxl") {
@@ -129,53 +129,53 @@ $min-breakpoints: (
 // Heading Styles
 //
 
-@mixin heading($size, $size-lg, $size-md) {
+@mixin heading($size, $size-xxl, $size-md, $size-sm) {
   font-family: $brand-font-family-heading;
   font-size: $size;
-  font-weight: 400;
+  font-weight: 800;
   text-transform: uppercase;
-  // line-height: 1;
+  line-height: 1;
 
   @include mq-max("xxl") {
-    font-size: $size - 12px;
-  }
-
-  @include mq-max("xl") {
-    font-size: $size - 20px;
-  }
-
-  @include mq-max("lg") {
-    font-size: $size-lg;
+    font-size: $size-xxl;
   }
 
   @include mq-max("md") {
     font-size: $size-md;
   }
+
+  @include mq-max("sm") {
+    font-size: $size-sm;
+  }
 }
 
 .h1 {
-  @include heading(80px, 72px, calc(20px + 6.4vw));
+  @include heading(96px, 6vw, 7vw, 32px);
+  -webkit-text-stroke-color: var(--primary-font-color);
+  -webkit-text-stroke-width: 2px;
 }
 
 .h2 {
-  @include heading(64px, 56px, calc(12px + 5.6vw));
+  @include heading(64px, 56px, 12px, 12px);
 }
 
 .h3 {
-  @include heading(56px, 48px, calc(12px + 4.8vw));
+  @include heading(56px, 48px, 12px, 12px);
+  font-weight: 700;
 }
 
 .h4 {
-  @include heading(48px, 40px, calc(8px + 4.8vw));
+  @include heading(48px, 40px, 12px, 12px);
+  font-weight: 500;
 }
 
 .h5 {
-  @include heading(40px, 32px, calc(8px + 4vw));
+  @include heading(40px, 32px, 12px, 12px);
 }
 
 .h6 {
-  @include heading(32px, 20px, calc(8px + 3.6vw));
-  font-weight: 100;
+  @include heading(32px, 20px, 12px, 12px);
+  font-weight: 600;
 
   @include mq-max("xl") {
     font-size: 20px;

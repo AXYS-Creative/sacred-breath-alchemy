@@ -12,7 +12,9 @@
   <ul class="header-links">
     {% for item in navigation.items %}
     <li class="">
-      <a class="header-links__link" href="{{ item.url }}">{{ item.text }}</a>
+      <a class="header-links__link classic-link" href="{{ item.url }}">
+        {{ item.text }}
+      </a>
     </li>
     {% endfor %}
   </ul>

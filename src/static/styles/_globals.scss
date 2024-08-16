@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
@@ -85,43 +84,12 @@ header {
       display: none;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -24px;
-      width: calc(100vw - $body-padding * 2);
-      height: 1px;
-      background: rgba($grey-dark, 0.8);
-      transition: 0.8s ease 0.2s;
-    }
-
     &__link {
-      position: relative;
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--link-color);
-
       &:hover,
       &:focus {
-        color: var(--link-color-hover);
-
         &::after {
           background: var(--primary-font-color);
         }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        translate: -50% 0;
-        bottom: -24px;
-        width: 160%;
-        height: 1px;
-        background: transparent;
-        transition: 0.3s ease;
       }
     }
 
@@ -540,15 +508,33 @@ h3 {
 h4 {
   @extend .h4;
 }
+h5 {
+  @extend .h5;
+}
+h6 {
+  @extend .h6;
+}
 
-p {
+p,
+a,
+ul {
+  color: var(--primary-font-color);
   font-family: $brand-font-family-body;
+  font-size: 16px;
+  font-weight: 500;
+
+  @include mq-max("xxl") {
+    font-size: 14px;
+  }
+
+  @include mq-max("xxl") {
+    font-size: 12px;
+  }
 }
 
 a {
-  font-family: $brand-font-family-body;
+  text-transform: uppercase;
   text-decoration: none;
-  color: lightcoral;
 }
 
 button {
@@ -561,24 +547,22 @@ ul {
   list-style: none;
 }
 
-// Sections
+// Components
 
-#hero-section {
-  @include column-center;
+.cta-wrapper {
+  @include row-center;
   gap: 24px;
-  margin-top: 196px;
+  flex-shrink: 0;
 
-  h1,
-  p {
-    text-align: center;
-  }
+  .cta-1 {
+    border: 2px solid var(--primary-font-color);
+    padding: 12px 24px;
 
-  p {
-    opacity: 0.5;
+    @include mq-max("sm") {
+      padding: 10px 20px;
+    }
   }
 }
-
-// Components
 
 .social-media-links {
   display: flex;

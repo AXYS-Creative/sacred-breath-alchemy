@@ -1,12 +1,16 @@
 ---
 items:
   - text: Home
-    url: "/"
+    url: "#"
   - text: About
-    url: "/about"
-  - text: Blog
-    url: "/blog"
+    url: "#about"
   - text: Services
-    ulr: "/services"
-  - text: Contact
-    ulr: "/contact"
+    ulr: "#services"
+  - text: Bundles
+    url: "#bundles"
+  - text: FAQ
+    ulr: "#faq"
+  - text: Events
+    ulr: "#events"
+  - text: Book
+    ulr: "#book"

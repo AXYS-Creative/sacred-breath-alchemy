@@ -1,13 +1,61 @@
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+.classic-link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-font-color);
+    animation: classic-link-default $cubic-ease-sudden forwards;
+
+    @include mq-motion-allow {
+      transition: 0.3s ease;
+      animation-duration: 0.64s;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--primary-accent-color);
+    transition: 0.3s ease 0.3s;
+
+    &::before {
+      background: var(--primary-accent-color);
+      animation: classic-link-hover $cubic-ease-sudden forwards;
+      @include mq-motion-allow {
+        animation-duration: 0.64s;
+      }
+    }
+  }
 }
+
+.alchemy-symbol {
+  display: inline-flex;
+  margin-inline: 4px;
+  translate: 0 -0.2em;
+}
+
+// .text-stroke {
+//   color: transparent;
+//   -webkit-text-stroke: 2px var(--primary-font-color);
+// }
+
+.gold {
+  color: $gold;
+  -webkit-text-stroke-color: $gold;
+}
+
+.pink {
+  color: $pink;
+  -webkit-text-stroke-color: $pink;
+}
+
+//
+// Media Query Utility // Be mindful these may not work well with screen readers
+//
 
 .lg-screen-and-up {
   display: none;
