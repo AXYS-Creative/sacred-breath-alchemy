@@ -35,26 +35,22 @@ collections:
         name: "image"
         widget: "image"
         required: false
-  - name: "resources_page"
-    label: "Resources Page"
+  - name: "page_content"
+    label: "Page Content"
+    description: >
+      Modify site content here
     files:
-      - name: "resource_list"
-        label: "Resource List"
-        file: "src/_data/resource_list.yaml"
-        preview_path: "/resources#resources-list"
+      - name: "text_block_1"
+        label: "Text Block 1"
+        file: "src/_data/text_block_1.yaml"
+        preview_path: "#text-block-1"
         editor:
-          preview: false
+          preview: true
         fields:
-          - name: "services"
-            label: "Services"
-            label_singular: "Service"
+          - name: "paragraph_lines"
+            label: "Paragraph Lines"
+            label_singular: "Line"
             widget: "list"
             collapsed: false
             fields:
-              - label: "Category"
-                name: "tag"
-                widget: select
-                multiple: false
-                options: ["Physical", "Emotional", "Financial"]
-                default: ["Add Category"]
-              - { name: "title", label: "Title", widget: "string" }
+              - { name: "content", label: "Content", widget: "string" }
