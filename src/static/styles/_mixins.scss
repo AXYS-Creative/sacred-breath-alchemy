@@ -160,7 +160,7 @@ $min-breakpoints: (
 }
 
 .h3 {
-  @include heading(56px, 48px, 12px, 12px);
+  @include heading(48px, 3vw, 24px, 12px);
   font-weight: 700;
 }
 

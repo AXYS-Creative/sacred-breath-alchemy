@@ -1,0 +1,21 @@
+.text-block {
+  @include column-start;
+  gap: 64px;
+
+  p {
+    @include column-start;
+
+    @include mq-max("md") {
+      display: inline;
+      text-align: center;
+
+      span {
+        display: inline;
+      }
+    }
+
+    .alchemy-symbol {
+      display: inline-flex;
+    }
+  }
+}

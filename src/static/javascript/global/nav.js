@@ -9,14 +9,19 @@ const navMenu = document.querySelector(".nav-menu"),
 
 tabElementsNav.forEach((elem) => elem.setAttribute("tabIndex", "-1"));
 
-function toggleNav() {
-  const isNavOpen = navMenu.classList.contains("menu-active");
+let isNavOpen;
+
+const toggleNav = () => {
   navMenu.classList.toggle("menu-active");
   menuBtn.classList.toggle("menu-active");
   siteHeader.classList.toggle("menu-active");
 
-  navMenu.setAttribute("aria-hidden", isNavOpen);
-  menuBtn.setAttribute("aria-expanded", !isNavOpen);
+  isNavOpen = navMenu.classList.contains("menu-active");
+
+  console.log(isNavOpen);
+
+  navMenu.setAttribute("aria-hidden", !isNavOpen);
+  menuBtn.setAttribute("aria-expanded", isNavOpen);
 
   //   Update tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) =>
@@ -27,10 +32,11 @@ function toggleNav() {
   );
 
   // Pevent scroll when nav is open
-  document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
-}
+  document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
+};
 
-function closeNav() {
+const closeNav = () => {
+  console.log("close nav");
   // Pevent scroll when nav is open
   document.body.style = "overflow: auto;";
 
@@ -44,7 +50,7 @@ function closeNav() {
   // Reset tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) => el.setAttribute("tabindex", "0"));
   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "-1"));
-}
+};
 
 // [...navLinks, ...navFooterLinks].forEach((link) => {
 [...navLinks].forEach((link) => {
