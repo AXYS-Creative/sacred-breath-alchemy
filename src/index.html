@@ -49,18 +49,16 @@ path: home
 </section>
 
 <!-- prettier-ignore -->
+{% set text_block = text_block_1.paragraph_lines %}
 {% set symbol_1 = "🜲" %} 
 {% set symbol_2 = "🜒" %}
-<!-- {% set line_1 = "Experience transformative breathwork," %} 
-{% set line_2 = "sound healing sessions, meditations" %} 
-{% set line_3 = "and sacred cacao ceremonies" %} 
-{% set line_4 = "in-person and online" %}  -->
-<!-- prettier-ignore -->
-{% set line_1 = text_block_1.line %} 
-{% set line_2 = text_block_1.line %} 
-{% set line_3 = text_block_1.line %} 
-{% set line_4 = text_block_1.line %} 
-{% set preview_id = "text-block-1" %} 
+{% set line_1 = text_block[0].line %}
+{% set line_2 = text_block[1].line %}
+{% set line_3 = text_block[2].line %}
+{% set line_4 = text_block[3].line %}
+{% set preview_id = "text-block-1" %}
+
+
 {% include "./_includes/partials/text-block.html" %}
 
 <!-- prettier-ignore -->
