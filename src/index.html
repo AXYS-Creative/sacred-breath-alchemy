@@ -50,11 +50,16 @@ path: home
 
 <!-- prettier-ignore -->
 {% set symbol_1 = "🜲" %} 
-{% set symbol_2 = "🜒" %} 
-{% set line_1 = "Experience transformative breathwork," %} 
+{% set symbol_2 = "🜒" %}
+<!-- {% set line_1 = "Experience transformative breathwork," %} 
 {% set line_2 = "sound healing sessions, meditations" %} 
 {% set line_3 = "and sacred cacao ceremonies" %} 
-{% set line_4 = "in-person and online" %} 
+{% set line_4 = "in-person and online" %}  -->
+<!-- prettier-ignore -->
+{% set line_1 = text_block_1.line %} 
+{% set line_2 = text_block_1.line %} 
+{% set line_3 = text_block_1.line %} 
+{% set line_4 = text_block_1.line %} 
 {% set preview_id = "text-block-1" %} 
 {% include "./_includes/partials/text-block.html" %}
 

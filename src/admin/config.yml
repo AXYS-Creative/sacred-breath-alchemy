@@ -53,5 +53,6 @@ collections:
             label_singular: "Line"
             widget: "list"
             collapsed: false
+            max: 4
             fields:
-              - { name: "content", label: "Content", widget: "string" }
+              - { name: "line", label: "Line", widget: "string" }
