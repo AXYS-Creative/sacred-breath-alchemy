@@ -1,0 +1,32 @@
+.services {
+  .service-block {
+    @include row-center(space-between);
+    border-top: 2px solid var(--primary-font-color);
+    padding: 64px 0;
+
+    @include mq-max("xxl") {
+      padding: 48px 0;
+    }
+
+    &:last-of-type {
+      border-bottom: 2px solid var(--primary-font-color);
+    }
+
+    &__title {
+      width: 48%;
+      flex-shrink: 0;
+    }
+
+    &__description {
+      margin-inline-end: 196px;
+
+      @include mq-max("xxl") {
+        margin-inline-end: 96px;
+      }
+    }
+
+    &__link {
+      flex-shrink: 0;
+    }
+  }
+}

@@ -56,3 +56,23 @@ collections:
             max: 4
             fields:
               - { name: "line", label: "Line", widget: "string" }
+      - name: "services_section"
+        label: "Services Section"
+        file: "src/_data/services_section.yaml"
+        preview_path: "#services"
+        editor:
+          preview: true
+        fields:
+          - name: "services"
+            label: "Services"
+            label_singular: "Service"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - {
+                  name: "description",
+                  label: "Description",
+                  widget: "text",
+                  hint: "Try to keep it under 180 characters if you can.",
+                }

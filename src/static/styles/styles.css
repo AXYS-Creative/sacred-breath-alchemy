@@ -81,15 +81,15 @@
 
 .h4, h4 {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media screen and (max-width: 1512px) {
   .h4, h4 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -611,6 +611,14 @@ section {
     padding: 96px 12px;
   }
 }
+section .section-title {
+  margin-block-end: 96px;
+}
+@media screen and (max-width: 1512px) {
+  section .section-title {
+    margin-block-end: 64px;
+  }
+}
 
 footer {
   padding: 64px;
@@ -788,8 +796,8 @@ ul {
 
 .alchemy-symbol {
   display: inline-flex;
-  margin-inline: 4px;
   translate: 0 -0.2em;
+  font-weight: 100;
 }
 
 .gold {
@@ -856,40 +864,6 @@ ul {
   }
 }
 
-@keyframes classic-link-default {
-  0% {
-    right: auto;
-    left: 0;
-    width: 0;
-  }
-  80% {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    right: 0;
-    left: auto;
-    width: 100%;
-  }
-}
-@keyframes classic-link-hover {
-  0% {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-  20% {
-    right: 0;
-    left: auto;
-    width: 100%;
-  }
-  100% {
-    right: 0;
-    left: auto;
-    width: 0;
-  }
-}
 .text-block {
   display: flex;
   flex-direction: column;
@@ -920,6 +894,37 @@ ul {
 }
 .text-block p .alchemy-symbol {
   display: inline-flex;
+}
+
+.services .service-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--primary-font-color);
+  padding: 64px 0;
+}
+@media screen and (max-width: 1512px) {
+  .services .service-block {
+    padding: 48px 0;
+  }
+}
+.services .service-block:last-of-type {
+  border-bottom: 2px solid var(--primary-font-color);
+}
+.services .service-block__title {
+  width: 48%;
+  flex-shrink: 0;
+}
+.services .service-block__description {
+  margin-inline-end: 196px;
+}
+@media screen and (max-width: 1512px) {
+  .services .service-block__description {
+    margin-inline-end: 96px;
+  }
+}
+.services .service-block__link {
+  flex-shrink: 0;
 }
 
 .hero {

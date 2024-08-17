@@ -401,6 +401,14 @@ nav {
 
 section {
   @include section-padding;
+
+  .section-title {
+    margin-block-end: 96px;
+
+    @include mq-max("xxl") {
+      margin-block-end: 64px;
+    }
+  }
 }
 
 footer {

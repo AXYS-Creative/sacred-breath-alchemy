@@ -182,8 +182,8 @@ $min-breakpoints: (
 }
 
 .h4 {
-  @include heading(48px, 40px, 12px, 12px);
-  font-weight: 500;
+  @include heading(36px, 32px, 12px, 12px);
+  font-weight: 400;
 }
 
 .h5 {
