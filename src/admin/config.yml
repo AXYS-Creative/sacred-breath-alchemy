@@ -199,6 +199,13 @@ collections:
                 fields:
                   - { name: "benefit", label: "benefit", widget: "string" }
                   - { name: "bold", label: "Bold Item", widget: "boolean" }
+              - {
+                  name: "full_width",
+                  label: "Full width",
+                  widget: "boolean",
+                  required: false,
+                  hint: "Should the width of the card take up a full row?",
+                }
       - name: "text_block_2"
         label: "Text Block 2"
         file: "src/_data/text_block_2.yaml"

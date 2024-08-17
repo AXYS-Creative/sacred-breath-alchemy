@@ -199,7 +199,7 @@ $min-breakpoints: (
 
 // Price Card Title Only
 .h5 {
-  @include heading(40px, 32px, 32px, 12px, 12px);
+  @include heading(40px, 2.4vw, 3.2vw, 4.4vw, 28px);
 }
 
 // FAQ Accordion Question Only

@@ -81,10 +81,10 @@ path: home
     {{ bundles.section_title }} <span class="alchemy-symbol gold">🜊</span>
   </h2>
 
-  <div class="bundle-cards">
+  <div class="bundle-cards-wrapper">
     {% for card in bundles.price_cards %}
-    <div class="bundle-card">
-      <h3>
+    <div class="bundle-card {% if card.full_width %}full-width{% endif %}">
+      <h3 class="h5">
         {{ card.title }} {% if card.sub_title %}
         <small>{{ card.sub_title }}</small>
         {% endif %}
@@ -96,11 +96,17 @@ path: home
         <span class="price">{{ card.price }}</span>
       </h4>
 
-      <hr aria-hidden="true" />
+      <hr class="gold" aria-hidden="true" />
 
+      {% if card.benefit_list %}
       <ul class="benefit-list list">
-        <li>Item here</li>
+        {% for item in card.benefit_list %}
+        <li class="benefit-list__item {% if item.bold %}bold{% endif %}">
+          {{ item.benefit }}
+        </li>
+        {% endfor %}
       </ul>
+      {% endif %}
 
       <div class="cta-wrapper">
         <a href="" class="cta-1">Subscribe</a>

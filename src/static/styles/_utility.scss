@@ -51,11 +51,17 @@
 .gold {
   color: $gold;
   -webkit-text-stroke-color: $gold;
+  border-color: $gold; // Added for price card hr. Delete if needed
 }
 
 .pink {
   color: $pink;
   -webkit-text-stroke-color: $pink;
+  border-color: $pink; // Added for price card hr. Delete if needed
+}
+
+.bold {
+  font-weight: 800;
 }
 
 //

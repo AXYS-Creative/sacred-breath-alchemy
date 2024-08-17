@@ -72,9 +72,18 @@
 .bundles {
   $card-padding: 16px;
 
+  .bundle-cards-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
   .bundle-card {
     @include column-start;
     gap: 16px;
+    flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
+    // width: 49%;
     border: 2px solid var(--primary-font-color);
     padding: $card-padding;
 
@@ -87,12 +96,33 @@
       }
     }
 
+    hr {
+      width: 100%;
+      border: none;
+      border-bottom: 4px solid;
+      margin-block: 24px;
+
+      // See utility classes
+      // &.gold {
+      //   border-color: $gold;
+      // }
+
+      // &.pink {
+      //   border-color: $pink;
+      // }
+    }
+
     .benefit-list {
       translate: $card-padding 0;
+      margin-block-end: 48px;
     }
 
     .cta-wrapper {
       justify-content: flex-start;
+    }
+
+    &.full-width {
+      flex: 2 1 $content-width; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
     }
   }
 }
