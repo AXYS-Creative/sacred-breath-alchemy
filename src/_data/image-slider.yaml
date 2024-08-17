@@ -1,0 +1,15 @@
+paragraph_lines:
+  - line: Discover the healing power of the breath
+  - line: find solace from stress and anxiety while nurturing
+  - line: self-awareness, love, and compassion, all within the
+  - line: sanctuary of your home
+
+images:
+  - src: /static/img/slider-img-1.png
+    description: Sample text here
+  - src: /static/img/slider-img-2.png
+    description: Sample text here
+  - src: /static/img/slider-img-3.png
+    description: Sample text here
+  - src: /static/img/slider-img-4.png
+    description: Sample text here

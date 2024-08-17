@@ -450,11 +450,6 @@ footer {
       translate: 0 100%;
     }
 
-    // @include mq-max("md") {
-    //   position: static;
-    //   order: 1;
-    // }
-
     @include mq-max("sm") {
       position: static;
       order: 1;

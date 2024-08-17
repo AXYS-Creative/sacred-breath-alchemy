@@ -89,3 +89,37 @@ collections:
                   hint: "Try to keep it under 180 characters if you can.",
                   required: true,
                 }
+      - name: "image_slider"
+        label: "Image Slider"
+        file: "src/_data/image_slider.yaml"
+        preview_path: "#image-slider"
+        editor:
+          preview: true
+        fields:
+          - name: "paragraph_lines"
+            label: "Paragraph Lines"
+            label_singular: "Line"
+            widget: "list"
+            collapsed: false
+            max: 4
+            fields:
+              - { name: "line", label: "Line", widget: "string" }
+          - name: "images"
+            label: "Images"
+            label_singular: "Image"
+            widget: "list"
+            collapsed: false
+            fields:
+              - {
+                  name: "src",
+                  label: "Image Source",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  name: "description",
+                  label: "SEO Description",
+                  widget: "string",
+                  required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
+                }

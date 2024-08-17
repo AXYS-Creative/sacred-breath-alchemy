@@ -904,12 +904,32 @@ ul {
   }
 }
 
+.image-slider .text-block {
+  padding: 0;
+}
+
 .text-block {
+  padding: 196px 128px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 64px;
+}
+@media screen and (max-width: 1512px) {
+  .text-block {
+    padding: 148px 96px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text-block {
+    padding: 96px 48px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .text-block {
+    padding: 96px 12px;
+  }
 }
 @media screen and (max-width: 768px) {
   .text-block {
