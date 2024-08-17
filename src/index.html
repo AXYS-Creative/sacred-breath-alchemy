@@ -77,17 +77,23 @@ path: home
 {% include "./_includes/partials/image-slider.html" %}
 
 <section class="bundles" id="bundles">
-  <h2>Bundle options <span class="alchemy-symbol gold">🜊</span></h2>
+  <h2>
+    {{ bundles.section_title }} <span class="alchemy-symbol gold">🜊</span>
+  </h2>
 
   <div class="bundle-cards">
+    {% for card in bundles.price_cards %}
     <div class="bundle-card">
       <h3>
-        1 Session
-        <small>Most popular</small>
+        {{ card.title }} {% if card.sub_title %}
+        <small>{{ card.sub_title }}</small>
+        {% endif %}
       </h3>
       <h4>
-        <span class="price-dim">$288</span>
-        <span class="price">$244</span>
+        {% if card.price_dimmed %}
+        <span class="price-dim">{{ card.price_dimmed }}</span>
+        {% endif %}
+        <span class="price">{{ card.price }}</span>
       </h4>
 
       <hr aria-hidden="true" />
@@ -100,6 +106,7 @@ path: home
         <a href="" class="cta-1">Subscribe</a>
       </div>
     </div>
+    {% endfor %}
   </div>
 </section>
 

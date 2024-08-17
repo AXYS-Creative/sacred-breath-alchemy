@@ -192,6 +192,13 @@ collections:
                   required: false,
                   hint: "If offering a discount, this is the higher/original price",
                 }
+              - name: "benefit_list"
+                label: "Benefit List"
+                label_singular: "List item"
+                widget: "list"
+                fields:
+                  - { name: "benefit", label: "benefit", widget: "string" }
+                  - { name: "bold", label: "Bold Item", widget: "boolean" }
       - name: "text_block_2"
         label: "Text Block 2"
         file: "src/_data/text_block_2.yaml"

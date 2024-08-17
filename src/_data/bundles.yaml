@@ -5,7 +5,13 @@ price_cards:
     sub_title:
     price: $244
     price_dimmed: $288
+    benefit_list:
+      - benefit: testing
+        bold: false
   - title: 3 Sessions
     sub_title: Most popular
     price: $244
     price_dimmed: $288
+    benefit_list:
+      - benefit: testing
+        bold: false
