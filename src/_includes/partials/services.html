@@ -1,15 +1,20 @@
 <section class="services" id="services">
   <h2 class="section-title">
-    Services <span class="alchemy-symbol gold">🝆</span>
+    Services <span class="alchemy-symbol gold" aria-hidden="true">🝆</span>
   </h2>
 
   {% for service in services_section.services %}
   <div class="service-block">
-    <h3 class="h4 service-block__title">{{ service.title }}</h3>
+    <h3 class="h4 service-block__title">
+      {{ service.title }}
+      <span class="alchemy-symbol pink" aria-hidden="true">
+        {{ service.symbol }}
+      </span>
+    </h3>
     <p class="service-block__description">{{ service.description }}</p>
-    <a href="" class="service-block__link classic-link tab-element-page"
-      >Book Now</a
-    >
+    <a href="" class="service-block__link classic-link tab-element-page">
+      Book Now
+    </a>
   </div>
   {% endfor %}
 </section>

@@ -69,10 +69,23 @@ collections:
             widget: "list"
             collapsed: false
             fields:
-              - { name: "title", label: "Title", widget: "string" }
+              - {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                  hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+                }
               - {
                   name: "description",
                   label: "Description",
                   widget: "text",
                   hint: "Try to keep it under 180 characters if you can.",
+                  required: true,
                 }

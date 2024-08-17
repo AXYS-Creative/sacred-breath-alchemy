@@ -5,12 +5,12 @@ items:
   - text: About
     url: "#about"
   - text: Services
-    ulr: "#services"
+    url: "#services"
   - text: Bundles
     url: "#bundles"
   - text: FAQ
-    ulr: "#faq"
+    url: "#faq"
   - text: Events
-    ulr: "#events"
+    url: "#events"
   - text: Book
-    ulr: "#book"
+    url: "#book"

@@ -21,6 +21,11 @@
     font-size: 6vw;
   }
 }
+@media screen and (max-width: 1024px) {
+  .h1, h1 {
+    font-size: 6vw;
+  }
+}
 @media screen and (max-width: 768px) {
   .h1, h1 {
     font-size: 8vw;
@@ -41,17 +46,22 @@
 }
 @media screen and (max-width: 1512px) {
   .h2, h2, nav .nav-links .nav-link {
-    font-size: 56px;
+    font-size: 4.4vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .h2, h2, nav .nav-links .nav-link {
+    font-size: 4.4vw;
   }
 }
 @media screen and (max-width: 768px) {
   .h2, h2, nav .nav-links .nav-link {
-    font-size: 12px;
+    font-size: 6.4vw;
   }
 }
 @media screen and (max-width: 480px) {
   .h2, h2, nav .nav-links .nav-link {
-    font-size: 12px;
+    font-size: 32px;
   }
 }
 
@@ -64,6 +74,11 @@
   font-weight: 700;
 }
 @media screen and (max-width: 1512px) {
+  .h3, h3 {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 1024px) {
   .h3, h3 {
     font-size: 3vw;
   }
@@ -89,17 +104,22 @@
 }
 @media screen and (max-width: 1512px) {
   .h4, h4 {
-    font-size: 32px;
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .h4, h4 {
+    font-size: 2.8vw;
   }
 }
 @media screen and (max-width: 768px) {
   .h4, h4 {
-    font-size: 12px;
+    font-size: 4vw;
   }
 }
 @media screen and (max-width: 480px) {
   .h4, h4 {
-    font-size: 12px;
+    font-size: 24px;
   }
 }
 
@@ -111,6 +131,11 @@
   line-height: 1;
 }
 @media screen and (max-width: 1512px) {
+  .h5, h5 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .h5, h5 {
     font-size: 32px;
   }
@@ -139,6 +164,11 @@
     font-size: 20px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .h6, h6 {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .h6, h6 {
     font-size: 12px;
@@ -147,16 +177,6 @@
 @media screen and (max-width: 480px) {
   .h6, h6 {
     font-size: 12px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .h6, h6 {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .h6, h6 {
-    font-size: calc(8px + 3.6vw);
   }
 }
 
@@ -660,23 +680,9 @@ ul {
   color: var(--primary-font-color);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media screen and (max-width: 1512px) {
-  p,
-  a,
-  ul {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 768px) {
-  p,
-  a,
-  ul {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 480px) {
   p,
   a,
   ul {
@@ -710,7 +716,7 @@ ul {
   border: 2px solid var(--primary-font-color);
   padding: 12px 24px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .cta-wrapper .cta-1 {
     padding: 10px 20px;
   }
@@ -908,23 +914,56 @@ ul {
     padding: 48px 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .services .service-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services .service-block {
+    border-width: 2px;
+  }
+}
 .services .service-block:last-of-type {
   border-bottom: 2px solid var(--primary-font-color);
 }
+@media screen and (max-width: 768px) {
+  .services .service-block:last-of-type {
+    border-width: 2px;
+  }
+}
 .services .service-block__title {
-  width: 48%;
+  width: 50%;
   flex-shrink: 0;
+  margin-inline-end: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .services .service-block__title {
+    width: auto;
+  }
 }
 .services .service-block__description {
-  margin-inline-end: 196px;
+  margin-inline-end: 164px;
 }
 @media screen and (max-width: 1512px) {
   .services .service-block__description {
-    margin-inline-end: 96px;
+    margin-inline-end: 64px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .services .service-block__description {
+    margin-inline-end: 24px;
   }
 }
 .services .service-block__link {
   flex-shrink: 0;
+}
+@media screen and (max-width: 1024px) {
+  .services .service-block__link {
+    translate: -8px 0;
+  }
 }
 
 .hero {
@@ -950,7 +989,7 @@ ul {
 }
 @media screen and (max-width: 480px) {
   .hero {
-    padding-block: 248px 0;
+    padding-block: 248px 64px;
   }
 }
 .hero h1 {
