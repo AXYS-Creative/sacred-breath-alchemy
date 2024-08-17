@@ -74,3 +74,32 @@ path: home
 {% set cta_2_url = "#" %}
 {% set preview_id = "text-block-2" %} 
 {% include "./_includes/partials/text-block.html" %}
+
+<section id="pre-footer" class="pre-footer">
+  <h2
+    class="h1"
+    aria-label="Transform and align yourself through breath and sound"
+  >
+    <!-- <h1 class="h1"> -->
+    <span aria-hidden="true">
+      <span class="alchemy-symbol gold">🝔</span>
+      Transform&nbsp;<br class="md-screen-and-below" />
+      and align&nbsp;<br class="md-screen-and-up" />
+      yourself&nbsp; <br class="md-screen-and-below" />
+      through <span class="text-stroke">breath </span><br />
+      and
+      <span class="text-stroke">sound </span>
+      <span class="alchemy-symbol pink">🝡</span>
+    </span>
+  </h2>
+
+  <!-- prettier-ignore -->
+  {% set cta_1_text = "View Bundles" %}
+  {% set cta_1_url = "#bundles" %}
+  {% set cta_2_text = "Book Now" %}
+  {% set cta_2_url = "#bundles" %}
+  <div class="hero-actions">
+    <!-- prettier-ignore -->
+    {% include "./_includes/partials/cta-wrapper.html" %}
+  </div>
+</section>

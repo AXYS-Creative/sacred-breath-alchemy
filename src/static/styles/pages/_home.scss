@@ -1,4 +1,5 @@
-.hero {
+.hero,
+.pre-footer {
   @include column-center;
   gap: 196px;
   padding-inline: 0;
@@ -18,7 +19,7 @@
     padding-block: 248px 64px;
   }
 
-  h1 {
+  .h1 {
     text-align: center;
     -webkit-text-stroke: 2px var(--primary-font-color);
 
@@ -65,5 +66,19 @@
       align-items: flex-start;
       width: auto;
     }
+  }
+}
+
+.pre-footer {
+  gap: 64px;
+  padding-block: 196px;
+
+  @include mq-max("xxl") {
+    padding-block: 96px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -18,12 +18,10 @@ const toggleNav = () => {
 
   isNavOpen = navMenu.classList.contains("menu-active");
 
-  console.log(isNavOpen);
-
   navMenu.setAttribute("aria-hidden", !isNavOpen);
   menuBtn.setAttribute("aria-expanded", isNavOpen);
 
-  //   Update tabindex for tabElementsPage and tabElementsNav
+  // Update tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) =>
     el.setAttribute("tabindex", isNavOpen ? "0" : "-1")
   );
@@ -35,9 +33,25 @@ const toggleNav = () => {
   document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
 };
 
+// Toggle nav and allow scrolling when resizing browser greater than 1024px
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1024 && isNavOpen) {
+    navMenu.classList.remove("menu-active");
+    menuBtn.classList.remove("menu-active");
+    siteHeader.classList.remove("menu-active");
+
+    document.body.style.overflow = "auto";
+
+    navMenu.setAttribute("aria-hidden", true);
+    menuBtn.setAttribute("aria-expanded", false);
+    tabElementsPage.forEach((el) => el.setAttribute("tabindex", "0"));
+    tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
+
+    isNavOpen = false;
+  }
+});
+
 const closeNav = () => {
-  console.log("close nav");
-  // Pevent scroll when nav is open
   document.body.style = "overflow: auto;";
 
   navMenu.classList.remove("menu-active");
