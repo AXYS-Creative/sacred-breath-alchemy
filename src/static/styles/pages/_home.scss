@@ -69,9 +69,33 @@
   }
 }
 
-// .bundles {
-//   border: $test;
-// }
+.bundles {
+  $card-padding: 16px;
+
+  .bundle-card {
+    @include column-start;
+    gap: 16px;
+    border: 2px solid var(--primary-font-color);
+    padding: $card-padding;
+
+    h3 {
+      @include row-center;
+      gap: 12px;
+
+      small {
+        opacity: 0.5;
+      }
+    }
+
+    .benefit-list {
+      translate: $card-padding 0;
+    }
+
+    .cta-wrapper {
+      justify-content: flex-start;
+    }
+  }
+}
 
 .pre-footer {
   gap: 64px;

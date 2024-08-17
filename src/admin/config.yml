@@ -40,8 +40,8 @@ collections:
     label: "Page Content"
     description: >
       Edit the site content here.
-      Have questions or need to add a new config? Reach out to Aaron or Bailey →
-      help@axyscreative.com
+      Have questions or need to add a new config? Visit your Trello board to add a new request.
+      Don't have a Trello board? Reach out to Aaron or Bailey → help@axyscreative.com
     files:
       - name: "text_block_1"
         label: "Text Block 1"
@@ -148,6 +148,49 @@ collections:
                   widget: "string",
                   required: false,
                   hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
+                }
+      - name: "bundles"
+        label: "Bundles"
+        file: "src/_data/bundles.yaml"
+        preview_path: "#bundles"
+        editor:
+          preview: true
+        fields:
+          - name: "section_title"
+            label: "Section Title"
+            widget: "string"
+          - name: "price_cards"
+            label: "Price Cards"
+            label_singular: "Card"
+            widget: "list"
+            collapsed: false
+            # max: 4
+            fields:
+              - {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "sub_title",
+                  label: "Sub Title",
+                  widget: "string",
+                  required: false,
+                  hint: "i.e. Most Popular",
+                }
+              - {
+                  name: "price",
+                  label: "Price",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "price_dimmed",
+                  label: "Price Dimmed",
+                  widget: "string",
+                  required: false,
+                  hint: "If offering a discount, this is the higher/original price",
                 }
       - name: "text_block_2"
         label: "Text Block 2"

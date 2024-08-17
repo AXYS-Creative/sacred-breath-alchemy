@@ -836,6 +836,9 @@ button {
 ul {
   list-style: none;
 }
+ul.list {
+  list-style-type: disc;
+}
 
 .cta-wrapper {
   display: flex;
@@ -1269,6 +1272,31 @@ ul {
     align-items: flex-start;
     width: auto;
   }
+}
+
+.bundles .bundle-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  border: 2px solid var(--primary-font-color);
+  padding: 16px;
+}
+.bundles .bundle-card h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.bundles .bundle-card h3 small {
+  opacity: 0.5;
+}
+.bundles .bundle-card .benefit-list {
+  translate: 16px 0;
+}
+.bundles .bundle-card .cta-wrapper {
+  justify-content: flex-start;
 }
 
 .pre-footer {
