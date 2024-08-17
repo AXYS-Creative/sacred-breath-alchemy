@@ -4,7 +4,7 @@
   </h2>
 
   {% for service in services_section.services %}
-  <div class="service-block">
+  <div class="service-block {% if loop.last %}service-block--last{% endif %}">
     <h3 class="h4 service-block__title">
       {{ service.title }}
       <span class="alchemy-symbol pink" aria-hidden="true">
@@ -16,5 +16,5 @@
       Book Now
     </a>
   </div>
-  {% endfor %}
+  {% endfor %} {% include "./cta-wrapper.html" %}
 </section>

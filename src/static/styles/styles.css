@@ -1018,11 +1018,11 @@ ul {
     border-width: 2px;
   }
 }
-.services .service-block:last-of-type {
+.services .service-block--last {
   border-bottom: 2px solid var(--primary-font-color);
 }
 @media screen and (max-width: 768px) {
-  .services .service-block:last-of-type {
+  .services .service-block--last {
     border-width: 2px;
   }
 }
@@ -1055,6 +1055,15 @@ ul {
 @media screen and (max-width: 1024px) {
   .services .service-block__link {
     translate: -8px 0;
+  }
+}
+.services .cta-wrapper {
+  justify-content: flex-start;
+  margin-block-start: 96px;
+}
+@media screen and (max-width: 1512px) {
+  .services .cta-wrapper {
+    margin-block-start: 64px;
   }
 }
 

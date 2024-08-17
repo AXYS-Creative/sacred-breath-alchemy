@@ -23,7 +23,7 @@
       }
     }
 
-    &:last-of-type {
+    &--last {
       border-bottom: $border-width solid var(--primary-font-color);
 
       @include mq-max("md") {
@@ -59,6 +59,15 @@
       @include mq-max("lg") {
         translate: -8px 0;
       }
+    }
+  }
+
+  .cta-wrapper {
+    justify-content: flex-start;
+    margin-block-start: $section-title-vertical-spacing;
+
+    @include mq-max("xxl") {
+      margin-block-start: $section-title-vertical-spacing-xxl;
     }
   }
 }

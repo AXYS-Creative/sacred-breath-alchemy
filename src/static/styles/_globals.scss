@@ -403,10 +403,10 @@ section {
   @include section-padding;
 
   .section-title {
-    margin-block-end: 96px;
+    margin-block-end: $section-title-vertical-spacing;
 
     @include mq-max("xxl") {
-      margin-block-end: 64px;
+      margin-block-end: $section-title-vertical-spacing-xxl;
     }
   }
 }

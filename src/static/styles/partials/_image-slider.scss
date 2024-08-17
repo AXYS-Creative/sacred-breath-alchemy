@@ -12,20 +12,22 @@
     figure {
       width: 640px;
 
-      @include mq-max("xxl") {
-        width: 500px;
-      }
+      @media all {
+        @include mq-max("xxl") {
+          width: 500px;
+        }
 
-      @include mq-max("xl") {
-        width: 420px;
-      }
+        @include mq-max("xl") {
+          width: 420px;
+        }
 
-      @include mq-max("md") {
-        width: 360px;
-      }
+        @include mq-max("md") {
+          width: 360px;
+        }
 
-      @include mq-max("sm") {
-        width: 280px;
+        @include mq-max("sm") {
+          width: 280px;
+        }
       }
 
       img {
