@@ -66,6 +66,7 @@ collections:
                   label: "Alchemy Symbol",
                   widget: "string",
                   required: false,
+                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
                 }
       - name: "services_section"
         label: "Services Section"
@@ -125,6 +126,7 @@ collections:
                   label: "Alchemy Symbol",
                   widget: "string",
                   required: false,
+                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
                 }
           - name: "images"
             label: "Images"
@@ -144,4 +146,31 @@ collections:
                   widget: "string",
                   required: true,
                   hint: "Required for SEO and accessibility. Keep it brief.",
+                }
+      - name: "text_block_2"
+        label: "Text Block 2"
+        file: "src/_data/text_block_2.yaml"
+        preview_path: "#text-block-2"
+        editor:
+          preview: true
+        fields:
+          - name: "paragraph_lines"
+            label: "Paragraph Lines"
+            label_singular: "Line"
+            widget: "list"
+            collapsed: false
+            max: 4
+            fields:
+              - {
+                  name: "line",
+                  label: "Line",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
                 }

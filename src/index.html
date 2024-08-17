@@ -50,8 +50,10 @@ path: home
 
 <!-- prettier-ignore -->
 {% set text_block = text_block_1.paragraph_lines %}
-{% set symbol_1 = "🜲" %} 
-{% set symbol_2 = "🜒" %}
+{% set symbol_1 = text_block[0].symbol %} 
+{% set symbol_2 = text_block[1].symbol %} 
+{% set symbol_3 = text_block[2].symbol %} 
+{% set symbol_4 = text_block[3].symbol %} 
 {% set line_1 = text_block[0].line %}
 {% set line_2 = text_block[1].line %}
 {% set line_3 = text_block[2].line %}
@@ -72,21 +74,24 @@ path: home
 {% set line_2 = slider_content_text[1].line %}
 {% set line_3 = slider_content_text[2].line %}
 {% set line_4 = slider_content_text[3].line %}
-{% set preview_id = "text-block-2" %}
+{% set preview_id = "image-slider" %}
 {% include "./_includes/partials/image-slider.html" %}
 
 <!-- prettier-ignore -->
-{% set symbol_1 = "🜲" %} 
-{% set symbol_2 = "🜒" %} 
-{% set line_1 = "Get ticktes to upcoming events and learn" %} 
-{% set line_2 = "moure about the transformative power of" %} 
-{% set line_3 = "breathwork, sound healing, cacao" %} 
-{% set line_4 = "ceremonies and meditation" %} 
+{% set text_block = text_block_2.paragraph_lines %}
+{% set symbol_1 = text_block[0].symbol %} 
+{% set symbol_2 = text_block[1].symbol %} 
+{% set symbol_3 = text_block[2].symbol %} 
+{% set symbol_4 = text_block[3].symbol %} 
+{% set line_1 = text_block[0].line %}
+{% set line_2 = text_block[1].line %}
+{% set line_3 = text_block[2].line %}
+{% set line_4 = text_block[3].line %}
 {% set cta_1_text = "Get Tickets" %}
 {% set cta_1_url = "#" %}
 {% set cta_2_text = "View FAQ" %}
 {% set cta_2_url = "#" %}
-{% set preview_id = "text-block-3" %} 
+{% set preview_id = "text-block-2" %} 
 {% include "./_includes/partials/text-block.html" %}
 
 <section id="pre-footer" class="pre-footer">
@@ -113,7 +118,6 @@ path: home
   {% set cta_2_text = "Book Now" %}
   {% set cta_2_url = "#bundles" %}
   <div class="hero-actions">
-    <!-- prettier-ignore -->
     {% include "./_includes/partials/cta-wrapper.html" %}
   </div>
 </section>
