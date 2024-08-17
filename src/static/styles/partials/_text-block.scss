@@ -2,6 +2,10 @@
   @include column-start;
   gap: 64px;
 
+  @include mq-max("md") {
+    align-items: center;
+  }
+
   p {
     @include column-start;
 

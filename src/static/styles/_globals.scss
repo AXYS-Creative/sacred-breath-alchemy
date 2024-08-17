@@ -7,7 +7,7 @@
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus {
+  &:-webkit-autofill:focus-visible {
     -webkit-text-fill-color: var(--primary-font-color);
     -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
   }
@@ -80,6 +80,15 @@ header {
     top: 68px;
     gap: 48px;
     transition: 0.4s ease;
+    // mix-blend-mode: difference;
+
+    @include mq-max("xxl") {
+      gap: 32px;
+    }
+
+    @include mq-max("xl") {
+      gap: 16px;
+    }
 
     @include mq-max("lg") {
       display: none;
@@ -87,7 +96,7 @@ header {
 
     &__link {
       &:hover,
-      &:focus {
+      &:focus-visible {
         &::after {
           background: var(--primary-font-color);
         }
@@ -118,7 +127,7 @@ header {
       transition: 0.2s ease 0s;
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         scale: 1.1;
       }
 
@@ -165,7 +174,7 @@ header {
     }
   }
 
-  &.scroll-active {
+  &.away-from-top {
     .header-logo {
       .logo-text {
         width: 0px;
@@ -173,9 +182,15 @@ header {
     }
 
     .header-links {
-      translate: 0 -200%;
+      translate: 0 -250%;
       opacity: 0;
       pointer-events: none;
+
+      &:focus-within {
+        translate: 0 0;
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 
@@ -273,7 +288,7 @@ nav {
       // transition: 0.2s ease, translate 0.3s ease 0.6s;
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         padding-left: 24px;
         border-color: var(--primary-accent-color);
 
@@ -312,7 +327,7 @@ nav {
         transition: 0.2s ease;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
           border-color: var(--primary-accent-color);
         }
       }
@@ -448,8 +463,12 @@ ul {
     font-size: 14px;
   }
 
-  @include mq-max("sm") {
+  @include mq-max("md") {
     font-size: 16px;
+  }
+
+  @include mq-max("sm") {
+    font-size: 14px;
   }
 }
 
@@ -515,7 +534,7 @@ ul {
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       .social-media-icon-wrapper {
         translate: 0 -40%;
       }

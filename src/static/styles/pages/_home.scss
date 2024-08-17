@@ -1,19 +1,17 @@
 .hero {
   @include column-center;
   gap: 196px;
-  min-height: 100vh;
-  min-height: 100dvh;
   padding-inline: 0;
-  padding-block: 196px 0;
+  padding-block: 312px 0;
 
   @include mq-max("xxl") {
     gap: 148px;
-    padding-block: 148px 0;
+    padding-block: 248px 0;
   }
 
   @include mq-max("lg") {
     gap: 96px;
-    padding-block: 196px 0;
+    padding-block: 196px 96px;
   }
 
   @include mq-max("sm") {
@@ -46,16 +44,26 @@
     @include mq-max("md") {
       align-items: center;
       gap: 164px;
+      width: unset;
     }
   }
 
   .paragraph-wrapper {
+    // border: $test;
     @include row-center;
+    justify-content: flex-start;
     gap: 64px;
+    flex-wrap: wrap;
 
     @include mq-max("md") {
+      // padding-inline: $body-padding;
+      width: 400px;
+    }
+
+    @include mq-max("sm") {
       flex-direction: column;
       align-items: flex-start;
+      width: auto;
     }
   }
 }

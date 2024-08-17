@@ -1,33 +1,34 @@
 .classic-link {
+  $link-horizontal-padding: 8px;
+
   position: relative;
+  padding: 4px $link-horizontal-padding;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
+    bottom: 0;
+    left: $link-horizontal-padding;
+    width: calc(100% - $link-horizontal-padding * 2);
     height: 2px;
     background-color: var(--primary-font-color);
-    animation: classic-link-default $cubic-ease-sudden forwards;
 
     @include mq-motion-allow {
-      transition: 0.3s ease;
-      animation-duration: 0.64s;
+      // transition: 0.3s ease;
+      transition: 0.4s $cubic-ease-sudden;
     }
   }
 
   &:hover,
   &:focus-visible {
     color: var(--primary-accent-color);
-    transition: 0.3s ease 0.3s;
+    transition: color 0.3s ease 0.3s;
 
     &::before {
       background: var(--primary-accent-color);
-      animation: classic-link-hover $cubic-ease-sudden forwards;
-      @include mq-motion-allow {
-        animation-duration: 0.64s;
-      }
+      left: auto;
+      right: $link-horizontal-padding;
+      width: 0%;
     }
   }
 }

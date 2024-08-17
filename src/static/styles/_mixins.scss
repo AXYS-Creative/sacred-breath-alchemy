@@ -95,6 +95,14 @@ $min-breakpoints: (
     @if $thin {
       padding: 128px 96px;
     } @else {
+      padding: 96px 48px;
+    }
+  }
+
+  @include mq-max("sm") {
+    @if $thin {
+      padding: 128px 96px;
+    } @else {
       padding: 96px 12px;
     }
   }
