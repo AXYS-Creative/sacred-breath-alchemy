@@ -1,4 +1,39 @@
 .image-slider {
+  @include column-start;
+  overflow: hidden;
+  gap: 64px;
+
+  .slider {
+    &__inner {
+      display: flex;
+      gap: 24px;
+    }
+
+    figure {
+      width: 640px;
+
+      @include mq-max("xxl") {
+        width: 500px;
+      }
+
+      @include mq-max("xl") {
+        width: 420px;
+      }
+
+      @include mq-max("md") {
+        width: 360px;
+      }
+
+      @include mq-max("sm") {
+        width: 280px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .text-block {
     padding: 0;
   }
