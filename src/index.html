@@ -62,12 +62,16 @@ path: home
 {% include "./_includes/partials/services.html" %}
 
 <!-- prettier-ignore -->
-{% set symbol_1 = "🜲" %} 
-{% set symbol_2 = "🜒" %} 
-{% set line_1 = "Get ticktes to upcoming events and learn" %} 
-{% set line_2 = "moure about the transformative power of" %} 
-{% set line_3 = "breathwork, sound healing, cacao" %} 
-{% set line_4 = "ceremonies and meditation" %} 
+{% set slider_content_text = image_slider.paragraph_lines %}
+{% set slider_content_images = image_slider.images %}
+{% set symbol_1 = slider_content_text[0].symbol %} 
+{% set symbol_2 = slider_content_text[1].symbol %} 
+{% set symbol_3 = slider_content_text[2].symbol %} 
+{% set symbol_4 = slider_content_text[3].symbol %} 
+{% set line_1 = slider_content_text[0].line %}
+{% set line_2 = slider_content_text[1].line %}
+{% set line_3 = slider_content_text[2].line %}
+{% set line_4 = slider_content_text[3].line %}
 {% set preview_id = "text-block-2" %}
 {% include "./_includes/partials/image-slider.html" %}
 

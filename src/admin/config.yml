@@ -55,7 +55,18 @@ collections:
             collapsed: false
             max: 4
             fields:
-              - { name: "line", label: "Line", widget: "string" }
+              - {
+                  name: "line",
+                  label: "Line",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                }
       - name: "services_section"
         label: "Services Section"
         file: "src/_data/services_section.yaml"
@@ -103,7 +114,18 @@ collections:
             collapsed: false
             max: 4
             fields:
-              - { name: "line", label: "Line", widget: "string" }
+              - {
+                  name: "line",
+                  label: "Line",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                }
           - name: "images"
             label: "Images"
             label_singular: "Image"

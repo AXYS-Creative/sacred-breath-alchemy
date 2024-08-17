@@ -6,10 +6,10 @@ paragraph_lines:
 
 images:
   - src: /static/img/slider-img-1.png
-    description: Sample text here
+    description: A sound healing session. A large group joined together.
   - src: /static/img/slider-img-2.png
-    description: Sample text here
+    description: A woman during a sound healing session.
   - src: /static/img/slider-img-3.png
-    description: Sample text here
+    description: A man deep in resolve during a session.
   - src: /static/img/slider-img-4.png
-    description: Sample text here
+    description: A group during a session.
