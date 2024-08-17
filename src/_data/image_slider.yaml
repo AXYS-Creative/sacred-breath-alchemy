@@ -1,9 +1,3 @@
-paragraph_lines:
-  - line: Discover the healing power of the breath 🜳
-  - line: find solace from stress and anxiety while nurturing
-  - line: self-awareness, love, and compassion, all within the
-  - line: sanctuary of your home
-
 images:
   - src: /static/img/slider-img-1.png
     description: A sound healing session. A large group joined together.
@@ -13,3 +7,13 @@ images:
     description: A man deep in resolve during a session.
   - src: /static/img/slider-img-4.png
     description: A group during a session.
+
+paragraph_lines:
+  - line: Discover the healing power of the breath, find
+    symbol: 🜳
+  - line: solace from stress and anxiety while nurturing
+    symbol:
+  - line: self-awareness, love, and compassion, all
+    symbol:
+  - line: within the sanctuary of your home
+    symbol: 🝞

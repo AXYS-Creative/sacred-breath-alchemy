@@ -75,12 +75,12 @@
 }
 @media screen and (max-width: 1512px) {
   .h3, h3 {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 }
 @media screen and (max-width: 1024px) {
   .h3, h3 {
-    font-size: 3vw;
+    font-size: 2.6vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1028,13 +1028,13 @@ ul {
   align-items: center;
   gap: 196px;
   padding-inline: 0;
-  padding-block: 312px 0;
+  padding-block: 312px 156px;
 }
 @media screen and (max-width: 1512px) {
   .hero,
   .pre-footer {
     gap: 148px;
-    padding-block: 248px 0;
+    padding-block: 248px 156px;
   }
 }
 @media screen and (max-width: 1024px) {

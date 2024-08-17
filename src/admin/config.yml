@@ -108,6 +108,25 @@ collections:
         editor:
           preview: true
         fields:
+          - name: "images"
+            label: "Images"
+            label_singular: "Image"
+            widget: "list"
+            collapsed: false
+            fields:
+              - {
+                  name: "src",
+                  label: "Image Source",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  name: "description",
+                  label: "SEO Description",
+                  widget: "string",
+                  required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
+                }
           - name: "paragraph_lines"
             label: "Paragraph Lines"
             label_singular: "Line"
@@ -127,25 +146,6 @@ collections:
                   widget: "string",
                   required: false,
                   hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
-                }
-          - name: "images"
-            label: "Images"
-            label_singular: "Image"
-            widget: "list"
-            collapsed: false
-            fields:
-              - {
-                  name: "src",
-                  label: "Image Source",
-                  widget: "image",
-                  required: true,
-                }
-              - {
-                  name: "description",
-                  label: "SEO Description",
-                  widget: "string",
-                  required: true,
-                  hint: "Required for SEO and accessibility. Keep it brief.",
                 }
       - name: "text_block_2"
         label: "Text Block 2"

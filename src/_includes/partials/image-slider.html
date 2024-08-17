@@ -1,9 +1,11 @@
 <section class="image-slider" id="image-slider">
-  {% include "./text-block.html" %}
-
   <div class="image-slider__slider">
+    {% for image in image_slider.images %}
     <figure>
-      <img src="" alt="hello" />
+      <img src="{{ image.src }}" alt="{{ image.description }}" />
     </figure>
+    {% endfor %}
   </div>
+
+  {% include "./text-block.html" %}
 </section>

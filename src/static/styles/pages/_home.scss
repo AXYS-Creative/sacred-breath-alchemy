@@ -3,11 +3,11 @@
   @include column-center;
   gap: 196px;
   padding-inline: 0;
-  padding-block: 312px 0;
+  padding-block: 312px 156px;
 
   @include mq-max("xxl") {
     gap: 148px;
-    padding-block: 248px 0;
+    padding-block: 248px 156px;
   }
 
   @include mq-max("lg") {
