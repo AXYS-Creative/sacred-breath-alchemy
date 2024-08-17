@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $brand-font-family-body;
+  // font-family: $brand-font-family-body; // Issues with this overridding mixin? Specificy isn't higher...
 
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
@@ -402,7 +402,7 @@ nav {
 section {
   @include section-padding;
 
-  .section-title {
+  h2 {
     margin-block-end: $section-title-vertical-spacing;
 
     @include mq-max("xxl") {
@@ -494,7 +494,8 @@ h6 {
 
 p,
 a,
-ul {
+ul,
+small {
   @include body-font-styles;
 }
 

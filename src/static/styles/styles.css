@@ -1,4 +1,100 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-blackit.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-boldit.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-extraboldit.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-lightit.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-mediumit.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-regularit.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-semiboldit.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proximanova-thinit.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
 :root {
   --background-color: #313131;
   --primary-font-color: #fafafa;
@@ -13,6 +109,7 @@
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1;
+  font-family: "Proxima Nova", sans-serif;
   -webkit-text-stroke-color: var(--primary-font-color);
   -webkit-text-stroke-width: 2px;
 }
@@ -184,7 +281,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Plus Jakarta Sans", sans-serif;
 }
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus-visible {
   -webkit-text-fill-color: var(--primary-font-color);
@@ -631,11 +727,11 @@ section {
     padding: 96px 12px;
   }
 }
-section .section-title {
+section h2 {
   margin-block-end: 96px;
 }
 @media screen and (max-width: 1512px) {
-  section .section-title {
+  section h2 {
     margin-block-end: 64px;
   }
 }
@@ -710,7 +806,8 @@ footer .axys-link {
 
 p,
 a,
-ul {
+ul,
+small {
   color: var(--primary-font-color);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
@@ -719,7 +816,8 @@ ul {
 @media screen and (max-width: 1512px) {
   p,
   a,
-  ul {
+  ul,
+  small {
     font-size: 14px;
   }
 }
@@ -838,6 +936,16 @@ ul {
   display: inline-flex;
   translate: 0 -0.2em;
   font-weight: 100;
+}
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary-font-color);
+}
+@media screen and (max-width: 768px) {
+  .text-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
 }
 
 .gold {

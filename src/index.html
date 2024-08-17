@@ -65,7 +65,6 @@ path: home
 
 <!-- prettier-ignore -->
 {% set slider_content_text = image_slider.paragraph_lines %}
-{% set slider_content_images = image_slider.images %}
 {% set symbol_1 = slider_content_text[0].symbol %} 
 {% set symbol_2 = slider_content_text[1].symbol %} 
 {% set symbol_3 = slider_content_text[2].symbol %} 
@@ -76,6 +75,19 @@ path: home
 {% set line_4 = slider_content_text[3].line %}
 {% set preview_id = "image-slider" %}
 {% include "./_includes/partials/image-slider.html" %}
+
+<section class="bundles" id="bundles">
+  <h2>Bundle options <span class="alchemy-symbol gold">🜊</span></h2>
+
+  <div class="bundle-cards">
+    <div class="bundle-card">
+      <h3>
+        Card Title
+        <span class="title-">Most popular</span>
+      </h3>
+    </div>
+  </div>
+</section>
 
 <!-- prettier-ignore -->
 {% set text_block = text_block_2.paragraph_lines %}
