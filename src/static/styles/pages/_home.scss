@@ -72,6 +72,11 @@
 .bundles {
   $card-padding: 16px;
 
+  > * {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
   .bundle-cards-wrapper {
     display: flex;
     align-items: stretch;
@@ -80,15 +85,16 @@
   }
 
   .bundle-card {
-    @include column-start;
+    @include column-start(flex-start);
     gap: 16px;
     flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
     // width: 49%;
     border: 2px solid var(--primary-font-color);
     padding: $card-padding;
 
-    h3 {
-      @include row-center;
+    .card-title {
+      @include row-center(flex-start);
+      flex-wrap: wrap;
       gap: 12px;
 
       small {
@@ -112,9 +118,21 @@
       // }
     }
 
+    .price {
+      text-transform: initial;
+
+      &-dim {
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
+
     .benefit-list {
+      @include column-start(flex-start);
+      gap: 2px;
       translate: $card-padding 0;
       margin-block-end: 48px;
+      height: 100%;
     }
 
     .cta-wrapper {

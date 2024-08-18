@@ -84,16 +84,16 @@ path: home
   <div class="bundle-cards-wrapper">
     {% for card in bundles.price_cards %}
     <div class="bundle-card {% if card.full_width %}full-width{% endif %}">
-      <h3 class="h5">
+      <h3 class="card-title h5">
         {{ card.title }} {% if card.sub_title %}
         <small>{{ card.sub_title }}</small>
         {% endif %}
       </h3>
-      <h4>
+      <h4 class="price">
         {% if card.price_dimmed %}
         <span class="price-dim">{{ card.price_dimmed }}</span>
         {% endif %}
-        <span class="price">{{ card.price }}</span>
+        <span class="price-current">{{ card.price }}</span>
       </h4>
 
       <hr class="gold" aria-hidden="true" />
@@ -109,7 +109,9 @@ path: home
       {% endif %}
 
       <div class="cta-wrapper">
-        <a href="" class="cta-1">Subscribe</a>
+        <a class="cta-1" href="{{ card.cta_url }}" target="_blank">
+          {{ card.cta_text }}
+        </a>
       </div>
     </div>
     {% endfor %}

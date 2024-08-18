@@ -813,7 +813,7 @@ small {
   font-size: 16px;
   font-weight: 400;
 }
-@media screen and (max-width: 1512px) {
+@media screen and (max-width: 1024px) {
   p,
   a,
   ul,
@@ -825,6 +825,12 @@ small {
 a {
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 16px;
+}
+@media screen and (max-width: 1512px) {
+  a {
+    font-size: 14px;
+  }
 }
 
 button {
@@ -937,7 +943,7 @@ ul.list {
 
 .alchemy-symbol {
   display: inline-flex;
-  translate: 0 -0.2em;
+  translate: 0 -0.14em;
   font-weight: 100;
 }
 
@@ -964,7 +970,7 @@ ul.list {
 }
 
 .bold {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .lg-screen-and-up {
@@ -1280,6 +1286,10 @@ ul.list {
   }
 }
 
+.bundles > * {
+  max-width: 1440px;
+  margin-inline: auto;
+}
 .bundles .bundle-cards-wrapper {
   display: flex;
   align-items: stretch;
@@ -1289,20 +1299,21 @@ ul.list {
 .bundles .bundle-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 16px;
   flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
   border: 2px solid var(--primary-font-color);
   padding: 16px;
 }
-.bundles .bundle-card h3 {
+.bundles .bundle-card .card-title {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
 }
-.bundles .bundle-card h3 small {
+.bundles .bundle-card .card-title small {
   opacity: 0.5;
 }
 .bundles .bundle-card hr {
@@ -1311,9 +1322,22 @@ ul.list {
   border-bottom: 4px solid;
   margin-block: 24px;
 }
+.bundles .bundle-card .price {
+  text-transform: initial;
+}
+.bundles .bundle-card .price-dim {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
 .bundles .bundle-card .benefit-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2px;
   translate: 16px 0;
   margin-block-end: 48px;
+  height: 100%;
 }
 .bundles .bundle-card .cta-wrapper {
   justify-content: flex-start;

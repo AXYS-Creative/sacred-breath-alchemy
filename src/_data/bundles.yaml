@@ -1,33 +1,65 @@
-section_title: Bundle Options
+section_title: Join Us
 
 price_cards:
-  - title: 1 Session
+  - title: Subscribe
     sub_title:
-    price: $244
-    price_dimmed: $288
+    price: $28/m
+    price_dimmed:
     benefit_list:
-      - benefit: One 90 minute session
+      - benefit: Two online 60 minute sessions
         bold: true
-      - benefit: Breathwork exercises
+      - benefit: Sound journey and meditations
         bold: false
+      - benefit: Sacred opening prayer
+        bold: false
+      - benefit: Cacao activation
+        bold: false
+      - benefit: Supportive community & environment
+        bold: false
+      - benefit: On-demand access to recorded sessions
+        bold: false
+      - benefit: Access exclusive monthly content
+        bold: false
+    cta_text: Subscribe
+    cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/WSRYIDTLIAF2N33XDA7DX2VR
     full_width: false
-  - title: 3 Sessions
+  - title: 1 Session
     sub_title: Most popular
     price: $244
     price_dimmed: $288
     benefit_list:
-      - benefit: Three 90 minute sessions
+      - benefit: Two online 60 minute sessions
         bold: true
-      - benefit: Breathwork exercises
+      - benefit: Sound journey and meditations
         bold: false
+      - benefit: Sacred opening prayer
+        bold: false
+      - benefit: Cacao activation
+        bold: false
+      - benefit: Supportive community & environment
+        bold: false
+      - benefit: On-demand access to recorded sessions
+        bold: false
+      - benefit: Access exclusive monthly content
+        bold: false
+    cta_text: Purchase
+    cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/FRAOZYEINIVAUNI25JCKH2UH
     full_width: false
   - title: Ceremonial Cacao
-    sub_title:
-    price: $244
-    price_dimmed: $288
+    sub_title: 1lb Brick
+    price: $55 PER BRICK
+    price_dimmed:
     benefit_list:
-      - benefit: Three 90 minute sessions
-        bold: true
-      - benefit: Breathwork exercises
+      - benefit: 1lb Brick
         bold: false
+      - benefit: Ethically Sourced
+        bold: false
+      - benefit: Ceremonial Grade
+        bold: false
+      - benefit: 100% Organic Cacao
+        bold: false
+      - benefit: Family Sourced from Guatemala
+        bold: false
+    cta_text: Order Now
+    cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/GRI77FLQWQVOAVSPLLGMYFVK
     full_width: true

@@ -200,6 +200,18 @@ collections:
                   - { name: "benefit", label: "benefit", widget: "string" }
                   - { name: "bold", label: "Bold Item", widget: "boolean" }
               - {
+                  name: "cta_text",
+                  label: "Button Text",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "cta_url",
+                  label: "Button Url",
+                  widget: "string",
+                  required: true,
+                }
+              - {
                   name: "full_width",
                   label: "Full width",
                   widget: "boolean",

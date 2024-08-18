@@ -214,7 +214,7 @@ $min-breakpoints: (
   font-size: 16px;
   font-weight: 400;
 
-  @include mq-max("xxl") {
+  @include mq-max("lg") {
     font-size: 14px;
   }
 }
