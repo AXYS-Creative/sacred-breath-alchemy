@@ -18,3 +18,14 @@ team_members:
       - title: Instagram
         url: https://www.instagram.com/sacredbreathalchemy?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr
         icon: /static/img/icon-instagram-block.svg
+
+paragraph_details:
+  - description: Through our guidance, you will uncover the healing potential of the breath, finding solace from stress and anxiety while nurturing self-awareness, love, and compassion, all within the sanctuary of your home.
+    symbol: 🝮
+    color: "gold"
+  - description: The teachings of Sacred Breath Alchemy amalgamate powerful breathwork techniques from various global traditions, offering you immediate integration into your everyday routine.
+    symbol: 🜩
+    color: "gold"
+  - description: By embracing these practices, you can enhance relationships, cultivate mental clarity, and discover a profound sense of purpose and direction in life.
+    symbol: 🜯
+    color: "gold"

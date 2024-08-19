@@ -1117,14 +1117,24 @@ ul.list {
 .about .about-text-blocks {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex: 1 1 1920px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
-  gap: 24px;
+  gap: 48px;
+  flex-wrap: wrap;
   margin-block-start: 96px;
+}
+@media screen and (max-width: 480px) {
+  .about .about-text-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .about .about-text-blocks p {
   display: block;
-  width: max(248px, 22%);
+  width: max(248px, 24%);
+}
+.about .about-text-blocks p .alchemy-symbol {
+  display: flex;
 }
 
 .image-slider {

@@ -37,17 +37,11 @@
   </div>
 
   <div class="about-text-blocks">
+    {% for block in about.paragraph_details %}
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
-      earum suscipit?
+      <span class="alchemy-symbol {{ block.color }}"> {{ block.symbol }} </span>
+      {{ block.description }}
     </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
-      earum suscipit?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
-      earum suscipit?
-    </p>
+    {% endfor %}
   </div>
 </section>

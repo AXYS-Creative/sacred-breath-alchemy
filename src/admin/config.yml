@@ -261,6 +261,34 @@ collections:
                   - { name: "title", label: "Title", widget: "string" }
                   - { name: "url", label: "Url", widget: "string" }
                   - { name: "icon", label: "Icon", widget: "image" }
+          - name: "paragraph_details"
+            label: "Paragraph Details"
+            label_singular: "Paragraph"
+            widget: "list"
+            collapsed: false
+            fields:
+              - {
+                  name: "description",
+                  label: "Description",
+                  widget: "text",
+                  hint: "Try to keep it under 180 characters if you can.",
+                  required: true,
+                }
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                  hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+                }
+              - {
+                  name: "color",
+                  label: "Color",
+                  widget: "select",
+                  multiple: false,
+                  options: ["gold", "pink"],
+                  default: ["gold"],
+                }
       - name: "text_block_2"
         label: "Text Block 2"
         file: "src/_data/text_block_2.yaml"
