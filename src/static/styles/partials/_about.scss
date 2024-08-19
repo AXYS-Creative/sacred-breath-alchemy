@@ -1,0 +1,105 @@
+.about {
+  @include row-center(space-between);
+  flex-wrap: wrap;
+  // gap: 96px 48px;
+
+  // > * {
+  //   border: $test;
+  // }
+
+  h2 {
+    margin-block-end: unset;
+    margin-inline-end: 24px;
+    flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
+    max-width: 33%;
+
+    @include mq-max("xxl") {
+      margin-block-end: $section-title-vertical-spacing-xxl;
+    }
+
+    @include mq-max("lg") {
+      max-width: unset;
+    }
+  }
+
+  .team-members-wrapper {
+    $card-caption-gap: 16px;
+
+    @include row-start;
+    flex: 1 1 672px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
+    gap: 48px;
+
+    @media all {
+      @include mq-max("xxl") {
+        gap: 24px;
+      }
+
+      @include mq-max("md") {
+        flex-direction: column;
+      }
+    }
+
+    .team-member {
+      @include column-start;
+      gap: $card-caption-gap;
+
+      &__image {
+        width: 100%;
+
+        @include mq-max("md") {
+          width: min(100%, 480px);
+        }
+      }
+
+      figcaption {
+        @include column-start;
+        gap: $card-caption-gap;
+      }
+
+      &__role {
+        @include body-font-styles;
+        text-transform: capitalize;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      gap: $card-caption-gap;
+
+      a {
+        display: flex;
+
+        @include mq-motion-allow {
+          transition: scale 0.3s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+          scale: 0.9;
+        }
+      }
+
+      &__icon {
+        width: 24px;
+        height: 24px;
+
+        @include mq-max("xxl") {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .about-text-blocks {
+    @include row-center(flex-start);
+    flex: 1 1 $content-width; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
+    gap: 24px;
+    margin-block-start: 96px;
+
+    p {
+      display: block;
+      width: max(248px, 22%);
+    }
+  }
+}

@@ -90,8 +90,10 @@ path: home
         {% endif %}
       </h3>
       <h4 class="price">
-        {% if card.price_dimmed %}
-        <span class="price-dim">{{ card.price_dimmed }}</span>
+        {% if card.price_linethrough %}
+        <span class="price-dim" aria-hidden="true">
+          {{ card.price_linethrough }}
+        </span>
         {% endif %}
         <span class="price-current">{{ card.price }}</span>
       </h4>
@@ -117,6 +119,8 @@ path: home
     {% endfor %}
   </div>
 </section>
+
+{% include "./_includes/partials/about.html" %}
 
 <!-- prettier-ignore -->
 {% set text_block = text_block_2.paragraph_lines %}

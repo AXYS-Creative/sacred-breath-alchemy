@@ -37,39 +37,32 @@ header {
 
   .header-logo {
     @include left-spacing;
-    top: 56px;
+    top: 68px;
     display: flex;
     align-items: center;
     gap: 12px;
-    mix-blend-mode: difference;
+    // mix-blend-mode: difference;
 
-    @include mq-min("xxxl") {
-      left: calc(50% - calc(1920px / 2) + $body-padding);
-    }
+    @media all {
+      @include mq-min("xxxl") {
+        left: calc(50% - calc(1920px / 2) + $body-padding);
+      }
 
-    @include mq-max("md") {
-      top: 38px;
-    }
-
-    &__icon {
-      width: 40px;
-      transition: 0.2s ease;
-
-      @include mq-max("xxl") {
-        width: 48px;
+      @include mq-max("md") {
+        top: 48px;
       }
     }
 
-    .logo-text {
-      width: $logo-text-width;
-      height: 20px;
-      object-fit: cover;
-      object-position: left;
+    &__icon {
+      width: 196px;
       transition: 0.2s ease;
 
       @include mq-max("xxl") {
-        scale: 0.8;
-        transform-origin: left;
+        width: 148px;
+      }
+
+      @include mq-max("sm") {
+        width: 128px;
       }
     }
   }

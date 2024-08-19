@@ -1,0 +1,20 @@
+section_title: About Us
+
+team_members:
+  - name: Jade Lyons
+    image: /static/img/portrait-jade.png
+    role: Breathwork + Sound Healing Facilitator
+    social_media:
+      - title: Instagram
+        url: https://www.instagram.com/sacredbreathalchemy?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr
+        icon: /static/img/icon-instagram-block.svg
+      - title: Facebook
+        url: https://www.facebook.com/sacredbreathalchemy
+        icon: /static/img/icon-facebook-block.svg
+  - name: Yuki Lyons
+    image: /static/img/portrait-yuki.png
+    role: Cacao + Meditation Facilitator
+    social_media:
+      - title: Instagram
+        url: https://www.instagram.com/sacredbreathalchemy?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr
+        icon: /static/img/icon-instagram-block.svg

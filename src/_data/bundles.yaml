@@ -4,7 +4,7 @@ price_cards:
   - title: Subscribe
     sub_title:
     price: $28/m
-    price_dimmed:
+    price_linethrough:
     benefit_list:
       - benefit: Two online 60 minute sessions
         bold: true
@@ -26,7 +26,7 @@ price_cards:
   - title: 1 Session
     sub_title: Most popular
     price: $244
-    price_dimmed: $288
+    price_linethrough: $288
     benefit_list:
       - benefit: Two online 60 minute sessions
         bold: true
@@ -48,7 +48,7 @@ price_cards:
   - title: Ceremonial Cacao
     sub_title: 1lb Brick
     price: $55 PER BRICK
-    price_dimmed:
+    price_linethrough:
     benefit_list:
       - benefit: 1lb Brick
         bold: false

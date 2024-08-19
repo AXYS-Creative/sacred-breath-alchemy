@@ -186,11 +186,11 @@ collections:
                   required: true,
                 }
               - {
-                  name: "price_dimmed",
-                  label: "Price Dimmed",
+                  name: "price_linethrough",
+                  label: "Price Linethrough",
                   widget: "string",
                   required: false,
-                  hint: "If offering a discount, this is the higher/original price",
+                  hint: "If offering a discount, this was the higher/original price",
                 }
               - name: "benefit_list"
                 label: "Benefit List"
@@ -218,6 +218,49 @@ collections:
                   required: false,
                   hint: "Should the width of the card take up a full row?",
                 }
+      - name: "about"
+        label: "About"
+        file: "src/_data/about.yaml"
+        preview_path: "#about"
+        editor:
+          preview: true
+        fields:
+          - name: "section_title"
+            label: "Section Title"
+            widget: "string"
+          - name: "team_members"
+            label: "Team Members"
+            label_singular: "Team Member"
+            widget: "list"
+            collapsed: false
+            # max: 2
+            fields:
+              - {
+                  name: "name",
+                  label: "Name",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "image",
+                  label: "Image",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  name: "role",
+                  label: "Role",
+                  widget: "string",
+                  required: true,
+                }
+              - name: "social_media"
+                label: "Social Media"
+                label_singular: "Social Media Account"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Title", widget: "string" }
+                  - { name: "url", label: "Url", widget: "string" }
+                  - { name: "icon", label: "Icon", widget: "image" }
       - name: "text_block_2"
         label: "Text Block 2"
         file: "src/_data/text_block_2.yaml"

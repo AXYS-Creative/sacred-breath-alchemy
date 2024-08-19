@@ -1,0 +1,53 @@
+<section class="about" id="about">
+  <h2>
+    <span class="alchemy-symbol gold">🝢</span>
+    {{ about.section_title }}
+  </h2>
+
+  <div class="team-members-wrapper">
+    {% for member in about.team_members %}
+    <figure class="team-member">
+      <img
+        class="team-member__image"
+        src="{{ member.image }}"
+        alt="{{ member.name }}"
+      />
+      <figcaption>
+        <h3 class="team-member__name h5">{{ member.name }}</h3>
+        <h4 class="team-member__role">{{ member.role }}</h4>
+
+        {% if member.social_media %}
+        <ul class="social-media">
+          {% for account in member.social_media %}
+          <li>
+            <a href="{{ account.url }}">
+              <img
+                class="social-media__icon"
+                src="{{ account.icon }}"
+                alt="{{ account.title }}"
+              />
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="about-text-blocks">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
+      earum suscipit?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
+      earum suscipit?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere provident
+      earum suscipit?
+    </p>
+  </div>
+</section>
