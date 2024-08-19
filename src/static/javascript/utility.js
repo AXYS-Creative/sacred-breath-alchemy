@@ -16,3 +16,8 @@ const handleReturnToTop = (() => {
     logo.focus();
   });
 })();
+
+// Add 'aria-hidden' to each alchemy symbol
+document
+  .querySelectorAll(".alchemy-symbol")
+  .forEach((el) => el.setAttribute("aria-hidden", true));

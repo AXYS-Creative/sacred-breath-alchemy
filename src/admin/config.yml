@@ -43,6 +43,44 @@ collections:
       Have questions or need to add a new config? Visit your Trello board to add a new request.
       Don't have a Trello board? Reach out to Aaron or Bailey → help@axyscreative.com
     files:
+      - name: "hero"
+        label: "Hero Section"
+        file: "src/_data/hero.yaml"
+        preview_path: "#hero"
+        editor:
+          preview: true
+        fields:
+          # - name: "section_title"
+          #   label: "Section Title"
+          #   widget: "string"
+          - name: "hero_lists"
+            label: "Services Lists"
+            label_singular: "List"
+            widget: "list"
+            collapsed: false
+            max: 2
+            fields:
+              - {
+                  name: "symbol",
+                  label: "Alchemy Symbol",
+                  widget: "string",
+                  required: false,
+                  hint: "Optional alchemy symbol above the list. https://glyphy.io/cool-symbols/alchemy",
+                }
+              - {
+                  name: "symbol_color",
+                  label: "Symbol Color",
+                  widget: "select",
+                  multiple: false,
+                  options: ["gold", "pink"],
+                  default: ["gold"],
+                }
+              - name: "hero_list_items"
+                label: "List items"
+                label_singular: "Item"
+                widget: "list"
+                fields:
+                  - { name: "title", label: "Title", widget: "string" }
       - name: "text_block_1"
         label: "Text Block 1"
         file: "src/_data/text_block_1.yaml"
@@ -279,7 +317,7 @@ collections:
                   label: "Alchemy Symbol",
                   widget: "string",
                   required: false,
-                  hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+                  hint: "Optional alchemy symbol above the paragraph. https://glyphy.io/cool-symbols/alchemy",
                 }
               - {
                   name: "color",
@@ -292,7 +330,7 @@ collections:
       - name: "text_block_2"
         label: "Text Block 2"
         file: "src/_data/text_block_2.yaml"
-        preview_path: "#text-block-2"
+        preview_path: "#events"
         editor:
           preview: true
         fields:

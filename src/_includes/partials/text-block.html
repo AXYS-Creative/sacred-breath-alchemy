@@ -2,25 +2,27 @@
   <p class="h3">
     <span class="line1">
       {% if symbol_1 %}
-      <span class="alchemy-symbol gold" aria-hidden="true">{{ symbol_1 }}</span>
+      <span class="alchemy-symbol gold">{{ symbol_1 }}</span>
       {% endif %}
       <!-- prettier-ignore -->
       {{ line_1 }}
     </span>
     <span class="line2">
-      {{ line_2 }}
-      <span class="alchemy-symbol pink" aria-hidden="true">{{ symbol_2 }}</span>
+      {{ line_2 }} {% if symbol_2 %}
+      <span class="alchemy-symbol pink">{{ symbol_2 }}</span>
+      {% endif %}
     </span>
     <span class="line3">
-      {{ line_3 }}
-      <span class="alchemy-symbol pink" aria-hidden="true">{{ symbol_3 }}</span>
+      {{ line_3 }} {% if symbol_3 %}
+      <span class="alchemy-symbol pink">{{ symbol_3 }}</span>
+      {% endif %}
     </span>
     <span class="line4">
       <!-- prettier-ignore -->
       {{ line_4 }} 
       
       {% if symbol_4 %}
-      <span class="alchemy-symbol pink" aria-hidden="true">{{ symbol_4 }}</span>
+      <span class="alchemy-symbol pink">{{ symbol_4 }}</span>
       {% endif %}
     </span>
   </p>
