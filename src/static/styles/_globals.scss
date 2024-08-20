@@ -488,7 +488,8 @@ h6 {
 p,
 a,
 ul,
-small {
+small,
+div {
   @include body-font-styles;
 }
 
@@ -511,7 +512,7 @@ button {
 ul {
   list-style: none;
 
-  &.list {
+  &.classic-list {
     list-style-type: disc;
   }
 }

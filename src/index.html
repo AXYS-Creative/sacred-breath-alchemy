@@ -97,7 +97,7 @@ path: home
       <hr class="gold" aria-hidden="true" />
 
       {% if card.benefit_list %}
-      <ul class="benefit-list list">
+      <ul class="benefit-list classic-list">
         {% for item in card.benefit_list %}
         <li class="benefit-list__item {% if item.bold %}bold{% endif %}">
           {{ item.benefit }}
@@ -134,6 +134,8 @@ path: home
 {% set cta_2_url = "#" %}
 {% set preview_id = "events" %} 
 {% include "./_includes/partials/text-block.html" %}
+
+{% include "./_includes/partials/faq.html" %}
 
 <section id="pre-footer" class="pre-footer">
   <h2

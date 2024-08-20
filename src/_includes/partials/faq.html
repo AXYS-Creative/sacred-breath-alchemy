@@ -1,0 +1,32 @@
+<section class="faq">
+  <h2>{{ faq.section_title }}</h2>
+
+  <div class="faq-list">
+    {% for item in faq.faq_list %}
+    <div class="faq-item">
+      <button
+        class="question tab-element-page"
+        aria-controls="answer-{{ loop.index }}"
+      >
+        <h3 class="h6">{{ item.question }}</h3>
+        <svg
+          class="angle-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <path
+            opacity="1"
+            fill="#1E3050"
+            d="M224 342.6l11.3-11.3 160-160L406.6 160 384 137.4l-11.3 11.3L224 297.4 75.3 148.7 64 137.4 41.4 160l11.3 11.3 160 160L224 342.6z"
+          />
+        </svg>
+      </button>
+      <div class="answer" id="answer-{{ loop.index }}">
+        <p>{{ item.answer }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

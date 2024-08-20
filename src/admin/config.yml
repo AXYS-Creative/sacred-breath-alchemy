@@ -36,15 +36,15 @@ collections:
   #       name: "image"
   #       widget: "image"
   #       required: false
-  - name: "page_content"
-    label: "Page Content"
+  - name: "home_page"
+    label: "Page - Home"
     description: >
       Edit the site content here.
       Have questions or need to add a new config? Visit your Trello board to add a new request.
       Don't have a Trello board? Reach out to Aaron or Bailey → help@axyscreative.com
     files:
       - name: "hero"
-        label: "Hero Section"
+        label: "Section - Hero"
         file: "src/_data/hero.yaml"
         preview_path: "#hero"
         editor:
@@ -82,7 +82,7 @@ collections:
                 fields:
                   - { name: "title", label: "Title", widget: "string" }
       - name: "text_block_1"
-        label: "Text Block 1"
+        label: "Partial - Text Block 1"
         file: "src/_data/text_block_1.yaml"
         preview_path: "#text-block-1"
         editor:
@@ -109,7 +109,7 @@ collections:
                   hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
                 }
       - name: "services_section"
-        label: "Services Section"
+        label: "Section - Services"
         file: "src/_data/services_section.yaml"
         preview_path: "#services"
         editor:
@@ -142,7 +142,7 @@ collections:
                   required: true,
                 }
       - name: "image_slider"
-        label: "Image Slider"
+        label: "Partial - Image Slider"
         file: "src/_data/image_slider.yaml"
         preview_path: "#image-slider"
         editor:
@@ -188,7 +188,7 @@ collections:
                   hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
                 }
       - name: "bundles"
-        label: "Bundles"
+        label: "Section - Bundles"
         file: "src/_data/bundles.yaml"
         preview_path: "#bundles"
         editor:
@@ -257,7 +257,7 @@ collections:
                   hint: "Should the width of the card take up a full row?",
                 }
       - name: "about"
-        label: "About"
+        label: "Section - About"
         file: "src/_data/about.yaml"
         preview_path: "#about"
         editor:
@@ -328,7 +328,7 @@ collections:
                   default: ["gold"],
                 }
       - name: "text_block_2"
-        label: "Text Block 2"
+        label: "Partial - Text Block 2"
         file: "src/_data/text_block_2.yaml"
         preview_path: "#events"
         editor:
@@ -353,4 +353,34 @@ collections:
                   widget: "string",
                   required: false,
                   hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
+                }
+      - name: "faq"
+        label: "Section - FAQ"
+        file: "src/_data/faq.yaml"
+        preview_path: "#faq"
+        editor:
+          preview: true
+        fields:
+          - name: "section_title"
+            label: "Section Title"
+            widget: "string"
+          - name: "section_description"
+            label: "Section Description"
+            widget: "text"
+          - name: "faq_list"
+            label: "FAQ List"
+            widget: "list"
+            collapsed: false
+            fields:
+              - {
+                  name: "question",
+                  label: "Question",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "answer",
+                  label: "Answer",
+                  widget: "text",
+                  required: true,
                 }
