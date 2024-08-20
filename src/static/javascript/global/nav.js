@@ -23,10 +23,10 @@ const toggleNav = () => {
 
   // Update tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) =>
-    el.setAttribute("tabindex", isNavOpen ? "0" : "-1")
+    el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
   tabElementsNav.forEach((el) =>
-    el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
+    el.setAttribute("tabindex", isNavOpen ? "0" : "-1")
   );
 
   // Pevent scroll when nav is open

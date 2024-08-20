@@ -147,7 +147,7 @@ $min-breakpoints: (
 //
 
 @mixin heading($size, $size-xxl, $size-lg, $size-md, $size-sm) {
-  font-family: $brand-font-family-body;
+  font-family: $font-family-body;
   font-size: $size;
   font-weight: 800;
   text-transform: uppercase;
@@ -173,7 +173,7 @@ $min-breakpoints: (
 // Hero & Prefooter
 .h1 {
   @include heading(96px, 6vw, 6vw, 8vw, 32px);
-  font-family: $brand-font-family-heading;
+  font-family: $font-family-heading;
   -webkit-text-stroke-color: var(--primary-font-color);
   -webkit-text-stroke-width: 2px;
 }
@@ -182,7 +182,7 @@ $min-breakpoints: (
 .h2 {
   // @include heading(64px, 56px, 40px, 12px);
   @include heading(64px, 4.4vw, 4.4vw, 6.4vw, 32px);
-  // font-family: $brand-font-family-heading;
+  // font-family: $font-family-heading;
 }
 
 // Text Block Partial & Image Slider
@@ -211,7 +211,7 @@ $min-breakpoints: (
 
 @mixin body-font-styles {
   color: var(--primary-font-color);
-  font-family: $brand-font-family-body;
+  font-family: $font-family-body;
   font-size: 16px;
   font-weight: 400;
 

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // font-family: $brand-font-family-body; // Issues with this overridding mixin? Specificy isn't higher...
+  // font-family: $font-family-body; // Issues with this overridding mixin? Specificy isn't higher...
 
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
@@ -114,7 +114,6 @@ header {
     }
 
     .menu-btn {
-      // border: 1px solid white;
       width: 28px;
       height: 28px;
       transition: 0.2s ease 0s;
@@ -129,7 +128,6 @@ header {
       }
 
       .menu-btn-line-wrapper {
-        // border: $test;
         display: flex;
         flex-wrap: wrap;
         gap: 6px;
@@ -148,15 +146,15 @@ header {
         pointer-events: all;
 
         .menu-btn-line-wrapper {
-          rotate: 45deg;
           gap: 0;
 
           .menu-btn-line:first-of-type {
             translate: 0 1.5px;
+            rotate: 45deg;
           }
           .menu-btn-line:last-of-type {
             translate: 0 -1.5px;
-            rotate: 90deg;
+            rotate: -45deg;
           }
         }
       }
@@ -202,23 +200,23 @@ header {
   }
 }
 
-nav {
+.nav-menu {
   display: none;
-  position: fixed;
-  top: 0;
-  // background: transparent;
-  background: navy;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-  overflow: auto;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 4;
-  // transition: background 0s ease 0.4s, opacity 0s ease 0.75s;
 
   @include mq-max("lg") {
     display: block;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 4;
+    // transition: background 1s ease 0s, opacity 0.3s ease 0.75s;
+    transition: 0.5s ease 0.3s;
   }
 
   .width-constraint {
@@ -244,14 +242,18 @@ nav {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    // user-select: none;
-    // transition: opacity 0s ease 0.3s;
+    transition: opacity 0s ease 0.3s;
 
     li {
       a {
-        font-family: $brand-font-family-body;
+        font-family: $font-family-body;
       }
     }
+  }
+
+  .nav-footer-links,
+  .nav-social-media {
+    transition: 0.3s ease;
   }
 
   .nav-links {
@@ -260,6 +262,7 @@ nav {
     gap: 12px;
     top: 50%;
     translate: 0 -50%;
+    transition: 0.3s ease;
 
     li {
       display: flex;
@@ -269,25 +272,51 @@ nav {
         border-radius: 4px;
         box-shadow: 0 0 0 3px rgba(#2353c1, 0.75), 0 0 0 5px rgba(#fff, 0.75);
       }
+
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          $transition: 0.25s + ($i - 2) * 0.05s;
+          $delay: 0.1s + ($i - 2) * 0.02s;
+
+          .nav-link {
+            transition: 0.2s ease, translate $transition ease $delay;
+            // transition: 0.3s ease;
+          }
+        }
+      }
     }
 
     .nav-link {
       @extend .h2;
+      font-family: $font-family-heading;
       text-transform: uppercase;
       line-height: 100%;
       height: 100%;
       translate: 0 100%;
-      border-left: 4px solid transparent;
-      // transition: 0.2s ease, translate 0.3s ease 0.6s;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-repeat: no-repeat;
+      -webkit-text-stroke: 1px $white;
+      -webkit-text-fill-color: transparent;
+
+      background-size: 220% 100%;
+      -webkit-background-size: 220% 100%;
+
+      transition: 2.6s ease;
+      -webkit-transition: 2.6s ease;
+
+      background-image: linear-gradient(
+        135deg,
+        $white 0%,
+        $white 50%,
+        transparent 50.1%
+      );
 
       &:hover,
       &:focus-visible {
-        padding-left: 24px;
-        border-color: var(--primary-accent-color);
-
-        @include mq-max("xxl") {
-          padding-left: 16px;
-        }
+        background-size: 0 100%;
+        -webkit-background-size: 0 100%;
       }
     }
   }
@@ -311,19 +340,6 @@ nav {
     @include mq-max("sm") {
       gap: 4px;
       bottom: $body-padding-md;
-    }
-
-    li {
-      .nav-footer-link {
-        padding: 4px;
-        border-bottom: 2px solid transparent;
-        transition: 0.2s ease;
-
-        &:hover,
-        &:focus-visible {
-          border-color: var(--primary-accent-color);
-        }
-      }
     }
   }
 
@@ -359,23 +375,11 @@ nav {
     opacity: 1;
     pointer-events: all;
     background: var(--background-color);
-    transition: background 0s ease;
+    // transition: background 0s ease;
+    transition: 0.1s ease 0s, background 0.1s ease;
 
     .nav-abstract {
       animation: nav-abstract-open 0.75s ease 0s forwards;
-    }
-
-    .nav-links {
-      @for $i from 2 through 10 {
-        &:nth-of-type(#{$i}) {
-          $transition: 0.25s + ($i - 2) * 0.2s;
-          $delay: 0.65s + ($i - 2) * 0.05s;
-
-          // .nav-link {
-          //   transition: 0.2s ease, translate $transition ease $delay;
-          // }
-        }
-      }
     }
 
     .nav-links,
@@ -383,7 +387,6 @@ nav {
     .nav-social-media {
       opacity: 1;
       pointer-events: all;
-      // transition: opacity 0s ease 0.3s;
 
       .nav-link {
         translate: 0 0;
