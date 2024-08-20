@@ -22,28 +22,72 @@ price_cards:
         bold: false
     cta_text: Subscribe
     cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/WSRYIDTLIAF2N33XDA7DX2VR
-    full_width: false
+    full_width: true
   - title: 1 Session
     sub_title: Most popular
     price: $244
     price_linethrough: $288
     benefit_list:
-      - benefit: Two online 60 minute sessions
+      - benefit: Choose one online 90 minute sessions
         bold: true
       - benefit: Sound journey and meditations
         bold: false
-      - benefit: Sacred opening prayer
+      - benefit: Breath journey
         bold: false
-      - benefit: Cacao activation
+      - benefit: Cacao session
         bold: false
-      - benefit: Supportive community & environment
+      - benefit: Gong lesson
         bold: false
-      - benefit: On-demand access to recorded sessions
+      - benefit: Reiki and sound journey
         bold: false
-      - benefit: Access exclusive monthly content
+      - benefit: Cacao, breathwork and soundjorney
         bold: false
     cta_text: Purchase
     cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/FRAOZYEINIVAUNI25JCKH2UH
+    full_width: false
+  - title: 3 Sessions
+    sub_title:
+    price: $699
+    price_linethrough: $764
+    benefit_list:
+      - benefit: Choose three online 90 minute sessions
+        bold: true
+      - benefit: Sound journey and meditations
+        bold: false
+      - benefit: Breath journey
+        bold: false
+      - benefit: Cacao session
+        bold: false
+      - benefit: Gong lesson
+        bold: false
+      - benefit: Reiki and sound journey
+        bold: false
+      - benefit: Cacao, breathwork and soundjorney
+        bold: false
+    cta_text: Purchase
+    cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/HDJAWE4MD6KNC5CVDJN67GZS
+    full_width: false
+  - title: 5 Sessions
+    sub_title:
+    price: $1,111
+    price_linethrough: $1,444
+    benefit_list:
+      - benefit: Choose five online 90 minute sessions
+        bold: true
+      - benefit: Sound journey and meditations
+        bold: false
+      - benefit: Breath journey
+        bold: false
+      - benefit: Cacao session
+        bold: false
+      - benefit: Gong lesson
+        bold: false
+      - benefit: Reiki and sound journey
+        bold: false
+      - benefit: Cacao, breathwork and soundjorney
+        bold: false
+    cta_text: Purchase
+    cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/FHVDVGJCO2GMTA5BJXU2C7BO
     full_width: false
   - title: Ceremonial Cacao
     sub_title: 1lb Brick

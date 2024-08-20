@@ -364,13 +364,13 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
-          - name: "title_symbol"
+          - name: "section_title_symbol"
             label: "Section Title Symbol"
             widget: "string"
             required: false
             hint: "Optional alchemy symbol next the title. https://glyphy.io/cool-symbols/alchemy"
-          - name: "symbol_color"
-            label: "Symbol Color"
+          - name: "title_symbol_color"
+            label: "Title Symbol Color"
             widget: "select"
             required: false
             options: ["gold", "pink"]
