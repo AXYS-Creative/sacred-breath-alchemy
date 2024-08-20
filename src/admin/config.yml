@@ -364,11 +364,34 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+          - name: "title_symbol"
+            label: "Section Title Symbol"
+            widget: "string"
+            required: false
+            hint: "Optional alchemy symbol next the title. https://glyphy.io/cool-symbols/alchemy"
+          - name: "symbol_color"
+            label: "Symbol Color"
+            widget: "select"
+            required: false
+            options: ["gold", "pink"]
+            default: ["gold"]
           - name: "section_description"
             label: "Section Description"
             widget: "text"
+          - name: "section_description_symbol"
+            label: "Section Description Symbol"
+            widget: "string"
+            required: false
+            hint: "Optional alchemy symbol above the paragraph. https://glyphy.io/cool-symbols/alchemy"
+          - name: "description_symbol_color"
+            label: "Description Symbol Color"
+            widget: "select"
+            required: false
+            options: ["gold", "pink"]
+            default: ["gold"]
           - name: "faq_list"
             label: "FAQ List"
+            label_singular: "FAQ item"
             widget: "list"
             collapsed: false
             fields:

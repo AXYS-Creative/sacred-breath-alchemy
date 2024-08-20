@@ -1146,15 +1146,44 @@ ul.classic-list {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.faq h2 {
-  margin-block-end: unset;
+.faq .faq-title-wrapper {
   flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
   max-width: 33%;
 }
 @media screen and (max-width: 1200px) {
-  .faq h2 {
-    margin-block-end: 64px;
+  .faq .faq-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
   }
+}
+.faq .faq-title-wrapper h2 {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1200px) {
+  .faq .faq-title-wrapper h2 {
+    flex: 1;
+  }
+}
+.faq .faq-title-wrapper p {
+  width: 80%;
+}
+@media screen and (max-width: 1200px) {
+  .faq .faq-title-wrapper p {
+    width: 64%;
+    flex: 1;
+    margin-block-end: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .faq .faq-title-wrapper p {
+    width: auto;
+  }
+}
+.faq .faq-title-wrapper p .alchemy-symbol {
+  display: block;
 }
 .faq .faq-list {
   display: flex;

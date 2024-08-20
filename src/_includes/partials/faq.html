@@ -1,5 +1,19 @@
-<section class="faq">
-  <h2>{{ faq.section_title }}</h2>
+<section class="faq" id="faq">
+  <div class="faq-title-wrapper">
+    <h2>
+      {{ faq.section_title }}
+      <span class="alchemy-symbol {{ faq.title_symbol_color }}">
+        {{ faq.section_title_symbol }}
+      </span>
+    </h2>
+
+    <p>
+      <span class="alchemy-symbol {{ faq.description_symbol_color }}">
+        {{ faq.section_description_symbol }}
+      </span>
+      {{ faq.section_description }}
+    </p>
+  </div>
 
   <div class="faq-list">
     {% for item in faq.faq_list %}

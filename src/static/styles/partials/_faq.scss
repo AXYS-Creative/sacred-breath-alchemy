@@ -2,13 +2,41 @@
   @include row-start(space-between);
   flex-wrap: wrap;
 
-  h2 {
-    margin-block-end: unset;
+  .faq-title-wrapper {
     flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
     max-width: 33%;
 
     @include mq-max("xl") {
-      margin-block-end: $section-title-vertical-spacing-xxl;
+      @include column-start;
+      max-width: 100%;
+    }
+
+    h2 {
+      flex-shrink: 0;
+
+      @include mq-max("xl") {
+        flex: 1;
+      }
+    }
+
+    p {
+      width: 80%;
+
+      @media all {
+        @include mq-max("xl") {
+          width: 64%;
+          flex: 1;
+          margin-block-end: 48px;
+        }
+
+        @include mq-max("lg") {
+          width: auto;
+        }
+      }
+
+      .alchemy-symbol {
+        display: block;
+      }
     }
   }
 
