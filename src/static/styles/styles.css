@@ -631,6 +631,7 @@ header.menu-active .header-logo .logo-text {
   align-items: center;
   bottom: 64px;
   gap: 48px;
+  translate: -8px 0;
 }
 @media screen and (min-width: 1921px) {
   .nav-menu .nav-footer-links {

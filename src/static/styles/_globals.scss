@@ -326,6 +326,7 @@ header {
     @include row-center;
     bottom: $body-padding;
     gap: 48px;
+    translate: -8px 0; // offset link padding
 
     @include mq-max("lg") {
       gap: 24px;
