@@ -1,11 +1,11 @@
 images:
-  - src: /static/img/slider-img-1.png
+  - src: /static/img/slider-image-1.png
     description: A sound healing session. A large group joined together.
-  - src: /static/img/slider-img-2.png
+  - src: /static/img/slider-image-2.png
     description: A woman during a sound healing session.
-  - src: /static/img/slider-img-4.png
+  - src: /static/img/slider-image-3.png
     description: A group during a session.
-  - src: /static/img/slider-img-3.png
+  - src: /static/img/slider-image-4.png
     description: A man deep in resolve during a session.
 paragraph_lines:
   - line: Discover the healing power of the breath, find
