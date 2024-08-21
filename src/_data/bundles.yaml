@@ -1,8 +1,8 @@
-section_title: Join Us
+section_title: Join us
 
 price_cards:
   - title: Subscribe
-    sub_title:
+    sub_title: Best deal
     price: $28/m
     price_linethrough:
     benefit_list:
@@ -24,7 +24,7 @@ price_cards:
     cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/WSRYIDTLIAF2N33XDA7DX2VR
     full_width: true
   - title: 1 Session
-    sub_title: Most popular
+    sub_title:
     price: $244
     price_linethrough: $288
     benefit_list:
@@ -46,7 +46,7 @@ price_cards:
     cta_url: https://checkout.square.site/merchant/ML6ZR24APWSAH/checkout/FRAOZYEINIVAUNI25JCKH2UH
     full_width: false
   - title: 3 Sessions
-    sub_title:
+    sub_title: Most popular
     price: $699
     price_linethrough: $764
     benefit_list:

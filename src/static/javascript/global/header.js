@@ -13,5 +13,5 @@ if (headerBanner) {
 
   setTimeout(() => {
     headerBanner.classList.add("show-banner");
-  }, 1000);
+  }, 4000);
 }

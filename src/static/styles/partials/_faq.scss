@@ -30,7 +30,7 @@
         }
 
         @include mq-max("lg") {
-          width: auto;
+          width: 80%;
         }
       }
 
@@ -46,8 +46,14 @@
     flex: 1 2 675px;
     padding-block-start: 56px;
 
-    @include mq-max("xxl") {
-      gap: 72px;
+    @media all {
+      @include mq-max("xxl") {
+        gap: 72px;
+      }
+
+      @include mq-max("md") {
+        gap: 96px;
+      }
     }
 
     .faq-item {

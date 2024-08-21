@@ -254,7 +254,7 @@
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: initial;
 }
 @media screen and (max-width: 1512px) {
@@ -274,7 +274,7 @@
 }
 @media screen and (max-width: 480px) {
   .h6, h6 {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -1361,7 +1361,7 @@ ul.classic-list {
 }
 @media screen and (max-width: 1024px) {
   .faq .faq-title-wrapper p {
-    width: auto;
+    width: 80%;
   }
 }
 .faq .faq-title-wrapper p .alchemy-symbol {
@@ -1379,6 +1379,11 @@ ul.classic-list {
 @media screen and (max-width: 1512px) {
   .faq .faq-list {
     gap: 72px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faq .faq-list {
+    gap: 96px;
   }
 }
 .faq .faq-list .faq-item {
