@@ -138,8 +138,21 @@ collections:
                   name: "description",
                   label: "Description",
                   widget: "text",
-                  hint: "Try to keep it under 180 characters if you can.",
                   required: true,
+                  hint: "Try to keep it under 180 characters if you can.",
+                }
+              - {
+                  name: "image",
+                  label: "Image Source",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  name: "image_description",
+                  label: "Image Description",
+                  widget: "string",
+                  required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief and avoid words like 'image, photo, picture, etc.'",
                 }
       - name: "image_slider"
         label: "Partial - Image Slider"

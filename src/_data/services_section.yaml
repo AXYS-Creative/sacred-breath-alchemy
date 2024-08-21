@@ -1,17 +1,26 @@
 services:
   - title: Alchemical Breathwork
-    description: Embark on a transformative journey with conscious connected breath,
+    description:
+      Embark on a transformative journey with conscious connected breath,
       guided by Jade, to release tension and achieve deep relaxation, inner
       healing, and renewed clarity.
     symbol: 🝲
+    image: /static/img/service-breathwork.jpg
+    image_description: A man lying down, focused on his breathing
   - title: Sacred Sound Healing
-    description: Embark on a transformative journey with alchemical sound healing,
+    description:
+      Embark on a transformative journey with alchemical sound healing,
       guided by Jade Lyons, where deep relaxation, stress relief, and spiritual
       connection are achieved through a masterful blend of gongs, healing
       instruments, and ambient sounds.
     symbol: 🜻
+    image: /static/img/service-sound-healing.jpg
+    image_description: Jade tapping a gong with a mallet
   - title: Heart Opening Cacao Ceremony
-    description: Experience Yuki’s captivating cacao ceremony, a fusion of Mayan and
+    description:
+      Experience Yuki’s captivating cacao ceremony, a fusion of Mayan and
       Japanese traditions, guiding you on a transformative journey of
       self-discovery, inner harmony, and profound connection.
     symbol: 🝚
+    image: /static/img/service-cacao-ceremony.jpg
+    image_description: Common tools for cacao ceremonies

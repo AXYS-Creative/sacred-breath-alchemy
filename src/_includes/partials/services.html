@@ -5,6 +5,11 @@
 
   {% for service in services_section.services %}
   <div class="service-block {% if loop.last %}service-block--last{% endif %}">
+    <img
+      class="service-block__image"
+      src="{{ service.image }}"
+      alt="{{ service.image_description }}"
+    />
     <h3 class="h4 service-block__title">
       {{ service.title }}
       <span class="alchemy-symbol pink" aria-hidden="true">
