@@ -229,13 +229,14 @@ body {
     }
 
     &__btn-close {
-      border: $test;
+      padding: 16px;
       position: absolute;
       top: 50%;
       translate: 224px -50%;
 
       @include mq-max("xxl") {
         translate: 200px -50%;
+        padding: 12px;
       }
 
       @include mq-max("lg") {

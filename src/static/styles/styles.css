@@ -528,7 +528,7 @@ body > * {
   background: var(--background-color);
 }
 .site-header .header-banner__btn-close {
-  border: 2px dashed rgba(50, 205, 50, 0.75);
+  padding: 16px;
   position: absolute;
   top: 50%;
   translate: 224px -50%;
@@ -536,6 +536,7 @@ body > * {
 @media screen and (max-width: 1512px) {
   .site-header .header-banner__btn-close {
     translate: 200px -50%;
+    padding: 12px;
   }
 }
 @media screen and (max-width: 1024px) {
