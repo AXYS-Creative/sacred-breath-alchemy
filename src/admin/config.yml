@@ -43,6 +43,20 @@ collections:
       Have questions or need to add a new config? Visit your Trello board to add a new request.
       Don't have a Trello board? Reach out to Aaron or Bailey → help@axyscreative.com
     files:
+      - name: "discount_banner"
+        label: "Header - Discount Banner"
+        file: "src/_data/header.yaml"
+        preview_path: "#"
+        editor:
+          preview: true
+        fields:
+          - name: "banner_toggle"
+            label: "Banner Toggle"
+            widget: "boolean"
+            hint: "Hide or show the discount banner."
+          - name: "banner_message"
+            label: "Banner Message"
+            widget: "string"
       - name: "hero"
         label: "Section - Hero"
         file: "src/_data/hero.yaml"

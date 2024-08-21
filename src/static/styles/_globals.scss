@@ -27,7 +27,7 @@ body {
   }
 }
 
-header {
+.site-header {
   $logo-text-width: 73px;
 
   & > * {
@@ -49,7 +49,7 @@ header {
       }
 
       @include mq-max("md") {
-        top: 48px;
+        top: 56px;
       }
     }
 
@@ -75,16 +75,18 @@ header {
     transition: 0.4s ease;
     // mix-blend-mode: difference;
 
-    @include mq-max("xxl") {
-      gap: 32px;
-    }
+    @media all {
+      @include mq-max("xxl") {
+        gap: 32px;
+      }
 
-    @include mq-max("xl") {
-      gap: 16px;
-    }
+      @include mq-max("xl") {
+        gap: 16px;
+      }
 
-    @include mq-max("lg") {
-      display: none;
+      @include mq-max("lg") {
+        display: none;
+      }
     }
 
     &__link {
@@ -100,17 +102,19 @@ header {
   .menu-btn-wrapper {
     display: none;
 
-    @include mq-max("lg") {
-      @include right-spacing;
-      top: 74px;
-      translate: 0 -50%;
-      transition: opacity 0.3s ease;
-      mix-blend-mode: difference;
-      display: block;
-    }
+    @media all {
+      @include mq-max("lg") {
+        @include right-spacing;
+        top: 74px;
+        translate: 0 -50%;
+        transition: opacity 0.3s ease;
+        mix-blend-mode: difference;
+        display: block;
+      }
 
-    @include mq-max("md") {
-      top: 56px;
+      @include mq-max("md") {
+        top: 64px;
+      }
     }
 
     .menu-btn {
@@ -165,6 +169,102 @@ header {
     }
   }
 
+  .header-banner {
+    @include row-center;
+    flex-wrap: nowrap;
+    background: var(--primary-accent-color);
+    left: 0;
+    width: 100vw;
+    padding: 24px;
+    translate: 0 -100%;
+    transition: translate 0.3s ease;
+
+    @media all {
+      @include mq-max("xxl") {
+        padding: 20px;
+      }
+    }
+
+    &__message {
+      @include absolute-center;
+      color: var(--background-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-wrap: nowrap;
+
+      @include mq-max("xxl") {
+        font-size: 14px;
+      }
+
+      @include mq-max("md") {
+        font-size: 12px;
+      }
+    }
+
+    &__cta {
+      color: var(--background-color);
+      position: absolute;
+      translate: 32px -4px;
+      text-wrap: nowrap;
+      font-weight: 700;
+
+      @media all {
+        @include mq-max("xxl") {
+          font-size: 12px;
+        }
+
+        @include mq-max("lg") {
+          display: none;
+        }
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: var(--primary-font-color);
+      }
+
+      &::before {
+        background: var(--background-color);
+      }
+    }
+
+    &__btn-close {
+      border: $test;
+      position: absolute;
+      top: 50%;
+      translate: 224px -50%;
+
+      @include mq-max("xxl") {
+        translate: 200px -50%;
+      }
+
+      @include mq-max("lg") {
+        translate: 24px -50%;
+      }
+
+      .close-line {
+        @include absolute-center;
+        padding: 2px 12px;
+        background-color: var(--background-color);
+
+        @include mq-max("xxl") {
+          padding: 1px 10px;
+        }
+
+        &:first-of-type {
+          rotate: 45deg;
+        }
+        &:last-of-type {
+          rotate: -45deg;
+        }
+      }
+    }
+
+    &.show-banner {
+      translate: 0 0;
+    }
+  }
+
   &.away-from-top {
     .header-logo {
       .logo-text {
@@ -185,19 +285,14 @@ header {
     }
   }
 
-  &.menu-active {
-    .header-logo {
-      .logo-text {
-        width: $logo-text-width;
-        transition: 0.2s ease 0.65s;
-      }
-    }
-
-    // .menu-btn-wrapper {
-    //   opacity: 1;
-    //   pointer-events: all;
-    // }
-  }
+  // &.menu-active {
+  //   .header-logo {
+  //     .logo-text {
+  //       width: $logo-text-width;
+  //       transition: 0.2s ease 0.65s;
+  //     }
+  //   }
+  // }
 }
 
 .nav-menu {
@@ -279,8 +374,8 @@ header {
           $delay: 0.1s + ($i - 2) * 0.02s;
 
           .nav-link {
-            transition: 0.2s ease, translate $transition ease $delay;
-            // transition: 0.3s ease;
+            transition: 0.3s ease, padding 0.2s ease,
+              translate $transition ease $delay;
           }
         }
       }
@@ -302,12 +397,11 @@ header {
 
       background-size: 220% 100%;
       -webkit-background-size: 220% 100%;
-
-      transition: 2.6s ease;
-      -webkit-transition: 2.6s ease;
+      background-position: right;
+      // transition set above in li loop
 
       background-image: linear-gradient(
-        135deg,
+        300deg,
         $white 0%,
         $white 50%,
         transparent 50.1%
@@ -315,6 +409,7 @@ header {
 
       &:hover,
       &:focus-visible {
+        padding-inline-start: 12px;
         background-size: 0 100%;
         -webkit-background-size: 0 100%;
       }
@@ -328,19 +423,25 @@ header {
     gap: 48px;
     translate: -8px 0; // offset link padding
 
-    @include mq-max("lg") {
-      gap: 24px;
+    @media all {
+      @include mq-max("lg") {
+        gap: 24px;
+      }
+
+      @include mq-max("md") {
+        @include column-start;
+        gap: 12px;
+        bottom: $body-padding-xxl;
+      }
+
+      @include mq-max("sm") {
+        gap: 4px;
+        bottom: $body-padding-md;
+      }
     }
 
-    @include mq-max("md") {
-      @include column-start;
-      gap: 12px;
-      bottom: $body-padding-xxl;
-    }
-
-    @include mq-max("sm") {
-      gap: 4px;
-      bottom: $body-padding-md;
+    .nav-footer-link {
+      font-size: 12px;
     }
   }
 

@@ -1,6 +1,6 @@
 const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
-  siteHeader = document.querySelector(".site-header"),
+  // siteHeader = document.querySelector(".site-header"),
   headerLogo = document.querySelector(".header-logo"),
   navLinks = document.querySelectorAll(".nav-link"),
   navFooterLinks = document.querySelectorAll(".nav-footer-link"),
@@ -14,7 +14,7 @@ let isNavOpen;
 const toggleNav = () => {
   navMenu.classList.toggle("menu-active");
   menuBtn.classList.toggle("menu-active");
-  siteHeader.classList.toggle("menu-active");
+  // siteHeader.classList.toggle("menu-active");
 
   isNavOpen = navMenu.classList.contains("menu-active");
 
@@ -38,7 +38,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 1024 && isNavOpen) {
     navMenu.classList.remove("menu-active");
     menuBtn.classList.remove("menu-active");
-    siteHeader.classList.remove("menu-active");
+    // siteHeader.classList.remove("menu-active");
 
     document.body.style.overflow = "auto";
 
@@ -56,7 +56,7 @@ const closeNav = () => {
 
   navMenu.classList.remove("menu-active");
   menuBtn.classList.remove("menu-active");
-  siteHeader.classList.remove("menu-active");
+  // siteHeader.classList.remove("menu-active");
 
   navMenu.setAttribute("aria-hidden", "true");
   menuBtn.setAttribute("aria-expanded", "false");
