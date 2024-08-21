@@ -9,6 +9,7 @@ if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
   imageSources.forEach((src) => {
     const img = document.createElement("img");
     img.src = src;
+    img.alt = "";
     img.classList.add("mouse-cursor__image");
     cursor.appendChild(img);
   });

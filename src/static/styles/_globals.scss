@@ -188,13 +188,10 @@ body {
     &__message {
       @include absolute-center;
       color: var(--background-color);
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       text-wrap: nowrap;
-
-      @include mq-max("xxl") {
-        font-size: 14px;
-      }
+      font-size: 14px;
 
       @include mq-max("md") {
         font-size: 12px;
@@ -206,7 +203,8 @@ body {
       position: absolute;
       translate: 32px -4px;
       text-wrap: nowrap;
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: 600;
 
       @media all {
         @include mq-max("xxl") {
@@ -234,19 +232,32 @@ body {
       top: 50%;
       translate: 224px -50%;
 
-      @include mq-max("xxl") {
-        translate: 200px -50%;
-        padding: 12px;
+      @media all {
+        @include mq-max("xxl") {
+          translate: 200px -50%;
+          padding: 12px;
+        }
+
+        @include mq-max("lg") {
+          translate: 24px -50%;
+        }
       }
 
-      @include mq-max("lg") {
-        translate: 24px -50%;
+      &:hover,
+      &:focus-visible {
+        .close-line {
+          background-color: var(--primary-font-color);
+        }
       }
 
       .close-line {
         @include absolute-center;
         padding: 2px 12px;
         background-color: var(--background-color);
+
+        @include mq-motion-allow {
+          transition: 0.3s ease;
+        }
 
         @include mq-max("xxl") {
           padding: 1px 10px;

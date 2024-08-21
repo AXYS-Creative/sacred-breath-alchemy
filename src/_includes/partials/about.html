@@ -7,11 +7,7 @@
   <div class="team-members-wrapper">
     {% for member in about.team_members %}
     <figure class="team-member">
-      <img
-        class="team-member__image"
-        src="{{ member.image }}"
-        alt="{{ member.name }}"
-      />
+      <img class="team-member__image" src="{{ member.image }}" alt="" />
       <figcaption>
         <h3 class="team-member__name h5">{{ member.name }}</h3>
         <h4 class="team-member__role">{{ member.role }}</h4>

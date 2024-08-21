@@ -490,14 +490,10 @@ body > * {
   left: 50%;
   translate: -50% -50%;
   color: var(--background-color);
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   text-wrap: nowrap;
-}
-@media screen and (max-width: 1512px) {
-  .site-header .header-banner__message {
-    font-size: 14px;
-  }
+  font-size: 14px;
 }
 @media screen and (max-width: 768px) {
   .site-header .header-banner__message {
@@ -509,7 +505,8 @@ body > * {
   position: absolute;
   translate: 32px -4px;
   text-wrap: nowrap;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
 }
 @media screen and (max-width: 1512px) {
   .site-header .header-banner__cta {
@@ -544,6 +541,9 @@ body > * {
     translate: 24px -50%;
   }
 }
+.site-header .header-banner__btn-close:hover .close-line, .site-header .header-banner__btn-close:focus-visible .close-line {
+  background-color: var(--primary-font-color);
+}
 .site-header .header-banner__btn-close .close-line {
   position: absolute;
   top: 50%;
@@ -551,6 +551,11 @@ body > * {
   translate: -50% -50%;
   padding: 2px 12px;
   background-color: var(--background-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .site-header .header-banner__btn-close .close-line {
+    transition: 0.3s ease;
+  }
 }
 @media screen and (max-width: 1512px) {
   .site-header .header-banner__btn-close .close-line {
@@ -1748,7 +1753,7 @@ ul.classic-list {
   gap: 12px;
 }
 .bundles .bundle-card .card-title small {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .bundles .bundle-card hr {
   width: 100%;

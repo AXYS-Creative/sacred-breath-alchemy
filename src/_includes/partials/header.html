@@ -1,4 +1,26 @@
 <header class="site-header" aria-label="Site Header">
+  {% if header.banner_toggle %}
+  <div class="header-banner" id="discount-banner">
+    <p class="header-banner__message">
+      {{ header.banner_message }}
+      <a
+        class="header-banner__cta classic-link tab-element-page"
+        href="#bundles"
+      >
+        View Bundles
+      </a>
+      <button
+        class="header-banner__btn-close"
+        aria-controls="discount-banner"
+        aria-label="Click to close the discount banner"
+      >
+        <span class="close-line" aria-hidden="true"></span>
+        <span class="close-line" aria-hidden="true"></span>
+      </button>
+    </p>
+  </div>
+  {% endif %}
+
   <a class="header-logo" href="{{ settings.url }}">
     <img
       class="header-logo__icon"
@@ -32,26 +54,4 @@
       </div>
     </button>
   </div>
-
-  {% if header.banner_toggle %}
-  <div class="header-banner" id="discount-banner">
-    <p class="header-banner__message">
-      {{ header.banner_message }}
-      <a
-        class="header-banner__cta classic-link tab-element-page"
-        href="#bundles"
-      >
-        View Bundles
-      </a>
-      <button
-        class="header-banner__btn-close"
-        aria-controls="discount-banner"
-        aria-label="Click to close the discount banner"
-      >
-        <span class="close-line" aria-hidden="true"></span>
-        <span class="close-line" aria-hidden="true"></span>
-      </button>
-    </p>
-  </div>
-  {% endif %}
 </header>
