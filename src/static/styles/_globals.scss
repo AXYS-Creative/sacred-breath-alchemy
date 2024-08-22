@@ -34,6 +34,12 @@ body {
   & > * {
     z-index: 5;
     position: fixed;
+
+    @include mq-motion-allow {
+      // Having this on the site-header caused strange z-index issues?
+      opacity: 0;
+      animation: fade 0s linear $finish-time + $step-delay forwards;
+    }
   }
 
   .header-logo {
@@ -312,7 +318,7 @@ body {
     // }
 
     .header-links {
-      translate: 0 -250%;
+      translate: 0 -360%;
       opacity: 0;
       pointer-events: none;
 
