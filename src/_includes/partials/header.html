@@ -4,47 +4,37 @@
   <div
     class="header-banner tab-element-page"
     aria-label="Click to close the discount banner"
+    role="button"
   >
     <p class="header-banner__message" aria-label="{{ header.banner_message }}">
       <span class="marquee-slider" aria-hidden="true">
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text md-screen-and-up">
           {{ header.banner_message }}&nbsp;
         </span>
-        <span class="alchemy-symbol md-screen-and-up">🜹</span>
+        <span class="alchemy-symbol md-screen-and-up"
+          >{{ header.banner_spacer_symbol }}</span
+        >
       </span>
       <span class="marquee-slider" aria-hidden="true">
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text"> {{ header.banner_message }}&nbsp;</span>
-        <span class="alchemy-symbol">🜹</span>
+        <span class="alchemy-symbol">{{ header.banner_spacer_symbol }}</span>
         <span class="message-text md-screen-and-up">
           {{ header.banner_message }}&nbsp;
         </span>
-        <span class="alchemy-symbol md-screen-and-up">🜹</span>
+        <span class="alchemy-symbol md-screen-and-up"
+          >{{ header.banner_spacer_symbol }}</span
+        >
       </span>
-
-      <!-- <a
-          class="header-banner__cta classic-link tab-element-page"
-          href="#bundles"
-        >
-          View Bundles
-        </a> -->
-      <!-- <button
-          class="header-banner__btn-close"
-          aria-controls="discount-banner"
-          aria-label="Click to close the discount banner"
-        >
-          <span class="close-line" aria-hidden="true"></span>
-          <span class="close-line" aria-hidden="true"></span>
-        </button> -->
     </p>
   </div>
   {% endif %}

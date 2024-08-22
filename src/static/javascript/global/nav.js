@@ -7,6 +7,7 @@ const navMenu = document.querySelector(".nav-menu"),
   tabElementsPage = document.querySelectorAll(".tab-element-page"),
   tabElementsNav = document.querySelectorAll(".tab-element-nav");
 
+tabElementsPage.forEach((elem) => elem.setAttribute("tabIndex", "0")); // Manually set for discount banner
 tabElementsNav.forEach((elem) => elem.setAttribute("tabIndex", "-1"));
 
 let isNavOpen;

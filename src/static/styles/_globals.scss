@@ -28,7 +28,6 @@ body {
 }
 
 .site-header {
-  // $logo-text-width: 73px;
   $banner-height: 48px;
   $banner-height-xxl: 40px;
 
@@ -176,7 +175,7 @@ body {
     height: $banner-height;
     cursor: pointer;
     translate: 0 -100%;
-    transition: translate 0.3s ease, opacity 0.3s ease;
+    transition: translate 0.3s ease, filter 0.3s ease;
 
     @media all {
       @include mq-max("xxl") {
@@ -186,7 +185,7 @@ body {
 
     &:hover,
     &:focus-visible {
-      opacity: 0.8;
+      filter: brightness(1.2);
     }
 
     &__message {
@@ -340,15 +339,6 @@ body {
       }
     }
   }
-
-  // &.menu-active {
-  //   .header-logo {
-  //     .logo-text {
-  //       width: $logo-text-width;
-  //       transition: 0.2s ease 0.65s;
-  //     }
-  //   }
-  // }
 }
 
 .nav-menu {
@@ -687,11 +677,38 @@ ul {
   flex-shrink: 0;
 
   .cta-1 {
+    position: relative;
     border: 2px solid var(--primary-font-color);
     padding: 12px 24px;
+    transition: 0.5s $cubic-ease-sudden;
 
     @include mq-max("md") {
       padding: 10px 20px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--secondary-accent-color);
+      color: var(--background-color);
+
+      &::after {
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: 0;
+      height: 100%;
+      background: var(--secondary-accent-color);
+      transition: 0.5s $cubic-ease-sudden;
+      z-index: -1;
     }
   }
 }
