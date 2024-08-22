@@ -30,6 +30,7 @@
   }
 
   .h1 {
+    width: min(88vw, 1440px);
     text-align: center;
     -webkit-text-stroke: 2px var(--primary-font-color);
 

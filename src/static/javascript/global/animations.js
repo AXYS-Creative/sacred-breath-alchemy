@@ -49,32 +49,51 @@ responsiveGsap.add(
       });
     })();
 
-    // // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
-    // const wordSplit = (() => {
-    //   const spanWordsInParagraph = (paragraph) => {
-    //     const text = paragraph.textContent || paragraph.innerText;
-    //     const words = text.trim().split(/\s+/);
+    // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
+    const wordSplit = (() => {
+      const spanWordsInParagraph = (paragraph) => {
+        const text = paragraph.textContent || paragraph.innerText;
+        const words = text.trim().split(/\s+/);
 
-    //     const wrappedWords = words
-    //       .map(
-    //         (word) =>
-    //           `<span class="outter-span"><span class="inner-span">${word}</span></span>`
-    //       )
-    //       .join(" ");
+        const wrappedWords = words
+          .map(
+            (word) =>
+              `<span class="outer-span">
+                <span class="inner-span">${word}</span>
+                <span class="inner-span">${word}</span>
+              </span>`
+          )
+          .join(" ");
 
-    //     paragraph.innerHTML = wrappedWords;
-    //   };
+        paragraph.innerHTML = wrappedWords;
+      };
 
-    //   const applyWordWrappingToAll = (globalClass) => {
-    //     const paragraphs = document.querySelectorAll(globalClass);
-    //     paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
-    //   };
+      const applyWordWrappingToAll = (globalClass) => {
+        const paragraphs = document.querySelectorAll(globalClass);
+        paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
+      };
 
-    //   applyWordWrappingToAll(".word-split");
+      applyWordWrappingToAll(".word-split");
+    })();
+
+    // // GLOBAL - Mirage over split text - Rxk studio inspired
+    // const mirageText = (() => {
+    //   document.querySelectorAll(".inner-span").forEach((el) => {
+    //     gsap.to(el, {
+    //       yPercent: 100,
+    //       scrollTrigger: {
+    //         trigger: el,
+    //         scrub: 0.6,
+    //         start: "top 28%",
+    //         end: "top 20%",
+    //         markers: true,
+    //       },
+    //     });
+    //   });
     // })();
 
-    // Hero Sliding Text - Rxk studio inspired
-    const textBlockAnimation = (() => {
+    // SCOPED - Hero Sliding Text - Rxk studio inspired
+    const mirageText = (() => {
       const lines = [
         {
           element: ".hero-heading__line-inner-1",

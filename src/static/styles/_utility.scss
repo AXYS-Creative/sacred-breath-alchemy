@@ -115,3 +115,23 @@
     display: flex;
   }
 }
+
+//
+// Javascript Utility Classes
+//
+
+.word-split {
+  .outer-span {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+
+    .inner-span:first-of-type {
+      translate: 0 0;
+    }
+    .inner-span:last-of-type {
+      position: absolute;
+      translate: 0 -100%;
+    }
+  }
+}
