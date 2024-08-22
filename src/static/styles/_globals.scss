@@ -28,7 +28,9 @@ body {
 }
 
 .site-header {
-  $logo-text-width: 73px;
+  // $logo-text-width: 73px;
+  $banner-height: 48px;
+  $banner-height-xxl: 40px;
 
   & > * {
     z-index: 5;
@@ -37,20 +39,15 @@ body {
 
   .header-logo {
     @include left-spacing;
-    top: 68px;
+    top: 64px;
     display: flex;
     align-items: center;
     gap: 12px;
     // mix-blend-mode: difference;
+    transition: translate 0.3s ease; // for .show-banner class
 
-    @media all {
-      @include mq-min("xxxl") {
-        left: calc(50% - calc(1920px / 2) + $body-padding);
-      }
-
-      @include mq-max("md") {
-        top: 72px;
-      }
+    @include mq-max("xxl") {
+      top: 40px;
     }
 
     &__icon {
@@ -70,13 +67,14 @@ body {
   .header-links {
     @include row-center;
     @include right-spacing;
-    top: 68px;
+    top: 60px;
     gap: 48px;
     transition: 0.4s ease;
     // mix-blend-mode: difference;
 
     @media all {
       @include mq-max("xxl") {
+        top: 34px;
         gap: 32px;
       }
 
@@ -105,15 +103,15 @@ body {
     @media all {
       @include mq-max("lg") {
         @include right-spacing;
-        top: 74px;
-        translate: 0 -50%;
-        transition: opacity 0.3s ease;
+        top: 28px;
+        // translate: 0 -50%;
+        transition: opacity 0.3s ease, translate 0.3s ease;
         mix-blend-mode: difference;
         display: block;
       }
 
       @include mq-max("md") {
-        top: 80px;
+        top: 28px;
       }
     }
 
@@ -175,14 +173,14 @@ body {
     background: var(--primary-accent-color);
     left: 0;
     width: 100vw;
-    padding: 24px;
+    height: $banner-height;
     cursor: pointer;
     translate: 0 -100%;
     transition: translate 0.3s ease, opacity 0.3s ease;
 
     @media all {
       @include mq-max("xxl") {
-        padding: 20px;
+        height: $banner-height-xxl;
       }
     }
 
@@ -305,10 +303,6 @@ body {
         }
       }
     }
-
-    &.show-banner {
-      translate: 0 0;
-    }
   }
 
   &.away-from-top {
@@ -327,6 +321,22 @@ body {
         translate: 0 0;
         opacity: 1;
         pointer-events: all;
+      }
+    }
+  }
+
+  &.show-banner {
+    .header-banner {
+      translate: 0 0;
+    }
+
+    .header-logo,
+    .header-links,
+    .menu-btn-wrapper {
+      translate: 0 $banner-height;
+
+      @include mq-max("xxl") {
+        translate: 0 $banner-height-xxl;
       }
     }
   }
@@ -481,8 +491,8 @@ body {
       }
 
       @include mq-max("sm") {
-        gap: 4px;
-        bottom: $body-padding-md;
+        gap: 8px;
+        bottom: $body-padding-xxl;
       }
     }
 
@@ -506,6 +516,7 @@ body {
     }
 
     @include mq-max("sm") {
+      bottom: $body-padding-xxl;
       translate: 0 0;
     }
   }
