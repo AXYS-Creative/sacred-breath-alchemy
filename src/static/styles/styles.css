@@ -637,7 +637,7 @@ body > * {
     opacity: 0;
     pointer-events: none;
     z-index: 4;
-    transition: 0.5s ease 0.3s;
+    transition: opacity 0.5s ease 0.3s;
   }
 }
 .nav-menu .width-constraint {
@@ -851,16 +851,12 @@ body > * {
   width: 100vw;
   height: 0px;
   background: #313131;
-  animation: nav-abstract-default 0.75s ease 0s forwards;
 }
 .nav-menu.menu-active {
   opacity: 1;
   pointer-events: all;
   background: var(--background-color);
   transition: 0.1s ease 0s, background 0.1s ease;
-}
-.nav-menu.menu-active .nav-abstract {
-  animation: nav-abstract-open 0.75s ease 0s forwards;
 }
 .nav-menu.menu-active .nav-links,
 .nav-menu.menu-active .nav-footer-links,
@@ -1143,7 +1139,7 @@ ul.classic-list {
 }
 .mouse-cursor.cursor-contrast {
   opacity: 0.25;
-  width: 18vw;
+  width: min(18vw, 380px);
 }
 
 .classic-link {
@@ -1230,7 +1226,7 @@ ul.classic-list {
 }
 @media screen and (min-width: 769px) {
   .md-screen-and-up {
-    display: flex;
+    display: block;
   }
 }
 
@@ -1239,7 +1235,7 @@ ul.classic-list {
 }
 @media screen and (max-width: 768px) {
   .md-screen-and-below {
-    display: flex;
+    display: block;
   }
 }
 
@@ -1714,6 +1710,12 @@ ul.classic-list {
   padding-inline: 0;
   padding-block: 312px 156px;
 }
+@media screen and (min-width: 1513px) {
+  .hero,
+  .pre-footer {
+    padding-block: 360px 156px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .hero,
   .pre-footer {
@@ -1728,10 +1730,16 @@ ul.classic-list {
     padding-block: 196px 96px;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero,
+  .pre-footer {
+    padding-block: 248px 96px;
+  }
+}
 @media screen and (max-width: 480px) {
   .hero,
   .pre-footer {
-    padding-block: 248px 64px;
+    padding-block: 264px 64px;
   }
 }
 .hero .h1, .hero h1,
@@ -1757,6 +1765,28 @@ ul.classic-list {
   .pre-footer h1 .alchemy-symbol {
     opacity: 0;
   }
+  .hero .h1 .hero-heading__line, .hero h1 .hero-heading__line,
+  .pre-footer .h1 .hero-heading__line,
+  .pre-footer h1 .hero-heading__line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .h1 .hero-heading__line .hero-heading__line-inner:first-of-type, .hero h1 .hero-heading__line .hero-heading__line-inner:first-of-type,
+  .pre-footer .h1 .hero-heading__line .hero-heading__line-inner:first-of-type,
+  .pre-footer h1 .hero-heading__line .hero-heading__line-inner:first-of-type {
+    translate: 0 0;
+  }
+  .hero .h1 .hero-heading__line .hero-heading__line-inner:last-of-type, .hero h1 .hero-heading__line .hero-heading__line-inner:last-of-type,
+  .pre-footer .h1 .hero-heading__line .hero-heading__line-inner:last-of-type,
+  .pre-footer h1 .hero-heading__line .hero-heading__line-inner:last-of-type {
+    position: absolute;
+    translate: 0 -102%;
+  }
+}
+@media screen and (prefers-reduced-motion: no-preference) and (min-width: 769px) {
   .hero .h1 .hero-heading__line:nth-of-type(1) .hero-heading__word:nth-of-type(1), .hero h1 .hero-heading__line:nth-of-type(1) .hero-heading__word:nth-of-type(1),
   .pre-footer .h1 .hero-heading__line:nth-of-type(1) .hero-heading__word:nth-of-type(1),
   .pre-footer h1 .hero-heading__line:nth-of-type(1) .hero-heading__word:nth-of-type(1) {
@@ -1817,6 +1847,70 @@ ul.classic-list {
   .pre-footer h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(4) {
     animation: fade 0s linear 2.2s forwards;
   }
+}
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 768px) {
+  .hero .h1 .hero-heading__line:nth-of-type(1) .hero-heading__word, .hero h1 .hero-heading__line:nth-of-type(1) .hero-heading__word,
+  .pre-footer .h1 .hero-heading__line:nth-of-type(1) .hero-heading__word,
+  .pre-footer h1 .hero-heading__line:nth-of-type(1) .hero-heading__word {
+    animation: fade 0s linear 0.4s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(1), .hero h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(1),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(1),
+  .pre-footer h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(1) {
+    animation: fade 0s linear 0.6s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(2), .hero h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(2),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(2),
+  .pre-footer h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(2) {
+    animation: fade 0s linear 0.8s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(3), .hero h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(3),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(3),
+  .pre-footer h1 .hero-heading__line:nth-of-type(2) .hero-heading__word:nth-of-type(3) {
+    animation: fade 0s linear 1s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(1), .hero h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(1),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(1),
+  .pre-footer h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(1) {
+    animation: fade 0s linear 1.2s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(2), .hero h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(2),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(2),
+  .pre-footer h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(2) {
+    animation: fade 0s linear 1.4s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(3), .hero h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(3),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(3),
+  .pre-footer h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(3) {
+    animation: fade 0s linear 1.6s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(4), .hero h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(4),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(4),
+  .pre-footer h1 .hero-heading__line:nth-of-type(3) .hero-heading__word:nth-of-type(4) {
+    animation: fade 0s linear 1.8s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(1), .hero h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(1),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(1),
+  .pre-footer h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(1) {
+    animation: fade 0s linear 1.6s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(2), .hero h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(2),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(2),
+  .pre-footer h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(2) {
+    animation: fade 0s linear 1.8s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(3), .hero h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(3),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(3),
+  .pre-footer h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(3) {
+    animation: fade 0s linear 2s forwards;
+  }
+  .hero .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(4), .hero h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(4),
+  .pre-footer .h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(4),
+  .pre-footer h1 .hero-heading__line:nth-of-type(4) .hero-heading__word:nth-of-type(4) {
+    animation: fade 0s linear 2.2s forwards;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
   .hero .h1 .alchemy-symbol, .hero h1 .alchemy-symbol,
   .pre-footer .h1 .alchemy-symbol,
   .pre-footer h1 .alchemy-symbol {

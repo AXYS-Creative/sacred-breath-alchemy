@@ -88,7 +88,7 @@
   display: none;
 
   @include mq-min("md") {
-    display: flex;
+    display: block; // Keep block for the h1
   }
 }
 
@@ -96,7 +96,7 @@
   display: none;
 
   @include mq-max("md") {
-    display: flex;
+    display: block; // Keep block for the h1
   }
 }
 

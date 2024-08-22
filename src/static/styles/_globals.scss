@@ -363,7 +363,7 @@ body {
     pointer-events: none;
     z-index: 4;
     // transition: background 1s ease 0s, opacity 0.3s ease 0.75s;
-    transition: 0.5s ease 0.3s;
+    transition: opacity 0.5s ease 0.3s;
   }
 
   .width-constraint {
@@ -523,7 +523,7 @@ body {
     width: 100vw;
     height: 0px;
     background: $black;
-    animation: nav-abstract-default 0.75s ease 0s forwards;
+    // animation: nav-abstract-default 0.75s ease 0s forwards;
   }
 
   &.menu-active {
@@ -533,9 +533,9 @@ body {
     // transition: background 0s ease;
     transition: 0.1s ease 0s, background 0.1s ease;
 
-    .nav-abstract {
-      animation: nav-abstract-open 0.75s ease 0s forwards;
-    }
+    // .nav-abstract {
+    //   animation: nav-abstract-open 0.75s ease 0s forwards;
+    // }
 
     .nav-links,
     .nav-footer-links,
@@ -811,6 +811,6 @@ ul {
 
   &.cursor-contrast {
     opacity: 0.25;
-    width: 18vw;
+    width: min(18vw, 380px);
   }
 }

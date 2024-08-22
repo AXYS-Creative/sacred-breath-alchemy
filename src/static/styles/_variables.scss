@@ -48,11 +48,15 @@ $section-title-vertical-spacing: 96px;
 $section-title-vertical-spacing-xxl: 64px;
 
 // Hero & Header
-
 $step-delay: 0.2s; // Change this to control the whole animation speed
 $line-2: $step-delay * 4;
 $line-3: $step-delay * 7;
 $finish-time: $step-delay * 10;
+
+$md-line-2: $step-delay * 2;
+$md-line-3: $step-delay * 5;
+$md-line-4: $step-delay * 7;
+$md-finish-time: $step-delay * 10;
 
 // Debugging
 

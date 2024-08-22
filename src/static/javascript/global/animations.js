@@ -8,9 +8,10 @@ responsiveGsap.add(
     maxMd: "(max-width: 768px)",
     maxXl: "(max-width: 1200px)",
     minMd: "(min-width: 769px)",
+    minXxl: "(min-width: 1920px)",
   },
   (context) => {
-    let { maxSm, maxMd, maxXl, minMd } = context.conditions;
+    let { maxSm, maxMd, maxXl, minMd, minXxl } = context.conditions;
 
     // SCOPED - Slider Tween
     gsap.fromTo(
@@ -46,19 +47,6 @@ responsiveGsap.add(
           },
         });
       });
-
-      // GAME CHANGER!!!
-      // Refresh ScrollTrigger instances on page load and resize
-      window.addEventListener("load", () => {
-        ScrollTrigger.refresh();
-      });
-
-      // Greater than 520 so it doesn't refresh on  mobile(dvh)
-      if (window.innerWidth > 520) {
-        window.addEventListener("resize", () => {
-          ScrollTrigger.refresh();
-        });
-      }
     })();
 
     // // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
@@ -85,23 +73,101 @@ responsiveGsap.add(
     //   applyWordWrappingToAll(".word-split");
     // })();
 
-    // Casino Slots Sliding Text - Rxk studio inspired
+    // Hero Sliding Text - Rxk studio inspired
     const textBlockAnimation = (() => {
-      const elements = document.querySelectorAll(
-        ".text-block__line-inner, .text-block__line-inner-2, .text-block__line-inner-3, .text-block__line-inner-4"
-      );
+      const lines = [
+        {
+          element: ".hero-heading__line-inner-1",
+          trigger: ".hero-heading__line-1",
+          start: "top 28%",
+          end: "bottom 22%",
+          startMinXxl: "top 18%",
+          endMinXxl: "bottom 12%",
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-2",
+          trigger: ".hero-heading__line-2",
+          start: "top 34%",
+          end: "bottom 28%",
+          startMinXxl: "top 24%",
+          endMinXxl: "bottom 18%",
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-3",
+          trigger: ".hero-heading__line-3",
+          start: "top 40%",
+          end: "bottom 34%",
+          startMinXxl: "top 30%",
+          endMinXxl: "bottom 24%",
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-1b",
+          trigger: ".hero-heading__line-1b",
+          start: "top 26%",
+          end: "bottom 26%",
+          undefined,
+          undefined,
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-2b",
+          trigger: ".hero-heading__line-2b",
+          start: "top 29%",
+          end: "bottom 29%",
+          undefined,
+          undefined,
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-3b",
+          trigger: ".hero-heading__line-3b",
+          start: "top 32%",
+          end: "bottom 32%",
+          undefined,
+          undefined,
+          markers: false,
+        },
+        {
+          element: ".hero-heading__line-inner-4b",
+          trigger: ".hero-heading__line-4b",
+          start: "top 35%",
+          end: "bottom 35%",
+          undefined,
+          undefined,
+          markers: false,
+        },
+      ];
 
-      elements.forEach((element) => {
-        gsap.to(element, {
-          yPercent: 100,
-          scrollTrigger: {
-            trigger: element,
-            scrub: 0.2,
-            start: "top 80%",
-            end: "bottom 50%",
-          },
-        });
-      });
+      lines.forEach(
+        ({ element, trigger, start, end, startMinXxl, endMinXxl, markers }) => {
+          gsap.to(element, {
+            yPercent: 100,
+            scrollTrigger: {
+              trigger: trigger,
+              scrub: 0.6,
+              start: minXxl ? startMinXxl : start,
+              end: minXxl ? endMinXxl : end,
+              markers: markers,
+            },
+          });
+        }
+      );
     })();
+
+    // GAME CHANGER!!!
+    // Refresh ScrollTrigger instances on page load and resize
+    window.addEventListener("load", () => {
+      ScrollTrigger.refresh();
+    });
+
+    // Greater than 520 so it doesn't refresh on  mobile(dvh)
+    if (window.innerWidth > 520) {
+      window.addEventListener("resize", () => {
+        ScrollTrigger.refresh();
+      });
+    }
   }
 );

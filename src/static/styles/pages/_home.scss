@@ -6,6 +6,10 @@
   padding-block: 312px 156px;
 
   @media all {
+    @include mq-min("xxl") {
+      padding-block: 360px 156px;
+    }
+
     @include mq-max("xxl") {
       gap: 148px;
       padding-block: 248px 156px;
@@ -16,8 +20,12 @@
       padding-block: 196px 96px;
     }
 
+    @include mq-max("md") {
+      padding-block: 248px 96px;
+    }
+
     @include mq-max("sm") {
-      padding-block: 248px 64px;
+      padding-block: 264px 64px;
     }
   }
 
@@ -35,31 +43,105 @@
         opacity: 0;
       }
 
-      .hero-heading__line:nth-of-type(1) {
-        .hero-heading__word {
-          @for $i from 1 through 4 {
-            &:nth-of-type(#{$i}) {
-              animation: fade 0s linear $step-delay * $i forwards;
+      .hero-heading__line {
+        @include row-start;
+        position: relative;
+        overflow: hidden;
+
+        .hero-heading__line-inner:first-of-type {
+          translate: 0 0;
+        }
+        .hero-heading__line-inner:last-of-type {
+          position: absolute;
+          translate: 0 -102%;
+        }
+      }
+
+      // Initial Load animation - LG+
+      @include mq-min("md") {
+        .hero-heading__line:nth-of-type(1) {
+          .hero-heading__word {
+            @for $i from 1 through 4 {
+              &:nth-of-type(#{$i}) {
+                animation: fade 0s linear $step-delay * $i forwards;
+              }
+            }
+          }
+        }
+
+        .hero-heading__line:nth-of-type(2) {
+          .hero-heading__word {
+            @for $i from 1 through 4 {
+              &:nth-of-type(#{$i}) {
+                animation: fade 0s linear $line-2 + $step-delay * $i forwards;
+              }
+            }
+          }
+        }
+
+        .hero-heading__line:nth-of-type(3) {
+          .hero-heading__word {
+            @for $i from 1 through 4 {
+              &:nth-of-type(#{$i}) {
+                animation: fade 0s linear $line-3 + $step-delay * $i forwards;
+              }
             }
           }
         }
       }
 
-      .hero-heading__line:nth-of-type(2) {
-        .hero-heading__word {
-          @for $i from 1 through 4 {
-            &:nth-of-type(#{$i}) {
-              animation: fade 0s linear $line-2 + $step-delay * $i forwards;
+      // Initial Load animation - MD-
+      @include mq-max("md") {
+        .hero-heading__line:nth-of-type(1) {
+          .hero-heading__word {
+            animation: fade 0s linear $step-delay * 2 forwards;
+          }
+        }
+
+        .hero-heading__line:nth-of-type(2) {
+          .hero-heading__word {
+            @for $i from 1 through 3 {
+              &:nth-of-type(#{$i}) {
+                animation: fade
+                  0s
+                  linear
+                  $md-line-2 +
+                  $step-delay *
+                  $i
+                  forwards;
+              }
             }
           }
         }
-      }
 
-      .hero-heading__line:nth-of-type(3) {
-        .hero-heading__word {
-          @for $i from 1 through 4 {
-            &:nth-of-type(#{$i}) {
-              animation: fade 0s linear $line-3 + $step-delay * $i forwards;
+        .hero-heading__line:nth-of-type(3) {
+          .hero-heading__word {
+            @for $i from 1 through 4 {
+              &:nth-of-type(#{$i}) {
+                animation: fade
+                  0s
+                  linear
+                  $md-line-3 +
+                  $step-delay *
+                  $i
+                  forwards;
+              }
+            }
+          }
+        }
+
+        .hero-heading__line:nth-of-type(4) {
+          .hero-heading__word {
+            @for $i from 1 through 4 {
+              &:nth-of-type(#{$i}) {
+                animation: fade
+                  0s
+                  linear
+                  $md-line-4 +
+                  $step-delay *
+                  $i
+                  forwards;
+              }
             }
           }
         }
