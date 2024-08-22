@@ -1,6 +1,4 @@
-const headerBanner = document.querySelector(".header-banner"),
-  headerBannerCta = document.querySelector(".header-banner__cta"),
-  headerBannerCloseBtn = document.querySelector(".header-banner__btn-close");
+const headerBanner = document.querySelector(".header-banner");
 
 if (headerBanner) {
   const closeBanner = () => {
@@ -8,10 +6,9 @@ if (headerBanner) {
     headerBanner.setAttribute("aria-hidden", true);
   };
 
-  headerBannerCloseBtn.addEventListener("click", closeBanner);
-  // headerBannerCta.addEventListener("click", closeBanner);
+  headerBanner.addEventListener("click", closeBanner);
 
   setTimeout(() => {
     headerBanner.classList.add("show-banner");
-  }, 4000);
+  }, 2500);
 }
