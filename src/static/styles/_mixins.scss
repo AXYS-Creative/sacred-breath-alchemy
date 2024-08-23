@@ -174,8 +174,6 @@ $min-breakpoints: (
 .h1 {
   @include heading(96px, 6vw, 6vw, 8vw, 32px);
   font-family: $font-family-heading;
-  -webkit-text-stroke-color: var(--primary-font-color);
-  -webkit-text-stroke-width: 2px;
 }
 
 // Section Title Only

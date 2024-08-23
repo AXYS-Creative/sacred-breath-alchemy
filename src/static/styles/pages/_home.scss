@@ -37,11 +37,6 @@
   .h1 {
     // width: min(88vw, 1440px); // for GLOBAL SLIDER TEXT
     text-align: center;
-    -webkit-text-stroke: 2px var(--primary-font-color);
-
-    @include mq-max("lg") {
-      -webkit-text-stroke-width: 1px;
-    }
 
     // // GLOBAL
     // @include mq-motion-allow {

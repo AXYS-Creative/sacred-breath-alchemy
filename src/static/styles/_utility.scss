@@ -40,8 +40,13 @@
 }
 
 .text-stroke {
-  color: transparent;
   -webkit-text-stroke: 2px var(--primary-font-color);
+  // color: transparent; // WAVE A11Y Contrast Error
+
+  color: var(--background-color); // Passes WAVE A11Y Error
+  background-color: var(--primary-font-color);
+  background-clip: text;
+  -webkit-background-clip: text;
 
   @include mq-max("md") {
     -webkit-text-stroke-width: 1px;
