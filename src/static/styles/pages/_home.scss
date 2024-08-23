@@ -328,8 +328,6 @@
   }
 
   h2 {
-    // margin-block-end: 0;
-
     @include mq-motion-allow {
       .footer-h2__line {
         @include row-start;
