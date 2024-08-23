@@ -354,7 +354,7 @@ body > * {
 }
 .site-header .header-banner__message .marquee-slider {
   display: flex;
-  animation: marquee 24s linear infinite;
+  animation: marquee 36s linear infinite;
 }
 .site-header .header-banner__message .alchemy-symbol {
   padding: 0 12px;
@@ -1259,19 +1259,6 @@ ul.classic-list {
   }
 }
 
-.word-split .outer-span {
-  display: inline-flex;
-  position: relative;
-  overflow: hidden;
-}
-.word-split .outer-span .inner-span:first-of-type {
-  translate: 0 0;
-}
-.word-split .outer-span .inner-span:last-of-type {
-  position: absolute;
-  translate: 0 -100%;
-}
-
 @keyframes marquee {
   from {
     translate: 0 0;
@@ -2084,8 +2071,21 @@ ul.classic-list {
     padding-block: 96px;
   }
 }
-.pre-footer h2 {
-  margin-block-end: 0;
+@media (prefers-reduced-motion: no-preference) {
+  .pre-footer h2 .footer-h2__line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+  }
+  .pre-footer h2 .footer-h2__line .footer-h2__line-inner:first-of-type {
+    translate: 0 0;
+  }
+  .pre-footer h2 .footer-h2__line .footer-h2__line-inner:last-of-type {
+    position: absolute;
+    translate: 0 -102%;
+  }
 }
 .pre-footer .hero-actions {
   justify-content: center;

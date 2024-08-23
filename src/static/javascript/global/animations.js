@@ -151,6 +151,48 @@ responsiveGsap.add(
           start: "top 35%",
           end: "bottom 35%",
         },
+        {
+          element: ".footer-h2__line-inner-1",
+          trigger: ".footer-h2__line-1",
+          start: "top 46%",
+          end: "50% 38%",
+        },
+        {
+          element: ".footer-h2__line-inner-2",
+          trigger: ".footer-h2__line-2",
+          start: "top 52%",
+          end: "50% 44%",
+        },
+        {
+          element: ".footer-h2__line-inner-3",
+          trigger: ".footer-h2__line-3",
+          start: "top 58%",
+          end: "50% 50%",
+        },
+        {
+          element: ".footer-h2__line-inner-1b",
+          trigger: ".footer-h2__line-1b",
+          start: "top 42%",
+          end: "bottom 42%",
+        },
+        {
+          element: ".footer-h2__line-inner-2b",
+          trigger: ".footer-h2__line-2b",
+          start: "top 45%",
+          end: "bottom 45%",
+        },
+        {
+          element: ".footer-h2__line-inner-3b",
+          trigger: ".footer-h2__line-3b",
+          start: "top 48%",
+          end: "bottom 48%",
+        },
+        {
+          element: ".footer-h2__line-inner-4b",
+          trigger: ".footer-h2__line-4b",
+          start: "top 51%",
+          end: "bottom 51%",
+        },
       ];
 
       lines.forEach(({ element, trigger, start, end, markers }) => {

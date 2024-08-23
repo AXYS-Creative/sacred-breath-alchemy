@@ -328,7 +328,23 @@
   }
 
   h2 {
-    margin-block-end: 0;
+    // margin-block-end: 0;
+
+    @include mq-motion-allow {
+      .footer-h2__line {
+        @include row-start;
+        position: relative;
+        overflow: hidden;
+
+        .footer-h2__line-inner:first-of-type {
+          translate: 0 0;
+        }
+        .footer-h2__line-inner:last-of-type {
+          position: absolute;
+          translate: 0 -102%;
+        }
+      }
+    }
   }
 
   .hero-actions {
