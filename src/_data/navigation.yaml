@@ -2,15 +2,15 @@
 items:
   - text: Home
     url: "#"
-  - text: About
-    url: "#about"
   - text: Services
     url: "#services"
   - text: Bundles
     url: "#bundles"
-  - text: FAQ
-    url: "#faq"
   - text: Events
     url: "#events"
+  - text: About
+    url: "#about"
+  - text: FAQ
+    url: "#faq"
   - text: Book
     url: "#bundles"
