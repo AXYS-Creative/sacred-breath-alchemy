@@ -7,11 +7,11 @@ responsiveGsap.add(
     maxSm: "(max-width: 480px)",
     maxMd: "(max-width: 768px)",
     maxXl: "(max-width: 1200px)",
+    maxXxl: "(max-width: 1512px)",
     minMd: "(min-width: 769px)",
-    minXxl: "(min-width: 1920px)",
   },
   (context) => {
-    let { maxSm, maxMd, maxXl, minMd, minXxl } = context.conditions;
+    let { maxSm, maxMd, maxXl, maxXxl, minMd } = context.conditions;
 
     // SCOPED - Slider Tween
     gsap.fromTo(
@@ -76,113 +76,103 @@ responsiveGsap.add(
       applyWordWrappingToAll(".word-split");
     })();
 
-    // // GLOBAL - Mirage over split text - Rxk studio inspired
+    // // GLOBAL - Hero Sliding Text
     // const mirageText = (() => {
-    //   document.querySelectorAll(".inner-span").forEach((el) => {
-    //     gsap.to(el, {
+    //   document.querySelectorAll(".outer-span").forEach((outer) => {
+    //     const firstSpan = outer.querySelector(".inner-span:first-of-type");
+    //     const secondSpan = outer.querySelector(".inner-span:last-of-type");
+
+    //     gsap.to(firstSpan, {
     //       yPercent: 100,
     //       scrollTrigger: {
-    //         trigger: el,
+    //         trigger: secondSpan,
     //         scrub: 0.6,
-    //         start: "top 28%",
-    //         end: "top 20%",
-    //         markers: true,
+    //         start: maxXxl ? "top 14%" : "top 20%",
+    //         end: "top 5%",
+    //         // markers: true,
+    //       },
+    //     });
+
+    //     gsap.to(secondSpan, {
+    //       yPercent: 100,
+    //       scrollTrigger: {
+    //         trigger: secondSpan,
+    //         scrub: 0.6,
+    //         start: maxXxl ? "top 14%" : "top 20%",
+    //         end: "top 5%",
+    //         // markers: true,
     //       },
     //     });
     //   });
     // })();
 
-    // SCOPED - Hero Sliding Text - Rxk studio inspired
+    // SCOPED - Hero Sliding Text - Animating per line (smoother)
     const mirageText = (() => {
       const lines = [
         {
-          element: ".hero-heading__line-inner-1",
-          trigger: ".hero-heading__line-1",
+          element: ".hero-h1__line-inner-1",
+          trigger: ".hero-h1__line-1",
           start: "top 28%",
           end: "bottom 22%",
-          startMinXxl: "top 18%",
-          endMinXxl: "bottom 12%",
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-2",
-          trigger: ".hero-heading__line-2",
+          element: ".hero-h1__line-inner-2",
+          trigger: ".hero-h1__line-2",
           start: "top 34%",
           end: "bottom 28%",
-          startMinXxl: "top 24%",
-          endMinXxl: "bottom 18%",
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-3",
-          trigger: ".hero-heading__line-3",
+          element: ".hero-h1__line-inner-3",
+          trigger: ".hero-h1__line-3",
           start: "top 40%",
           end: "bottom 34%",
-          startMinXxl: "top 30%",
-          endMinXxl: "bottom 24%",
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-1b",
-          trigger: ".hero-heading__line-1b",
+          element: ".hero-h1__line-inner-1b",
+          trigger: ".hero-h1__line-1b",
           start: "top 26%",
           end: "bottom 26%",
-          undefined,
-          undefined,
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-2b",
-          trigger: ".hero-heading__line-2b",
+          element: ".hero-h1__line-inner-2b",
+          trigger: ".hero-h1__line-2b",
           start: "top 29%",
           end: "bottom 29%",
-          undefined,
-          undefined,
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-3b",
-          trigger: ".hero-heading__line-3b",
+          element: ".hero-h1__line-inner-3b",
+          trigger: ".hero-h1__line-3b",
           start: "top 32%",
           end: "bottom 32%",
-          undefined,
-          undefined,
-          markers: false,
         },
         {
-          element: ".hero-heading__line-inner-4b",
-          trigger: ".hero-heading__line-4b",
+          element: ".hero-h1__line-inner-4b",
+          trigger: ".hero-h1__line-4b",
           start: "top 35%",
           end: "bottom 35%",
-          undefined,
-          undefined,
-          markers: false,
         },
       ];
 
-      lines.forEach(
-        ({ element, trigger, start, end, startMinXxl, endMinXxl, markers }) => {
-          gsap.to(element, {
-            yPercent: 100,
-            scrollTrigger: {
-              trigger: trigger,
-              scrub: 0.6,
-              start: minXxl ? startMinXxl : start,
-              end: minXxl ? endMinXxl : end,
-              markers: markers,
-            },
-          });
-        }
-      );
+      lines.forEach(({ element, trigger, start, end, markers }) => {
+        gsap.to(element, {
+          yPercent: 100,
+          scrollTrigger: {
+            trigger: trigger,
+            scrub: 0.6,
+            start: start,
+            end: end,
+            markers: markers,
+          },
+        });
+      });
     })();
 
-    // GAME CHANGER!!!
-    // Refresh ScrollTrigger instances on page load and resize
+    // Refresh ScrollTrigger instances on page load and resize. Game Changer
     window.addEventListener("load", () => {
       ScrollTrigger.refresh();
     });
 
-    // Greater than 520 so it doesn't refresh on  mobile(dvh)
+    // Greater than 520 so it doesn't loop refresh on mobile(dvh)
     if (window.innerWidth > 520) {
       window.addEventListener("resize", () => {
         ScrollTrigger.refresh();
