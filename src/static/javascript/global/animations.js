@@ -24,7 +24,7 @@ responsiveGsap.add(
           trigger: ".slider",
           start: "top bottom",
           end: "bottom top",
-          scrub: 0,
+          scrub: 1,
           // markers: true,
         },
       }
@@ -86,7 +86,7 @@ responsiveGsap.add(
     //       yPercent: 100,
     //       scrollTrigger: {
     //         trigger: secondSpan,
-    //         scrub: 0.6,
+    //         scrub: 1,
     //         start: maxXxl ? "top 14%" : "top 20%",
     //         end: "top 5%",
     //         // markers: true,
@@ -97,7 +97,7 @@ responsiveGsap.add(
     //       yPercent: 100,
     //       scrollTrigger: {
     //         trigger: secondSpan,
-    //         scrub: 0.6,
+    //         scrub: 1,
     //         start: maxXxl ? "top 14%" : "top 20%",
     //         end: "top 5%",
     //         // markers: true,
@@ -200,7 +200,7 @@ responsiveGsap.add(
           yPercent: 100,
           scrollTrigger: {
             trigger: trigger,
-            scrub: 0.6,
+            scrub: 1,
             start: start,
             end: end,
             markers: markers,
