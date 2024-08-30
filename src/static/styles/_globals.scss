@@ -788,6 +788,10 @@ ul {
       display: none;
     }
 
+    @include mq-motion-reduce {
+      display: none;
+    }
+
     @include mq-max("lg") {
       display: none;
     }

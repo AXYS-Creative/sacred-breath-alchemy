@@ -1119,6 +1119,11 @@ ul.classic-list {
     display: none;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .mouse-cursor {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .mouse-cursor {
     display: none;
@@ -1546,6 +1551,12 @@ ul.classic-list {
 .image-slider .slider__inner {
   display: flex;
   gap: 24px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .image-slider .slider__inner {
+    transform: translate(0, 0) !important;
+    flex-wrap: wrap;
+  }
 }
 .image-slider .slider figure {
   width: 640px;

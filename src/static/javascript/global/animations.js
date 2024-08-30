@@ -9,9 +9,10 @@ responsiveGsap.add(
     maxXl: "(max-width: 1200px)",
     maxXxl: "(max-width: 1512px)",
     minMd: "(min-width: 769px)",
+    noMotion: "(prefers-reduced-motion: reduce)",
   },
   (context) => {
-    let { maxSm, maxMd, maxXl, maxXxl, minMd } = context.conditions;
+    let { maxSm, maxMd, maxXl, maxXxl, minMd, noMotion } = context.conditions;
 
     // SCOPED - Slider Tween
     gsap.fromTo(
@@ -24,8 +25,7 @@ responsiveGsap.add(
           trigger: ".slider",
           start: "top bottom",
           end: "bottom top",
-          scrub: 1,
-          // markers: true,
+          scrub: noMotion ? 0 : 1,
         },
       }
     );
