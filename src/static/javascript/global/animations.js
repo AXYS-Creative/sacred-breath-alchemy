@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
-
 let responsiveGsap = gsap.matchMedia();
 
+// Responsive GSAP aniamtions.
 responsiveGsap.add(
   {
     maxSm: "(max-width: 480px)",
@@ -29,78 +29,6 @@ responsiveGsap.add(
         },
       }
     );
-
-    // GLOBAL - Easily toggle an 'animate' class on any element with '.gsap-animate' class
-    const globalGenerateAnimate = (() => {
-      const targetElements = document.querySelectorAll(".gsap-animate");
-
-      targetElements.forEach((targetElem) => {
-        gsap.to(targetElem, {
-          scrollTrigger: {
-            trigger: targetElem,
-            start: "top 98%",
-            end: "bottom top",
-            onEnter: () => targetElem.classList.add("animate"),
-            onLeave: () => targetElem.classList.remove("animate"),
-            onEnterBack: () => targetElem.classList.add("animate"),
-            onLeaveBack: () => targetElem.classList.remove("animate"),
-          },
-        });
-      });
-    })();
-
-    // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
-    const wordSplit = (() => {
-      const spanWordsInParagraph = (paragraph) => {
-        const text = paragraph.textContent || paragraph.innerText;
-        const words = text.trim().split(/\s+/);
-
-        const wrappedWords = words
-          .map(
-            (word) =>
-              `<span class="outer-span">
-                <span class="inner-span">${word}</span>
-                <span class="inner-span">${word}</span>
-              </span>`
-          )
-          .join(" ");
-
-        paragraph.innerHTML = wrappedWords;
-      };
-
-      const applyWordWrappingToAll = (globalClass) => {
-        const paragraphs = document.querySelectorAll(globalClass);
-        paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
-      };
-
-      applyWordWrappingToAll(".word-split");
-    })();
-
-    // GLOBAL + CMS Token - Any string element with the utility class 'word-wrap' can use the token '[%br%]' to wrap all previous text within a span.
-    const wordWrapToken = (() => {
-      const wrapWordsInSpan = (inputString) => {
-        // Using the token [%br%] on the CMS site
-        const segments = inputString.split("[%br%]");
-
-        let processedSegments = [];
-
-        segments.forEach((segment) => {
-          if (segment.trim() !== "") {
-            processedSegments.push(`<span>${segment.trim()}</span>`);
-          }
-        });
-
-        return processedSegments.join("");
-      };
-
-      const elements = document.querySelectorAll(".word-wrap");
-
-      elements.forEach((element) => {
-        const content = element.innerHTML;
-        const wrappedContent = wrapWordsInSpan(content);
-        element.innerHTML = wrappedContent;
-      });
-    })();
 
     // // GLOBAL - Hero Sliding Text (Try gauging position to separate a new row?)
     // const mirageText = (() => {
@@ -131,120 +59,195 @@ responsiveGsap.add(
     //     });
     //   });
     // })();
-
-    // SCOPED - Hero Sliding Text - Animating per line (smoother)
-    const mirageText = (() => {
-      const lines = [
-        {
-          element: ".hero-h1__line-inner-1",
-          trigger: ".hero-h1__line-1",
-          start: "top 28%",
-          end: "bottom 22%",
-        },
-        {
-          element: ".hero-h1__line-inner-2",
-          trigger: ".hero-h1__line-2",
-          start: "top 34%",
-          end: "bottom 28%",
-        },
-        {
-          element: ".hero-h1__line-inner-3",
-          trigger: ".hero-h1__line-3",
-          start: "top 40%",
-          end: "bottom 34%",
-        },
-        {
-          element: ".hero-h1__line-inner-1b",
-          trigger: ".hero-h1__line-1b",
-          start: "top 26%",
-          end: "bottom 26%",
-        },
-        {
-          element: ".hero-h1__line-inner-2b",
-          trigger: ".hero-h1__line-2b",
-          start: "top 29%",
-          end: "bottom 29%",
-        },
-        {
-          element: ".hero-h1__line-inner-3b",
-          trigger: ".hero-h1__line-3b",
-          start: "top 32%",
-          end: "bottom 32%",
-        },
-        {
-          element: ".hero-h1__line-inner-4b",
-          trigger: ".hero-h1__line-4b",
-          start: "top 35%",
-          end: "bottom 35%",
-        },
-        {
-          element: ".footer-h2__line-inner-1",
-          trigger: ".footer-h2__line-1",
-          start: "top 46%",
-          end: "50% 38%",
-        },
-        {
-          element: ".footer-h2__line-inner-2",
-          trigger: ".footer-h2__line-2",
-          start: "top 52%",
-          end: "50% 44%",
-        },
-        {
-          element: ".footer-h2__line-inner-3",
-          trigger: ".footer-h2__line-3",
-          start: "top 58%",
-          end: "50% 50%",
-        },
-        {
-          element: ".footer-h2__line-inner-1b",
-          trigger: ".footer-h2__line-1b",
-          start: "top 42%",
-          end: "bottom 42%",
-        },
-        {
-          element: ".footer-h2__line-inner-2b",
-          trigger: ".footer-h2__line-2b",
-          start: "top 45%",
-          end: "bottom 45%",
-        },
-        {
-          element: ".footer-h2__line-inner-3b",
-          trigger: ".footer-h2__line-3b",
-          start: "top 48%",
-          end: "bottom 48%",
-        },
-        {
-          element: ".footer-h2__line-inner-4b",
-          trigger: ".footer-h2__line-4b",
-          start: "top 51%",
-          end: "bottom 51%",
-        },
-      ];
-
-      lines.forEach(({ element, trigger, start, end, markers }) => {
-        gsap.to(element, {
-          yPercent: 100,
-          scrollTrigger: {
-            trigger: trigger,
-            scrub: 1,
-            start: start,
-            end: end,
-            markers: markers,
-          },
-        });
-      });
-    })();
-
-    // Refresh ScrollTrigger instances on page load and resize. Game Changer
-    window.addEventListener("load", () => {
-      ScrollTrigger.refresh();
-    });
-
-    // Greater than 520 so it doesn't loop refresh on mobile(dvh)
-    if (window.innerWidth > 520) {
-      window.addEventListener("resize", () => {
-        ScrollTrigger.refresh();
-      });
-    }
   }
 );
+
+// Separate animation library. Seeing spammed <span> tags injected into markup on resize. This fixes it.
+const animationLibrary = (() => {
+  // GLOBAL - Easily toggle an 'animate' class on any element with '.gsap-animate' class
+  const globalGenerateAnimate = (() => {
+    const targetElements = document.querySelectorAll(".gsap-animate");
+
+    targetElements.forEach((targetElem) => {
+      gsap.to(targetElem, {
+        scrollTrigger: {
+          trigger: targetElem,
+          start: "top 98%",
+          end: "bottom top",
+          onEnter: () => targetElem.classList.add("animate"),
+          onLeave: () => targetElem.classList.remove("animate"),
+          onEnterBack: () => targetElem.classList.add("animate"),
+          onLeaveBack: () => targetElem.classList.remove("animate"),
+        },
+      });
+    });
+  })();
+
+  // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
+  const wordSplit = (() => {
+    const spanWordsInParagraph = (paragraph) => {
+      const text = paragraph.textContent || paragraph.innerText;
+      const words = text.trim().split(/\s+/);
+
+      const wrappedWords = words
+        .map(
+          (word) =>
+            `<span class="outer-span">
+                  <span class="inner-span">${word}</span>
+                  <span class="inner-span">${word}</span>
+                </span>`
+        )
+        .join(" ");
+
+      paragraph.innerHTML = wrappedWords;
+    };
+
+    const applyWordWrappingToAll = (globalClass) => {
+      const paragraphs = document.querySelectorAll(globalClass);
+      paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
+    };
+
+    applyWordWrappingToAll(".word-split");
+  })();
+
+  // GLOBAL + CMS Token - Any string element with the utility class 'word-wrap' can use the token '[%br%]' to wrap all previous text within a span.
+  const wordWrapToken = (() => {
+    const wrapWordsInSpan = (inputString) => {
+      // Using the token [%br%] on the CMS site
+      const segments = inputString.split("[%br%]");
+
+      let processedSegments = [];
+
+      segments.forEach((segment) => {
+        if (segment.trim() !== "") {
+          processedSegments.push(`<span>${segment.trim()}</span>`);
+        }
+      });
+
+      return processedSegments.join("");
+    };
+
+    const elements = document.querySelectorAll(".word-wrap");
+
+    elements.forEach((element) => {
+      const content = element.innerHTML;
+      const wrappedContent = wrapWordsInSpan(content);
+      element.innerHTML = wrappedContent;
+    });
+  })();
+
+  // SCOPED - Hero Sliding Text - Animating per line (smoother)
+  const mirageText = (() => {
+    const lines = [
+      {
+        element: ".hero-h1__line-inner-1",
+        trigger: ".hero-h1__line-1",
+        start: "top 28%",
+        end: "bottom 22%",
+      },
+      {
+        element: ".hero-h1__line-inner-2",
+        trigger: ".hero-h1__line-2",
+        start: "top 34%",
+        end: "bottom 28%",
+      },
+      {
+        element: ".hero-h1__line-inner-3",
+        trigger: ".hero-h1__line-3",
+        start: "top 40%",
+        end: "bottom 34%",
+      },
+      {
+        element: ".hero-h1__line-inner-1b",
+        trigger: ".hero-h1__line-1b",
+        start: "top 26%",
+        end: "bottom 26%",
+      },
+      {
+        element: ".hero-h1__line-inner-2b",
+        trigger: ".hero-h1__line-2b",
+        start: "top 29%",
+        end: "bottom 29%",
+      },
+      {
+        element: ".hero-h1__line-inner-3b",
+        trigger: ".hero-h1__line-3b",
+        start: "top 32%",
+        end: "bottom 32%",
+      },
+      {
+        element: ".hero-h1__line-inner-4b",
+        trigger: ".hero-h1__line-4b",
+        start: "top 35%",
+        end: "bottom 35%",
+      },
+      {
+        element: ".footer-h2__line-inner-1",
+        trigger: ".footer-h2__line-1",
+        start: "top 46%",
+        end: "50% 38%",
+      },
+      {
+        element: ".footer-h2__line-inner-2",
+        trigger: ".footer-h2__line-2",
+        start: "top 52%",
+        end: "50% 44%",
+      },
+      {
+        element: ".footer-h2__line-inner-3",
+        trigger: ".footer-h2__line-3",
+        start: "top 58%",
+        end: "50% 50%",
+      },
+      {
+        element: ".footer-h2__line-inner-1b",
+        trigger: ".footer-h2__line-1b",
+        start: "top 42%",
+        end: "bottom 42%",
+      },
+      {
+        element: ".footer-h2__line-inner-2b",
+        trigger: ".footer-h2__line-2b",
+        start: "top 45%",
+        end: "bottom 45%",
+      },
+      {
+        element: ".footer-h2__line-inner-3b",
+        trigger: ".footer-h2__line-3b",
+        start: "top 48%",
+        end: "bottom 48%",
+      },
+      {
+        element: ".footer-h2__line-inner-4b",
+        trigger: ".footer-h2__line-4b",
+        start: "top 51%",
+        end: "bottom 51%",
+      },
+    ];
+
+    lines.forEach(({ element, trigger, start, end, markers }) => {
+      gsap.to(element, {
+        yPercent: 100,
+        scrollTrigger: {
+          trigger: trigger,
+          scrub: 1,
+          start: start,
+          end: end,
+          markers: markers,
+        },
+      });
+    });
+  })();
+
+  // Refresh ScrollTrigger instances on page load and resize. Game Changer
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
+
+  // Greater than 520 so it doesn't loop refresh on mobile(dvh)
+  if (window.innerWidth > 520) {
+    window.addEventListener("resize", () => {
+      ScrollTrigger.refresh();
+    });
+  }
+})();

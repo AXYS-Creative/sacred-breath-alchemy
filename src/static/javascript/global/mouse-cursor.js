@@ -91,4 +91,17 @@ if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
       cursor.classList.remove("cursor-contrast");
     });
   });
+
+  // Hide Mouse cursor on Safari ... glitched the animation
+  const isSafari = () => {
+    let ua = navigator.userAgent.toLowerCase();
+    return ua.indexOf("safari") !== -1 && ua.indexOf("chrome") === -1;
+  };
+
+  if (isSafari()) {
+    cursor.style.display = "none";
+    // cursor.style.transition = "none"; // Not working
+
+    // serviceImages.forEach((img) => (img.style.transition = "none"));
+  }
 }
