@@ -76,7 +76,7 @@ responsiveGsap.add(
       applyWordWrappingToAll(".word-split");
     })();
 
-    // // GLOBAL - Hero Sliding Text
+    // // GLOBAL - Hero Sliding Text (Try gauging position to separate a new row?)
     // const mirageText = (() => {
     //   document.querySelectorAll(".outer-span").forEach((outer) => {
     //     const firstSpan = outer.querySelector(".inner-span:first-of-type");
