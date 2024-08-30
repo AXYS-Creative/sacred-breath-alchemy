@@ -1,5 +1,7 @@
 import "./utility.js";
 
+import "./content/tokens.js";
+
 import "./components/faq.js";
 
 import "./global/animations.js";

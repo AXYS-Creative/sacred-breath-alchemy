@@ -176,6 +176,13 @@
         animation: fade 0s linear $finish-time forwards;
       }
     }
+
+    @include mq-motion-reduce {
+      .hero-h1__line-inner:last-of-type,
+      .footer-h2__line-inner:last-of-type {
+        display: none;
+      }
+    }
   }
 
   &-actions {

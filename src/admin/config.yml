@@ -102,8 +102,6 @@ collections:
         label: "Partial - Text Block 1"
         file: "src/_data/text_block_1.yaml"
         preview_path: "#text-block-1"
-        editor:
-          preview: true
         fields:
           - {
               name: "symbol_start",
@@ -176,8 +174,6 @@ collections:
         label: "Partial - Image Slider"
         file: "src/_data/image_slider.yaml"
         preview_path: "#image-slider"
-        editor:
-          preview: true
         fields:
           - name: "images"
             label: "Images"
@@ -363,8 +359,6 @@ collections:
         label: "Partial - Text Block 2"
         file: "src/_data/text_block_2.yaml"
         preview_path: "#text-block-2"
-        editor:
-          preview: true
         fields:
           - {
               name: "symbol_start",

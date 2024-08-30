@@ -354,6 +354,11 @@ body > * {
   display: flex;
   animation: marquee 36s linear infinite;
 }
+@media (prefers-reduced-motion: reduce) {
+  .site-header .header-banner__message .marquee-slider {
+    animation: marquee 60s linear infinite;
+  }
+}
 .site-header .header-banner__message .alchemy-symbol {
   padding: 0 12px;
 }
@@ -1919,6 +1924,17 @@ ul.classic-list {
   .pre-footer .h1 .alchemy-symbol,
   .pre-footer h1 .alchemy-symbol {
     animation: fade 0s linear 2s forwards;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero .h1 .hero-h1__line-inner:last-of-type, .hero h1 .hero-h1__line-inner:last-of-type,
+  .hero .h1 .footer-h2__line-inner:last-of-type,
+  .hero h1 .footer-h2__line-inner:last-of-type,
+  .pre-footer .h1 .hero-h1__line-inner:last-of-type,
+  .pre-footer h1 .hero-h1__line-inner:last-of-type,
+  .pre-footer .h1 .footer-h2__line-inner:last-of-type,
+  .pre-footer h1 .footer-h2__line-inner:last-of-type {
+    display: none;
   }
 }
 .hero-actions,

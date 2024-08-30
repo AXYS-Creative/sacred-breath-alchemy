@@ -87,6 +87,10 @@ body {
       .marquee-slider {
         display: flex;
         animation: marquee 36s linear infinite;
+
+        @include mq-motion-reduce {
+          animation: marquee 60s linear infinite;
+        }
       }
 
       .alchemy-symbol {

@@ -110,32 +110,6 @@ const animationLibrary = (() => {
     applyWordWrappingToAll(".word-split");
   })();
 
-  // GLOBAL + CMS Token - Any string element with the utility class 'word-wrap' can use the token '[%br%]' to wrap all previous text within a span.
-  const wordWrapToken = (() => {
-    const wrapWordsInSpan = (inputString) => {
-      // Using the token [%br%] on the CMS site
-      const segments = inputString.split("[%br%]");
-
-      let processedSegments = [];
-
-      segments.forEach((segment) => {
-        if (segment.trim() !== "") {
-          processedSegments.push(`<span>${segment.trim()}</span>`);
-        }
-      });
-
-      return processedSegments.join("");
-    };
-
-    const elements = document.querySelectorAll(".word-wrap");
-
-    elements.forEach((element) => {
-      const content = element.innerHTML;
-      const wrappedContent = wrapWordsInSpan(content);
-      element.innerHTML = wrappedContent;
-    });
-  })();
-
   // SCOPED - Hero Sliding Text - Animating per line (smoother)
   const mirageText = (() => {
     const lines = [
