@@ -1,9 +1,3 @@
-paragraph_lines:
-  - line: Experience transformative breathwork, [%br%]
-    symbol: 🜲
-  - line: sound healing sessions, meditations
-    symbol: null
-  - line: and sacred cacao ceremonies
-    symbol: null
-  - line: in-person and online
-    symbol: 🜒
+symbol_start: 🜲
+text_content: Experience transformative breathwork, [%br%] sound healing sessions, meditations [%br%] and sacred cacao ceremonies [%br%] in-person and online
+symbol_end: 🜒

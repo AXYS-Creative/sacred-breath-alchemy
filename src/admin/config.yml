@@ -105,26 +105,27 @@ collections:
         editor:
           preview: true
         fields:
-          - name: "paragraph_lines"
-            label: "Paragraph Lines"
-            label_singular: "Line"
-            widget: "list"
-            collapsed: false
-            max: 4
-            fields:
-              - {
-                  name: "line",
-                  label: "Line",
-                  widget: "string",
-                  required: true,
-                }
-              - {
-                  name: "symbol",
-                  label: "Alchemy Symbol",
-                  widget: "string",
-                  required: false,
-                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
-                }
+          - {
+              name: "symbol_start",
+              label: "Starting Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the beginning of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "text_content",
+              label: "Text content",
+              widget: "text",
+              required: true,
+              hint: "Optional. Use the token [%br%] to start a new line.",
+            }
+          - {
+              name: "symbol_end",
+              label: "Ending Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the end of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
       - name: "services_section"
         label: "Section - Services"
         file: "src/_data/services_section.yaml"
@@ -197,26 +198,27 @@ collections:
                   required: true,
                   hint: "Required for SEO and accessibility. Keep it brief.",
                 }
-          - name: "paragraph_lines"
-            label: "Paragraph Lines"
-            label_singular: "Line"
-            widget: "list"
-            collapsed: false
-            max: 4
-            fields:
-              - {
-                  name: "line",
-                  label: "Line",
-                  widget: "string",
-                  required: true,
-                }
-              - {
-                  name: "symbol",
-                  label: "Alchemy Symbol",
-                  widget: "string",
-                  required: false,
-                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
-                }
+          - {
+              name: "symbol_start",
+              label: "Starting Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the beginning of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "text_content",
+              label: "Text content",
+              widget: "text",
+              required: true,
+              hint: "Optional. Use the token [%br%] to start a new line.",
+            }
+          - {
+              name: "symbol_end",
+              label: "Ending Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the end of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
       - name: "bundles"
         label: "Section - Bundles"
         file: "src/_data/bundles.yaml"
@@ -360,30 +362,31 @@ collections:
       - name: "text_block_2"
         label: "Partial - Text Block 2"
         file: "src/_data/text_block_2.yaml"
-        preview_path: "#events"
+        preview_path: "#text-block-2"
         editor:
           preview: true
         fields:
-          - name: "paragraph_lines"
-            label: "Paragraph Lines"
-            label_singular: "Line"
-            widget: "list"
-            collapsed: false
-            max: 4
-            fields:
-              - {
-                  name: "line",
-                  label: "Line",
-                  widget: "string",
-                  required: true,
-                }
-              - {
-                  name: "symbol",
-                  label: "Alchemy Symbol",
-                  widget: "string",
-                  required: false,
-                  hint: "Optional alchemy symbol. https://glyphy.io/cool-symbols/alchemy",
-                }
+          - {
+              name: "symbol_start",
+              label: "Starting Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the beginning of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "text_content",
+              label: "Text content",
+              widget: "text",
+              required: true,
+              hint: "Optional. Use the token [%br%] to start a new line.",
+            }
+          - {
+              name: "symbol_end",
+              label: "Ending Alchemy Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol added to the end of the text block. https://glyphy.io/cool-symbols/alchemy",
+            }
       - name: "faq"
         label: "Section - FAQ"
         file: "src/_data/faq.yaml"

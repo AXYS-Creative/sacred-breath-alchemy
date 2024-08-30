@@ -7,12 +7,7 @@ images:
     description: A group during a session.
   - src: /static/img/slider-image-4.png
     description: A man deep in resolve during a session.
-paragraph_lines:
-  - line: Discover the healing power of the breath, find
-    symbol: 🜳
-  - line: solace from stress and anxiety while nurturing
-    symbol: null
-  - line: self-awareness, love, and compassion, all
-    symbol: null
-  - line: within the sanctuary of your home
-    symbol: 🝞
+
+symbol_start: 🜳
+text_content: Discover the healing power of the breath, find [%br%] solace from stress and anxiety while nurturing [%br%] self-awareness, love, and compassion, all [%br%] within the sanctuary of your home
+symbol_end: 🝞

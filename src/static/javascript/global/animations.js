@@ -76,6 +76,32 @@ responsiveGsap.add(
       applyWordWrappingToAll(".word-split");
     })();
 
+    // GLOBAL + CMS Token - Any string element with the utility class 'word-wrap' can use the token '[%br%]' to wrap all previous text within a span.
+    const wordWrapToken = (() => {
+      const wrapWordsInSpan = (inputString) => {
+        // Using the token [%br%] on the CMS site
+        const segments = inputString.split("[%br%]");
+
+        let processedSegments = [];
+
+        segments.forEach((segment) => {
+          if (segment.trim() !== "") {
+            processedSegments.push(`<span>${segment.trim()}</span>`);
+          }
+        });
+
+        return processedSegments.join("");
+      };
+
+      const elements = document.querySelectorAll(".word-wrap");
+
+      elements.forEach((element) => {
+        const content = element.innerHTML;
+        const wrappedContent = wrapWordsInSpan(content);
+        element.innerHTML = wrappedContent;
+      });
+    })();
+
     // // GLOBAL - Hero Sliding Text (Try gauging position to separate a new row?)
     // const mirageText = (() => {
     //   document.querySelectorAll(".outer-span").forEach((outer) => {

@@ -1,30 +1,14 @@
 <div class="text-block" id="{{ preview_id }}">
-  <p class="h3">
-    <span class="line1">
-      {% if symbol_1 %}
-      <span class="alchemy-symbol gold">{{ symbol_1 }} &nbsp;</span>
-      {% endif %}
-      <!-- prettier-ignore -->
-      {{ line_1 }}
-    </span>
-    <span class="line2">
-      {{ line_2 }} {% if symbol_2 %}
-      <span class="alchemy-symbol pink">{{ symbol_2 }}</span>
-      {% endif %}
-    </span>
-    <span class="line3">
-      {{ line_3 }} {% if symbol_3 %}
-      <span class="alchemy-symbol pink">{{ symbol_3 }}</span>
-      {% endif %}
-    </span>
-    <span class="line4">
-      <!-- prettier-ignore -->
-      {{ line_4 }} 
-      
-      {% if symbol_4 %}
-      <span class="alchemy-symbol pink">{{ symbol_4 }}</span>
-      {% endif %}
-    </span>
+  <p class="h3 word-wrap">
+    {% if symbol_start %}
+    <span class="alchemy-symbol gold">{{ symbol_start }} &nbsp;</span>
+    {% endif %}
+    <!-- prettier-ignore -->
+    {{ text_block }}
+    
+    {% if symbol_end %}
+    <span class="alchemy-symbol pink">{{ symbol_end }}</span>
+    {% endif %}
   </p>
 
   {% include "./cta-wrapper.html" %}

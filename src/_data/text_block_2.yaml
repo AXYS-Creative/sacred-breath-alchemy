@@ -1,9 +1,3 @@
-paragraph_lines:
-  - line: Get ticktes to upcoming events and learn
-    symbol: 🝱
-  - line: more about the transformative power of
-    symbol:
-  - line: breathwork, sound healing, cacao
-    symbol:
-  - line: ceremonies and meditation
-    symbol: 🜣
+symbol_start: 🝱
+text_content: Get ticktes to upcoming events and learn [%br%] more about the transformative power of [%br%] breathwork, sound healing, cacao [%br%] ceremonies and meditation
+symbol_end: 🜣

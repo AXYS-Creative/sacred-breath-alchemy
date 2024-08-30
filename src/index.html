@@ -141,30 +141,18 @@ path: home
 </section>
 
 <!-- prettier-ignore -->
-{% set text_block = text_block_1.paragraph_lines %}
-{% set symbol_1 = text_block[0].symbol %} 
-{% set symbol_2 = text_block[1].symbol %} 
-{% set symbol_3 = text_block[2].symbol %} 
-{% set symbol_4 = text_block[3].symbol %} 
-{% set line_1 = text_block[0].line %}
-{% set line_2 = text_block[1].line %}
-{% set line_3 = text_block[2].line %}
-{% set line_4 = text_block[3].line %}
+{% set text_block = text_block_1.text_content %}
+{% set symbol_start = text_block_1.symbol_start %}
+{% set symbol_end = text_block_1.symbol_end %}
 {% set preview_id = "text-block-1" %}
 {% include "./_includes/partials/text-block.html" %}
 
 {% include "./_includes/partials/services.html" %}
 
 <!-- prettier-ignore -->
-{% set slider_content_text = image_slider.paragraph_lines %}
-{% set symbol_1 = slider_content_text[0].symbol %} 
-{% set symbol_2 = slider_content_text[1].symbol %} 
-{% set symbol_3 = slider_content_text[2].symbol %} 
-{% set symbol_4 = slider_content_text[3].symbol %} 
-{% set line_1 = slider_content_text[0].line %}
-{% set line_2 = slider_content_text[1].line %}
-{% set line_3 = slider_content_text[2].line %}
-{% set line_4 = slider_content_text[3].line %}
+{% set text_block = image_slider.text_content %}
+{% set symbol_start = image_slider.symbol_start %}
+{% set symbol_end = image_slider.symbol_end %}
 {% set preview_id = "image-slider" %}
 {% include "./_includes/partials/image-slider.html" %}
 
@@ -223,15 +211,9 @@ path: home
 {% include "./_includes/partials/about.html" %}
 
 <!-- prettier-ignore -->
-{% set text_block = text_block_2.paragraph_lines %}
-{% set symbol_1 = text_block[0].symbol %} 
-{% set symbol_2 = text_block[1].symbol %} 
-{% set symbol_3 = text_block[2].symbol %} 
-{% set symbol_4 = text_block[3].symbol %} 
-{% set line_1 = text_block[0].line %}
-{% set line_2 = text_block[1].line %}
-{% set line_3 = text_block[2].line %}
-{% set line_4 = text_block[3].line %}
+{% set text_block = text_block_2.text_content %}
+{% set symbol_start = text_block_2.symbol_start %}
+{% set symbol_end = text_block_2.symbol_end %}
 {% set cta_1_text = "Get Tickets" %}
 {% set cta_1_url = "#" %}
 {% set cta_2_text = "View FAQ" %}
