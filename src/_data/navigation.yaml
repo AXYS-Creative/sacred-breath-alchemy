@@ -1,16 +1,17 @@
+# dev use only
 ---
 items:
   - text: Home
-    url: "#"
+    url: "/"
   - text: Services
-    url: "#services"
+    url: "/#services"
   - text: Bundles
-    url: "#bundles"
+    url: "/#bundles"
   - text: Events
-    url: "#events"
+    url: "/#events"
   - text: About
-    url: "#about"
+    url: "/#about"
   - text: FAQ
-    url: "#faq"
+    url: "/#faq"
   - text: Book
-    url: "#bundles"
+    url: "/#bundles"

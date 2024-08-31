@@ -1,6 +1,7 @@
 <header class="site-header" aria-label="Site Header">
+  <!-- prettier-ignore -->
+  {% if path == "home" %} 
   {% if header.banner_toggle %}
-
   <div
     class="header-banner tab-element-page"
     aria-label="Click to close the discount banner"
@@ -62,6 +63,8 @@
       </span>
     </p>
   </div>
+  <!-- prettier-ignore -->
+  {% endif %} 
   {% endif %}
 
   <a class="header-logo" href="{{ settings.url }}">

@@ -1,7 +1,13 @@
 <footer>
+  {% if path == "404" %}
+  <a href="/" class="return-to-top classic-link tab-element-page">
+    Return home
+  </a>
+  {% else %}
   <a href="#" class="return-to-top classic-link tab-element-page">
     Return to top
   </a>
+  {% endif %}
   <small class="copyright">
     <span>&copy;<time class="year-text"></time> Sacred Breath Alchemy</span>
     <span class="lg-screen-and-up" aria-hidden="true">|</span>

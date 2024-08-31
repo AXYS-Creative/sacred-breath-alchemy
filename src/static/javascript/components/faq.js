@@ -6,7 +6,7 @@ const faqQuestions = document.querySelectorAll(".faq-list .question"),
 faqQuestions.forEach((el) => el.setAttribute("aria-expanded", false));
 faqAnswers.forEach((el) => el.setAttribute("aria-hidden", true));
 
-faqList.addEventListener("click", (event) => {
+faqList?.addEventListener("click", (event) => {
   const clickedElement = event.target;
   const isQuestionOrAnswer =
     clickedElement.closest(".question") || clickedElement.closest(".answer");
