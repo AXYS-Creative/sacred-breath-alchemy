@@ -68,13 +68,15 @@
     <div class="mouse-cursor" aria-hidden="true"></div>
     <canvas class="particles"></canvas>
 
-    {% if path == "home" %}
     <!-- Netlify Identity Widget -->
+    {% if path == "home" %}
     <script
       type="text/javascript"
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
     {% endif %}
+
+    <!-- Scripts -->
     <script src="/static/js/alpine.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

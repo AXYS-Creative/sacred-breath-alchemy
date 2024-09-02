@@ -1,8 +1,5 @@
-// $font-family-heading: "Plus Jakarta Sans", sans-serif;
-$font-family-body: "Plus Jakarta Sans", sans-serif;
-
 $font-family-heading: "Proxima Nova", sans-serif;
-// $font-family-body: "Proxima Nova", sans-serif;
+$font-family-body: "Plus Jakarta Sans", sans-serif;
 
 $black: #313131;
 $grey-dark: #313131;
@@ -24,6 +21,8 @@ $cubic-ease-slow-finish: cubic-bezier(0.09, 0.9, 0.5, 1);
   --secondary-font-color: #{$grey-light};
   --primary-accent-color: #{$gold};
   --secondary-accent-color: #{$pink};
+
+  --link-weight: 600;
 
   // --link-color: #{$grey-light};
   // --link-color-hover: #{$white};

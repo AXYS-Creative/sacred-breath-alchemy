@@ -688,6 +688,7 @@ ul {
     position: relative;
     border: 2px solid var(--primary-font-color);
     padding: 12px 24px;
+    font-weight: var(--link-weight);
     transition: 0.5s $cubic-ease-sudden;
 
     @include mq-max("md") {

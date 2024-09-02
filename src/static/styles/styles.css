@@ -101,6 +101,7 @@
   --secondary-font-color: rgba(49, 49, 49, 0.5019607843);
   --primary-accent-color: #d1b768;
   --secondary-accent-color: #d982e0;
+  --link-weight: 600;
 }
 
 .h1, h1 {
@@ -1025,6 +1026,7 @@ ul.classic-list {
   position: relative;
   border: 2px solid var(--primary-font-color);
   padding: 12px 24px;
+  font-weight: var(--link-weight);
   transition: 0.5s cubic-bezier(1, 0.07, 0.2, 1);
 }
 @media screen and (max-width: 768px) {
@@ -1168,6 +1170,7 @@ ul.classic-list {
 .classic-link {
   position: relative;
   padding: 4px 8px;
+  font-weight: var(--link-weight);
 }
 .classic-link::before {
   content: "";

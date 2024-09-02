@@ -3,6 +3,7 @@
 
   position: relative;
   padding: 4px $link-horizontal-padding;
+  font-weight: var(--link-weight);
 
   &::before {
     content: "";
