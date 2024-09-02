@@ -1154,10 +1154,15 @@ ul.classic-list {
 
 .particles {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 0.5;
+}
+@media screen and (max-width: 480px) {
+  .particles {
+    opacity: 0.75;
+  }
 }
 
 .classic-link {

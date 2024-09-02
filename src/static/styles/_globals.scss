@@ -823,9 +823,12 @@ ul {
 
 .particles {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
   z-index: -1;
-  // opacity: 0.25;
+  opacity: 0.5;
+
+  @include mq-max("sm") {
+    opacity: 0.75;
+  }
 }

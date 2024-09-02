@@ -14,6 +14,5 @@ window.onload = function () {
     // color: colorGold,
     minDistance: maxSm ? 48 : 120, // 120, for connected lines
     connectParticles: true,
-    retinaDetect: true,
   });
 };
