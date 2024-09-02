@@ -820,3 +820,12 @@ ul {
     width: min(18vw, 380px);
   }
 }
+
+.particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  // opacity: 0.25;
+}

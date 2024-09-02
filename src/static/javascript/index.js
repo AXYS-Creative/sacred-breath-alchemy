@@ -9,3 +9,5 @@ import "./global/mouse-cursor.js";
 import "./global/header.js";
 import "./global/nav.js";
 import "./global/scroll.js";
+
+import "./lib/particles.js";

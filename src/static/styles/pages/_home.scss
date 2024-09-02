@@ -240,6 +240,25 @@
   }
 }
 
+// REMOVE IF NOT USING HERO VIDEO
+.hero {
+  .hero-video {
+    display: none;
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    z-index: -1;
+
+    @include mq-max("sm") {
+      width: auto;
+      height: 100vh;
+      height: 100dvh;
+    }
+  }
+}
+
 .bundles {
   $card-padding: 16px;
 

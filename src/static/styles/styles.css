@@ -1152,6 +1152,14 @@ ul.classic-list {
   width: min(18vw, 380px);
 }
 
+.particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .classic-link {
   position: relative;
   padding: 4px 8px;
@@ -1189,10 +1197,7 @@ ul.classic-list {
 
 .text-stroke {
   -webkit-text-stroke: 2px var(--primary-font-color);
-  color: var(--background-color);
-  background-color: var(--primary-font-color);
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: transparent;
 }
 @media screen and (max-width: 768px) {
   .text-stroke {
@@ -2012,6 +2017,22 @@ ul.classic-list {
   .pre-footer .cta-wrapper {
     opacity: 0;
     animation: fade 0s linear 2.2s forwards;
+  }
+}
+
+.hero .hero-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+}
+@media screen and (max-width: 480px) {
+  .hero .hero-video {
+    width: auto;
+    height: 100vh;
+    height: 100dvh;
   }
 }
 
