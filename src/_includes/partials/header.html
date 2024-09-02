@@ -2,10 +2,9 @@
   <!-- prettier-ignore -->
   {% if path == "home" %} 
   {% if header.banner_toggle %}
-  <div
+  <button
     class="header-banner tab-element-page"
     aria-label="Click to close the discount banner"
-    role="button"
   >
     <p class="header-banner__message" aria-label="{{ header.banner_message }}">
       <!-- revisit and refactor with javascript -->
@@ -62,7 +61,7 @@
         </span>
       </span>
     </p>
-  </div>
+  </button>
   <!-- prettier-ignore -->
   {% endif %} 
   {% endif %}

@@ -1148,7 +1148,7 @@ ul.classic-list {
   opacity: 0.75;
 }
 .mouse-cursor.cursor-contrast {
-  opacity: 0.25;
+  opacity: 0.2;
   width: min(18vw, 380px);
 }
 
