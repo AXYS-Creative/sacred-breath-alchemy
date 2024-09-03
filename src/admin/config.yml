@@ -327,6 +327,12 @@ collections:
                   - { name: "title", label: "Title", widget: "string" }
                   - { name: "url", label: "Url", widget: "string" }
                   - { name: "icon", label: "Icon", widget: "image" }
+              - {
+                  name: "description",
+                  label: "Description",
+                  widget: "text",
+                  required: true,
+                }
           - name: "paragraph_details"
             label: "Paragraph Details"
             label_singular: "Paragraph"

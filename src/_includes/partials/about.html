@@ -1,17 +1,26 @@
 <section class="about" id="about">
-  <h2>
-    <span class="alchemy-symbol gold">🝢</span>
-    {{ about.section_title }}
-  </h2>
+  <header class="section-header">
+    <h2>
+      {{ about.section_title }}
+      <span class="alchemy-symbol gold">🝢</span>
+    </h2>
 
-  <div class="team-members-wrapper">
+    <p class="section-header__description">
+      Through our guidance, you will uncover the healing potential of the
+      breath, finding solace from stress and anxiety while nurturing
+      self-awareness, love, and compassion, all within the sanctuary of your
+      home.
+    </p>
+  </header>
+
+  <article class="team-members-wrapper">
     {% for member in about.team_members %}
-    <figure class="team-member">
+    <div class="team-member">
       <img class="team-member__image" src="{{ member.image }}" alt="" />
-      <figcaption>
+
+      <div class="team-member__info">
         <h3 class="team-member__name h5">{{ member.name }}</h3>
         <h4 class="team-member__role">{{ member.role }}</h4>
-
         {% if member.social_media %}
         <ul class="social-media">
           {% for account in member.social_media %}
@@ -27,17 +36,9 @@
           {% endfor %}
         </ul>
         {% endif %}
-      </figcaption>
-    </figure>
+        <p class="team-member__info-text">{{ member.description }}</p>
+      </div>
+    </div>
     {% endfor %}
-  </div>
-
-  <div class="about-text-blocks">
-    {% for block in about.paragraph_details %}
-    <p>
-      <span class="alchemy-symbol {{ block.color }}"> {{ block.symbol }} </span>
-      {{ block.description }}
-    </p>
-    {% endfor %}
-  </div>
+  </article>
 </section>

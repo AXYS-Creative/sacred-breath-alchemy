@@ -11,6 +11,7 @@ team_members:
       - title: Facebook
         url: https://www.facebook.com/sacredbreathalchemy
         icon: /static/img/icon-facebook-block.svg
+    description: With a deep mastery of breathwork and sound healing, Jade has dedicated his life to guiding others on profound journeys of healing and self-discovery. Having completed an in depth 400-hour facilitator certification from Alchemy of Breath, Jade fluidly combines the transformative power of breathwork and sound healing. Guided by Jade's expertise, participants embark on profound journeys of healing and self-discovery. Jade's sessions feature the resonant vibrations of the gong, expertly wielded by a true master. This integration of breathwork and sound creates a harmonious and immersive experience. Through the art of conscious breathing and the healing vibrations of the gong, Jade facilitates deep relaxation, emotional release, and spiritual growth. Join Jade on a transformative path of self-transformation, as you tap into the profound healing potential of breathwork and the enchanting resonance of the gong.
   - name: Yuki Lyons
     image: /static/img/portrait-yuki.png
     role: Cacao + Meditation Facilitator
@@ -18,14 +19,4 @@ team_members:
       - title: Instagram
         url: https://www.instagram.com/sacredbreathalchemy?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr
         icon: /static/img/icon-instagram-block.svg
-
-paragraph_details:
-  - description: Through our guidance, you will uncover the healing potential of the breath, finding solace from stress and anxiety while nurturing self-awareness, love, and compassion, all within the sanctuary of your home.
-    symbol: 🝮
-    color: "gold"
-  - description: The teachings of Sacred Breath Alchemy amalgamate powerful breathwork techniques from various global traditions, offering you immediate integration into your everyday routine.
-    symbol: 🜩
-    color: "gold"
-  - description: By embracing these practices, you can enhance relationships, cultivate mental clarity, and discover a profound sense of purpose and direction in life.
-    symbol: 🜯
-    color: "gold"
+    description: Yuki Lyons, a Japanese native, discovered the transformative power of cacao and felt an immediate connection to its healing properties. Venturing to Guatemala, she found herself in a sacred Cacao jungle, immersing herself in Mayan cosmovisión and cacao facilitation. Yuki's heartfelt cacao ceremonies bridge cultures through prayers in both Japanese and English, connecting with spirits and ancestors. Through channeling visions and expressing gratitude for Mama cacao, she invites you to join her on a transformative journey of self-discovery and healing.
