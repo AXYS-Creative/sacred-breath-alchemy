@@ -129,7 +129,7 @@
 }
 @media screen and (max-width: 480px) {
   .h1, h1 {
-    font-size: 32px;
+    font-size: 9vw;
   }
 }
 
@@ -465,6 +465,11 @@ body > * {
     left: 24px;
   }
 }
+@media screen and (max-width: 768px) {
+  .site-header .header-logo {
+    left: 12px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .site-header .header-logo {
     top: 40px;
@@ -506,6 +511,11 @@ body > * {
 @media screen and (max-width: 768px) {
   .site-header .header-links {
     right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .site-header .header-links {
+    right: 12px;
   }
 }
 @media screen and (max-width: 1512px) {
@@ -552,6 +562,11 @@ body > * {
 @media screen and (max-width: 1024px) and (max-width: 768px) {
   .site-header .menu-btn-wrapper {
     right: 24px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 480px) {
+  .site-header .menu-btn-wrapper {
+    right: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -707,6 +722,11 @@ body > * {
     left: 24px;
   }
 }
+@media screen and (max-width: 768px) {
+  .nav-menu .nav-links {
+    left: 12px;
+  }
+}
 .nav-menu .nav-links li {
   display: flex;
   overflow: hidden;
@@ -790,6 +810,11 @@ body > * {
     left: 24px;
   }
 }
+@media screen and (max-width: 768px) {
+  .nav-menu .nav-footer-links {
+    left: 12px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .nav-menu .nav-footer-links {
     gap: 24px;
@@ -832,6 +857,11 @@ body > * {
 @media screen and (max-width: 768px) {
   .nav-menu .nav-social-media {
     right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav-menu .nav-social-media {
+    right: 12px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1159,10 +1189,27 @@ ul.classic-list {
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0;
+  animation: particle-fade 0.8s ease 2.4s forwards;
 }
 @media screen and (max-width: 480px) {
   .particles {
+    animation: particle-fade-sm 0.8s ease 2.4s forwards;
+  }
+}
+@keyframes particle-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes particle-fade-sm {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 0.75;
   }
 }

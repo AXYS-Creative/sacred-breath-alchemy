@@ -8,7 +8,9 @@ const wordWrapToken = (() => {
 
     segments.forEach((segment) => {
       if (segment.trim() !== "") {
-        processedSegments.push(`<span>${segment.trim()}</span>`);
+        processedSegments.push(
+          `<span class="token-br">${segment.trim()}</span>`
+        );
       }
     });
 

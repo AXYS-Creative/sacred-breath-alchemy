@@ -103,7 +103,7 @@ $min-breakpoints: (
     @if $thin {
       padding: 128px 96px;
     } @else {
-      padding: 96px 12px;
+      padding: 96px $body-padding-sm;
     }
   }
 }
@@ -123,6 +123,10 @@ $min-breakpoints: (
   @include mq-max("md") {
     left: $body-padding-md;
   }
+
+  @include mq-max("md") {
+    left: $body-padding-sm;
+  }
 }
 
 // header menu button, nav social items
@@ -139,6 +143,10 @@ $min-breakpoints: (
 
   @include mq-max("md") {
     right: $body-padding-md;
+  }
+
+  @include mq-max("sm") {
+    right: $body-padding-sm;
   }
 }
 
@@ -172,7 +180,7 @@ $min-breakpoints: (
 
 // Hero & Prefooter
 .h1 {
-  @include heading(96px, 6vw, 6vw, 8vw, 32px);
+  @include heading(96px, 6vw, 6vw, 8vw, 9vw);
   font-family: $font-family-heading;
 
   // // Optional - make text "thicker"
