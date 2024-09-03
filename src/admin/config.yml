@@ -48,7 +48,7 @@ collections:
         file: "src/_data/header.yaml"
         preview_path: "#"
         editor:
-          preview: true
+          preview: false
         fields:
           - name: "banner_toggle"
             label: "Banner Toggle"
@@ -65,7 +65,7 @@ collections:
         file: "src/_data/hero.yaml"
         preview_path: "#hero"
         editor:
-          preview: true
+          preview: false
         fields:
           # - name: "section_title"
           #   label: "Section Title"
@@ -129,7 +129,7 @@ collections:
         file: "src/_data/services_section.yaml"
         preview_path: "#services"
         editor:
-          preview: true
+          preview: false
         fields:
           - name: "services"
             label: "Services"
@@ -220,7 +220,7 @@ collections:
         file: "src/_data/bundles.yaml"
         preview_path: "#bundles"
         editor:
-          preview: true
+          preview: false
         fields:
           - name: "section_title"
             label: "Section Title"
@@ -289,7 +289,7 @@ collections:
         file: "src/_data/about.yaml"
         preview_path: "#about"
         editor:
-          preview: true
+          preview: false
         fields:
           - name: "section_title"
             label: "Section Title"
@@ -386,7 +386,7 @@ collections:
         file: "src/_data/faq.yaml"
         preview_path: "#faq"
         editor:
-          preview: true
+          preview: false
         fields:
           - name: "section_title"
             label: "Section Title"

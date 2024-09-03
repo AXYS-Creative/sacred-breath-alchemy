@@ -83,34 +83,55 @@ const animationLibrary = (() => {
     });
   })();
 
-  // Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
-  const wordSplit = (() => {
-    const spanWordsInParagraph = (paragraph) => {
-      const text = paragraph.textContent || paragraph.innerText;
-      const words = text.trim().split(/\s+/);
+  // // GLOBAL - Meant for the hero and pre-footer. Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
+  // const wordSplit = (() => {
+  //   const splitWordsInParagraph = (paragraph) => {
+  //     const text = paragraph.textContent || paragraph.innerText;
+  //     const words = text.trim().split(/\s+/);
 
-      const wrappedWords = words
-        .map(
-          (word) =>
-            `<span class="outer-span">
-                  <span class="inner-span">${word}</span>
-                  <span class="inner-span">${word}</span>
-                </span>`
-        )
-        .join(" ");
+  //     const wrappedWords = words
+  //       .map(
+  //         (word) =>
+  //           `<span class="outer-span">
+  //                 <span class="inner-span">${word}</span>
+  //                 <span class="inner-span">${word}</span>
+  //               </span>`
+  //       )
+  //       .join(" ");
 
-      paragraph.innerHTML = wrappedWords;
-    };
+  //     paragraph.innerHTML = wrappedWords;
+  //   };
 
-    const applyWordWrappingToAll = (globalClass) => {
-      const paragraphs = document.querySelectorAll(globalClass);
-      paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
-    };
+  //   const applyWordSplittingToAll = (globalClass) => {
+  //     const paragraphs = document.querySelectorAll(globalClass);
+  //     paragraphs.forEach((paragraph) => splitWordsInParagraph(paragraph));
+  //   };
 
-    applyWordWrappingToAll(".word-split");
-  })();
+  //   applyWordSplittingToAll(".word-split");
+  // })();
 
-  // SCOPED - Hero Sliding Text - Animating per line (smoother)
+  // // GLOBAL - Nest each word in a sentence within a <span> tag via 'word-span' utility class.
+  // const wordSpan = (() => {
+  //   const spanWordsInParagraph = (paragraph) => {
+  //     const text = paragraph.textContent || paragraph.innerText;
+  //     const words = text.trim().split(/\s+/);
+
+  //     const wrappedWords = words
+  //       .map((word) => `<span class="word-span__span">${word}</span>`)
+  //       .join(" ");
+
+  //     paragraph.innerHTML = wrappedWords;
+  //   };
+
+  //   const applyWordWrappingToAll = (globalClass) => {
+  //     const paragraphs = document.querySelectorAll(globalClass);
+  //     paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
+  //   };
+
+  //   applyWordWrappingToAll(".word-span");
+  // })();
+
+  // SCOPED - Hero Sliding Text - Animating per line (smoother) ... Should be able to gauge the distance to apply the line...
   const mirageText = (() => {
     const lines = [
       {

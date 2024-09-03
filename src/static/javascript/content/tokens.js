@@ -1,6 +1,6 @@
 // CMS Token - Any string element can use the token '[%br%]' to wrap all previous text within a span.
-const wordWrapToken = (() => {
-  const wrapWordsInSpan = (inputString) => {
+const lineWrapToken = (() => {
+  const lineWrap = (inputString) => {
     // Using the token [%br%] on the CMS side
     const segments = inputString.split("[%br%]");
 
@@ -32,7 +32,7 @@ const wordWrapToken = (() => {
     const content = element.innerHTML;
 
     if (content.includes("[%br%]")) {
-      const wrappedContent = wrapWordsInSpan(content);
+      const wrappedContent = lineWrap(content);
       element.innerHTML = wrappedContent;
     }
   });
