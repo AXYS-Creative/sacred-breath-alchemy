@@ -1,13 +1,13 @@
 backend:
   # Use netlify identity as backend
   name: "git-gateway"
-  branch: "main"
+  branch: "dev"
   repo: "https://github.com/AXYS-Creative/sacred-breath-alchemy"
 media_folder: "src/static/img"
 public_folder: "/static/img"
-site_url: https://sacredbreathalchemy.netlify.app # On admin login page, this adds a 'go back to site' link. Also added in the corner when logged in.
-display_url: https://sacredbreathalchemy.netlify.app # In admin dashboard, this addes the URL in the corner. Used with 'preview_path' for collection viewing.
-logo_url: https://sacredbreathalchemy.netlify.app/static/img/admin-logo.svg # On admin login page, this adds a custom logo.
+site_url: https://sacredbreathalchemy-dev.netlify.app # On admin login page, this adds a 'go back to site' link. Also added in the corner when logged in.
+display_url: https://sacredbreathalchemy-dev.netlify.app # In admin dashboard, this addes the URL in the corner. Used with 'preview_path' for collection viewing.
+logo_url: https://sacredbreathalchemy-dev.netlify.app/static/img/admin-logo.svg # On admin login page, this adds a custom logo.
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
