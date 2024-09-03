@@ -163,7 +163,7 @@
 
 .h3, h3 {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1;
@@ -1677,10 +1677,7 @@ ul.classic-list {
   }
 }
 .text-block p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  display: inline;
 }
 @media screen and (max-width: 768px) {
   .text-block p {
@@ -2072,22 +2069,6 @@ ul.classic-list {
   .pre-footer .cta-wrapper {
     opacity: 0;
     animation: fade 0s linear 2.2s forwards;
-  }
-}
-
-.hero .hero-video {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: auto;
-  z-index: -1;
-}
-@media screen and (max-width: 480px) {
-  .hero .hero-video {
-    width: auto;
-    height: 100vh;
-    height: 100dvh;
   }
 }
 
