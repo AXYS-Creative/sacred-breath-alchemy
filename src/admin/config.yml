@@ -102,6 +102,8 @@ collections:
         label: "Partial - Text Block 1"
         file: "src/_data/text_block_1.yaml"
         preview_path: "#text-block-1"
+        editor:
+          preview: false
         fields:
           - {
               name: "symbol_start",
@@ -115,7 +117,7 @@ collections:
               label: "Text content",
               widget: "text",
               required: true,
-              hint: "Optional. Use the token [%br%] to start a new line.",
+              hint: "Use tokens for greater customization over text. Visit https://axyscreative.com/tokens to learn more.",
             }
           - {
               name: "symbol_end",
@@ -206,7 +208,7 @@ collections:
               label: "Text content",
               widget: "text",
               required: true,
-              hint: "Optional. Use the token [%br%] to start a new line.",
+              hint: "Use tokens for greater customization over text. Visit https://axyscreative.com/tokens to learn more.",
             }
           - {
               name: "symbol_end",
@@ -372,7 +374,7 @@ collections:
               label: "Text content",
               widget: "text",
               required: true,
-              hint: "Optional. Use the token [%br%] to start a new line.",
+              hint: "Use tokens for greater customization over text. Visit https://axyscreative.com/tokens to learn more.",
             }
           - {
               name: "symbol_end",
