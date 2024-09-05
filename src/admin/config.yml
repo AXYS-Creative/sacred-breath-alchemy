@@ -153,6 +153,14 @@ collections:
                   hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
                 }
               - {
+                  name: "symbol_color",
+                  label: "Symbol Color",
+                  widget: "select",
+                  multiple: false,
+                  options: ["gold", "pink"],
+                  default: ["gold"],
+                }
+              - {
                   name: "description",
                   label: "Description",
                   widget: "text",

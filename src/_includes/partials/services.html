@@ -12,7 +12,10 @@
     />
     <h3 class="h4 service-block__title">
       {{ service.title }}
-      <span class="alchemy-symbol pink" aria-hidden="true">
+      <span
+        class="alchemy-symbol {{ service.symbol_color }}"
+        aria-hidden="true"
+      >
         {{ service.symbol }}
       </span>
     </h3>
