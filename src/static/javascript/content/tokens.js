@@ -1,37 +1,33 @@
-// CMS Token - Any string element can use the token '[%br%]' to wrap all previous text within a span.
+// CMS Token - Any string element can use the token '[%br%]' or '[%br.class-name%]' to inject a <br> tag with optional classes.
 const lineWrapToken = (() => {
   const lineWrap = (inputString) => {
-    // Using the token [%br%] on the CMS side
-    const segments = inputString.split("[%br%]");
-
-    let processedSegments = [];
-
-    segments.forEach((segment) => {
-      if (segment.trim() !== "") {
-        processedSegments.push(
-          `<span class="token-br">${segment.trim()}</span>`
-        );
+    // Match tokens like [%br%] or [%br.class-name%]
+    return inputString.replace(/\[%br(\.[^\]]+)?%\]/g, (match, className) => {
+      // If a class name is provided, clean it and add it to the <br> tag
+      if (className) {
+        const cleanClass = className.substring(1); // Remove the leading '.'
+        return `<br class="${cleanClass}" aria-hidden="true">`;
       }
+      // Default <br> for [%br%] token
+      return `<br aria-hidden="true">`;
     });
-
-    return processedSegments.join("");
   };
 
   const elements = document.querySelectorAll(`
-    p,
-    span,
-    h1, 
-    h2, 
-    h3, 
-    h4, 
-    h5, 
-    h6
+      p,
+      span,
+      h1, 
+      h2, 
+      h3, 
+      h4, 
+      h5, 
+      h6
   `);
 
   elements.forEach((element) => {
     const content = element.innerHTML;
 
-    if (content.includes("[%br%]")) {
+    if (content.includes("[%br%]") || content.includes("[%br.")) {
       const wrappedContent = lineWrap(content);
       element.innerHTML = wrappedContent;
     }

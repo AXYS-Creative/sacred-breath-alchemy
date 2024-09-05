@@ -200,7 +200,7 @@ $min-breakpoints: (
 
 // Text Block Partial & Image Slider
 .h3 {
-  @include heading(48px, 2.8vw, 2.6vw, 24px, 20px);
+  @include heading(44px, 2.8vw, 2.6vw, 24px, 20px);
   font-weight: 700;
 }
 
