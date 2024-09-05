@@ -353,11 +353,21 @@ body > * {
 }
 .site-header .header-banner__message .marquee-slider {
   display: flex;
-  animation: marquee 36s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
   .site-header .header-banner__message .marquee-slider {
-    animation: marquee 60s linear infinite;
+    animation-duration: 48s;
+  }
+}
+@media screen and (max-width: 1512px) {
+  .site-header .header-banner__message .marquee-slider {
+    animation-duration: 32s;
+  }
+}
+@media screen and (max-width: 480px) {
+  .site-header .header-banner__message .marquee-slider {
+    animation-duration: 12s;
   }
 }
 .site-header .header-banner__message .alchemy-symbol {
