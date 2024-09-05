@@ -133,6 +133,9 @@ collections:
         editor:
           preview: false
         fields:
+          - name: "section_title"
+            label: "Section Title"
+            widget: "string"
           - name: "services"
             label: "Services"
             label_singular: "Service"
