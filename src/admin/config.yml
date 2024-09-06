@@ -405,8 +405,8 @@ collections:
         editor:
           preview: false
         fields:
-          - name: "hide_section"
-            label: "Hide Section"
+          - name: "show_section"
+            label: "Show Section"
             widget: "boolean"
             default: true
           - name: "section_title"
@@ -439,7 +439,7 @@ collections:
             options: ["gold", "pink"]
             default: ["gold"]
           - name: "faq_items"
-            label: "FAQ List"
+            label: "FAQ Items"
             label_singular: "FAQ item"
             widget: "list"
             collapsed: false
@@ -456,7 +456,7 @@ collections:
                   widget: "text",
                   required: true,
                 }
-          - name: "faq_behavior"
+          - name: "single_faq_behavior"
             label: "FAQ Behavior"
             widget: "boolean"
-            hint: "Toggle multiple FAQ items to be open at once."
+            hint: "This toggles multiple FAQ items to be open at once."

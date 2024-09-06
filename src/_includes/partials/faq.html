@@ -1,4 +1,4 @@
-{% if faq.hide_section %}
+{% if faq.show_section %}
 <section class="faq" id="faq">
   <div class="faq-title-wrapper">
     <h2>
@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <div class="faq-list">
+  <div class="faq-list {% if faq.single_faq_behavior %}single-faq{% endif %}">
     {% for item in faq.faq_items %}
     <div class="faq-item">
       <button

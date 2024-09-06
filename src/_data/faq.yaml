@@ -1,4 +1,4 @@
-hide_section: false
+show_section: true
 
 section_title: FAQ
 section_title_symbol: 🝆
@@ -17,3 +17,5 @@ faq_items:
     answer: For online sessions, ensure you have a quiet, comfortable space where you can relax undisturbed. You may want to have a yoga mat, blanket, or cushion nearby. Using headphones is recommended for sound healing to fully immerse yourself in the experience. For in-person sessions, dress comfortably and bring any personal items that help you feel at ease, like a water bottle or eye mask.
   - question: What are the potential benefits of incorporating breathwork and sound healing into my routine?
     answer: Regular breathwork and sound healing can reduce stress, improve mental clarity, enhance emotional resilience, and promote deeper relaxation. These practices help release energetic blockages, boost creativity, and foster spiritual growth. Incorporating them into your routine supports a balanced mind, body, and spirit.
+
+single_faq_behavior: false
