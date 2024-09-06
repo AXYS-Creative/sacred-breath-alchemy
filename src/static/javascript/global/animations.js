@@ -83,33 +83,6 @@ const animationLibrary = (() => {
     });
   })();
 
-  // // GLOBAL - Meant for the hero and pre-footer. Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
-  // const wordSplit = (() => {
-  //   const splitWordsInParagraph = (paragraph) => {
-  //     const text = paragraph.textContent || paragraph.innerText;
-  //     const words = text.trim().split(/\s+/);
-
-  //     const wrappedWords = words
-  //       .map(
-  //         (word) =>
-  //           `<span class="outer-span">
-  //                 <span class="inner-span">${word}</span>
-  //                 <span class="inner-span">${word}</span>
-  //               </span>`
-  //       )
-  //       .join(" ");
-
-  //     paragraph.innerHTML = wrappedWords;
-  //   };
-
-  //   const applyWordSplittingToAll = (globalClass) => {
-  //     const paragraphs = document.querySelectorAll(globalClass);
-  //     paragraphs.forEach((paragraph) => splitWordsInParagraph(paragraph));
-  //   };
-
-  //   applyWordSplittingToAll(".word-split");
-  // })();
-
   // // GLOBAL - Nest each word in a sentence within a <span> tag via 'word-span' utility class.
   // const wordSpan = (() => {
   //   const spanWordsInParagraph = (paragraph) => {
@@ -129,6 +102,44 @@ const animationLibrary = (() => {
   //   };
 
   //   applyWordWrappingToAll(".word-span");
+  // })();
+
+  // // GLOBAL - Meant for the hero and pre-footer. Animating each word via 'word-split' utility class. Files: index.html, home.scss, & utility.scss
+  // const mirageSplit = (() => {
+  //   const splitWordsInParagraph = (paragraph) => {
+  //     const text = paragraph.textContent || paragraph.innerText;
+
+  //     // Regex pattern to detect tokens like [%br%] and similar
+  //     const tokenRegex = /\[%[^\]]+%\]/g;
+
+  //     // Split words, but keep tokens intact by using a regex split
+  //     const words = text.trim().split(/\s+/);
+
+  //     const wrappedWords = words
+  //       .map((word) => {
+  //         // Skip wrapping if the word is a token
+  //         if (tokenRegex.test(word)) {
+  //           return word; // Leave the token as is, no wrapping
+  //         }
+
+  //         // Wrap non-token words in spans
+  //         return `
+  //         <span class="outer-span">
+  //           <span class="inner-span">${word}</span>
+  //           <span class="inner-span">${word}</span>
+  //         </span>`;
+  //       })
+  //       .join(" ");
+
+  //     paragraph.innerHTML = wrappedWords;
+  //   };
+
+  //   const applyWordSplittingToAll = (globalClass) => {
+  //     const paragraphs = document.querySelectorAll(globalClass);
+  //     paragraphs.forEach((paragraph) => splitWordsInParagraph(paragraph));
+  //   };
+
+  //   applyWordSplittingToAll(".word-split");
   // })();
 
   // SCOPED - Hero Sliding Text - Animating per line (smoother) ... Should be able to gauge the distance to apply the line...

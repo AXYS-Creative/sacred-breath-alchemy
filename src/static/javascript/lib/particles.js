@@ -12,7 +12,7 @@ window.onload = function () {
     speed: maxXxl ? 0.25 : 0.5, // 0.5
     color: colorPink,
     // color: colorGold,
-    minDistance: maxSm ? 48 : 120, // 120, for connected lines
+    minDistance: maxSm ? 64 : 120, // 120, for connected lines
     connectParticles: true,
   });
 };

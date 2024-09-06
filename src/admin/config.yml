@@ -70,6 +70,7 @@ collections:
           # - name: "section_title"
           #   label: "Section Title"
           #   widget: "string"
+          #   required: true
           - name: "hero_lists"
             label: "Services Lists"
             label_singular: "List"
@@ -133,6 +134,10 @@ collections:
         editor:
           preview: false
         fields:
+          - name: "section_title"
+            label: "Section Title"
+            widget: "string"
+            required: true
           - name: "services"
             label: "Services"
             label_singular: "Service"
@@ -151,6 +156,14 @@ collections:
                   widget: "string",
                   required: false,
                   hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+                }
+              - {
+                  name: "symbol_color",
+                  label: "Symbol Color",
+                  widget: "select",
+                  multiple: false,
+                  options: ["gold", "pink"],
+                  default: ["gold"],
                 }
               - {
                   name: "description",
@@ -227,6 +240,7 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "price_cards"
             label: "Price Cards"
             label_singular: "Card"
@@ -296,6 +310,7 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "team_members"
             label: "Team Members"
             label_singular: "Team Member"
@@ -396,9 +411,14 @@ collections:
         editor:
           preview: false
         fields:
+          - name: "show_section"
+            label: "Show Section"
+            widget: "boolean"
+            default: true
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "section_title_symbol"
             label: "Section Title Symbol"
             widget: "string"
@@ -424,8 +444,8 @@ collections:
             required: false
             options: ["gold", "pink"]
             default: ["gold"]
-          - name: "faq_list"
-            label: "FAQ List"
+          - name: "faq_items"
+            label: "FAQ Items"
             label_singular: "FAQ item"
             widget: "list"
             collapsed: false
@@ -442,3 +462,7 @@ collections:
                   widget: "text",
                   required: true,
                 }
+          - name: "faq_behavior_single"
+            label: "FAQ Behavior (Single)"
+            widget: "boolean"
+            hint: "This option allows only one FAQ item to be opened at a time."

@@ -27,12 +27,14 @@ const toggleFAQItem = (faqItem) => {
   question.setAttribute("aria-expanded", !isActive);
   answer.setAttribute("aria-hidden", isActive);
 
-  // // Optional: Close other FAQ items if you want only one open at a time
-  // document.querySelectorAll(".faq-item").forEach((item) => {
-  //   if (item !== faqItem) {
-  //     item.classList.remove("active");
-  //     item.querySelector(".question").setAttribute("aria-expanded", false);
-  //     item.querySelector(".answer").setAttribute("aria-hidden", true);
-  //   }
-  // });
+  // CMS FAQ behavior toggle, only one open at a time.
+  if (faqList.classList.contains("single-faq")) {
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      if (item !== faqItem) {
+        item.classList.remove("active");
+        item.querySelector(".question").setAttribute("aria-expanded", false);
+        item.querySelector(".answer").setAttribute("aria-hidden", true);
+      }
+    });
+  }
 };

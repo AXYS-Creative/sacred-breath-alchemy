@@ -1,3 +1,5 @@
+section_title: Services
+
 services:
   - title: Alchemical Breathwork
     description:
@@ -5,6 +7,7 @@ services:
       guided by Jade, to release tension and achieve deep relaxation, inner
       healing, and renewed clarity.
     symbol: 🝲
+    symbol_color: "pink"
     image: /static/img/service-breathwork.jpg
     image_description: A man lying down, focused on his breathing
   - title: Sacred Sound Healing
@@ -14,6 +17,7 @@ services:
       connection are achieved through a masterful blend of gongs, healing
       instruments, and ambient sounds.
     symbol: 🜻
+    symbol_color: "pink"
     image: /static/img/service-sound-healing.jpg
     image_description: Jade tapping a gong with a mallet
   - title: Heart Opening Cacao Ceremony
@@ -22,5 +26,6 @@ services:
       Japanese traditions, guiding you on a transformative journey of
       self-discovery, inner harmony, and profound connection.
     symbol: 🝚
+    symbol_color: "pink"
     image: /static/img/service-cacao-ceremony.jpg
     image_description: Common tools for cacao ceremonies
