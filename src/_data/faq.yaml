@@ -1,3 +1,5 @@
+hide_section: false
+
 section_title: FAQ
 section_title_symbol: 🝆
 title_symbol_color: "gold"
@@ -6,7 +8,7 @@ section_description: Find the answers to your most pressing questions about our 
 section_description_symbol: 🝮
 description_symbol_color: "gold"
 
-faq_list:
+faq_items:
   - question: What can I expect during a typical breathwork or sound healing session?
     answer: During a session, you’ll be guided through breathing techniques or immersed in soothing sound vibrations, depending on the focus of the session. Breathwork may involve rhythmic, connected breathing to release tension and access deeper states of consciousness. Sound healing sessions use instruments like gongs, bowls, and chimes to promote relaxation, reduce stress, and restore balance. Each session is designed to help you feel more grounded, centered, and aligned.
   - question: Are your services suitable for beginners, or do I need prior experience?

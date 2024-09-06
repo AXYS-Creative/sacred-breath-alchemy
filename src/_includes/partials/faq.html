@@ -1,3 +1,4 @@
+{% if faq.hide_section %}
 <section class="faq" id="faq">
   <div class="faq-title-wrapper">
     <h2>
@@ -16,7 +17,7 @@
   </div>
 
   <div class="faq-list">
-    {% for item in faq.faq_list %}
+    {% for item in faq.faq_items %}
     <div class="faq-item">
       <button
         class="question tab-element-page"
@@ -44,3 +45,4 @@
     {% endfor %}
   </div>
 </section>
+{% endif %}

@@ -70,6 +70,7 @@ collections:
           # - name: "section_title"
           #   label: "Section Title"
           #   widget: "string"
+          #   required: true
           - name: "hero_lists"
             label: "Services Lists"
             label_singular: "List"
@@ -136,6 +137,7 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "services"
             label: "Services"
             label_singular: "Service"
@@ -238,6 +240,7 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "price_cards"
             label: "Price Cards"
             label_singular: "Card"
@@ -307,6 +310,7 @@ collections:
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "team_members"
             label: "Team Members"
             label_singular: "Team Member"
@@ -401,9 +405,14 @@ collections:
         editor:
           preview: false
         fields:
+          - name: "hide_section"
+            label: "Hide Section"
+            widget: "boolean"
+            default: true
           - name: "section_title"
             label: "Section Title"
             widget: "string"
+            required: true
           - name: "section_title_symbol"
             label: "Section Title Symbol"
             widget: "string"
@@ -429,7 +438,7 @@ collections:
             required: false
             options: ["gold", "pink"]
             default: ["gold"]
-          - name: "faq_list"
+          - name: "faq_items"
             label: "FAQ List"
             label_singular: "FAQ item"
             widget: "list"
@@ -447,3 +456,7 @@ collections:
                   widget: "text",
                   required: true,
                 }
+          - name: "faq_behavior"
+            label: "FAQ Behavior"
+            widget: "boolean"
+            hint: "Toggle multiple FAQ items to be open at once."
