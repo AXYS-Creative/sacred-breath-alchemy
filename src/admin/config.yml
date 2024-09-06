@@ -456,7 +456,7 @@ collections:
                   widget: "text",
                   required: true,
                 }
-          - name: "single_faq_behavior"
-            label: "FAQ Behavior"
+          - name: "faq_behavior_single"
+            label: "FAQ Behavior (Single)"
             widget: "boolean"
-            hint: "This toggles multiple FAQ items to be open at once."
+            hint: "This option allows only one FAQ item to be opened at a time."

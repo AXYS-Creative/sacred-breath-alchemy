@@ -18,4 +18,4 @@ faq_items:
   - question: What are the potential benefits of incorporating breathwork and sound healing into my routine?
     answer: Regular breathwork and sound healing can reduce stress, improve mental clarity, enhance emotional resilience, and promote deeper relaxation. These practices help release energetic blockages, boost creativity, and foster spiritual growth. Incorporating them into your routine supports a balanced mind, body, and spirit.
 
-single_faq_behavior: false
+faq_behavior_single: false
