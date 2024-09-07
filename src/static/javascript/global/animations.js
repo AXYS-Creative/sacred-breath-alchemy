@@ -1,6 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 let responsiveGsap = gsap.matchMedia();
 
+let markers = {
+  startColor: "white",
+  endColor: "white",
+  indent: 128,
+};
+let markersAlt = {
+  startColor: "yellow",
+  endColor: "yellow",
+  indent: 64,
+};
+
 // Responsive GSAP aniamtions.
 responsiveGsap.add(
   {
