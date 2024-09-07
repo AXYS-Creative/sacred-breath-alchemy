@@ -170,10 +170,12 @@ path: home
         <small>{{ card.sub_title }}</small>
         {% endif %}
       </h3>
+      <!-- prettier-ignore -->
       <h4
         class="price"
-        aria-label="
-        {% if card.price_linethrough %}Original price: {{ card.price_linethrough }}, Limited offer: {{ card.price }}.{% endif %}"
+        {% if card.price_linethrough %} 
+        aria-label="Original price: {{ card.price_linethrough }}, Limited offer: {{ card.price }}."
+        {% endif %}
       >
         {% if card.price_linethrough %}
         <span class="price-dim" aria-hidden="true">
