@@ -258,7 +258,7 @@
     @include column-start(flex-start);
     gap: 16px;
     flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
-    max-width: 49%;
+    // max-width: 49%;
     border: 2px solid var(--primary-font-color);
     padding: $card-padding;
 
@@ -315,7 +315,7 @@
 
     &.full-width {
       flex: 2 1 $content-width; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
-      max-width: unset;
+      // max-width: unset;
     }
   }
 }

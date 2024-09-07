@@ -2083,7 +2083,6 @@ ul.classic-list {
   align-items: flex-start;
   gap: 16px;
   flex: 1 1 400px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
-  max-width: 49%;
   border: 2px solid var(--primary-font-color);
   padding: 16px;
 }
@@ -2130,7 +2129,6 @@ ul.classic-list {
 }
 .bundles .bundle-card.full-width {
   flex: 2 1 1920px; /* flex-grow | flex-shrink | flex-basis, min width before wrapping */
-  max-width: unset;
 }
 
 .pre-footer {
