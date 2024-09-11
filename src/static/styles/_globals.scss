@@ -207,14 +207,19 @@ body {
 
     &__icon {
       width: 196px;
-      transition: 0.2s ease;
+      height: 36px;
+      object-fit: cover;
+      object-position: left;
+      transition: 0.3s ease;
 
       @include mq-max("xxl") {
-        width: 148px;
+        width: 152px;
+        height: 28px;
       }
 
       @include mq-max("sm") {
-        width: 128px;
+        width: 132px;
+        height: 24px;
       }
     }
   }
@@ -339,11 +344,19 @@ body {
   }
 
   &.away-from-top {
-    // .header-logo {
-    //   .logo-text {
-    //     width: 0px;
-    //   }
-    // }
+    .header-logo {
+      &__icon {
+        width: 48px;
+
+        @include mq-max("xxl") {
+          width: 36px;
+        }
+
+        @include mq-max("sm") {
+          width: 28px;
+        }
+      }
+    }
 
     .header-links {
       translate: 0 -480%;
