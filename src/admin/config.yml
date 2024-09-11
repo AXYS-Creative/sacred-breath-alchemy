@@ -92,6 +92,7 @@ collections:
                   multiple: false,
                   options: ["gold", "pink"],
                   default: ["gold"],
+                  required: false,
                 }
               - name: "hero_list_items"
                 label: "List items"
@@ -152,6 +153,7 @@ collections:
               multiple: false,
               options: ["gold", "pink"],
               default: ["gold"],
+              required: false,
             }
           - name: "services"
             label: "Services"
@@ -179,6 +181,7 @@ collections:
                   multiple: false,
                   options: ["gold", "pink"],
                   default: ["gold"],
+                  required: false,
                 }
               - {
                   name: "description",
@@ -270,6 +273,7 @@ collections:
               multiple: false,
               options: ["gold", "pink"],
               default: ["gold"],
+              required: false,
             }
           - name: "price_cards"
             label: "Price Cards"
@@ -355,6 +359,7 @@ collections:
               multiple: false,
               options: ["gold", "pink"],
               default: ["gold"],
+              required: false,
             }
           - name: "team_members"
             label: "Team Members"
@@ -416,6 +421,7 @@ collections:
                   multiple: false,
                   options: ["gold", "pink"],
                   default: ["gold"],
+                  required: false,
                 }
       - name: "text_block_2"
         label: "Partial - Text Block 2"
