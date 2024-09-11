@@ -159,7 +159,17 @@ path: home
 
 <section class="bundles" id="bundles">
   <h2>
-    {{ bundles.section_title }} <span class="alchemy-symbol gold">🜊</span>
+    {{ bundles.section_title }}
+
+    <!-- prettier-ignore -->
+    {% if bundles.title_symbol%}
+    <span
+      class="alchemy-symbol {{ bundles.title_symbol_color }}"
+      aria-hidden="true"
+    >
+      {{bundles.title_symbol}}
+    </span>
+    {% endif %}
   </h2>
 
   <div class="bundle-cards-wrapper">

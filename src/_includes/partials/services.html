@@ -1,7 +1,16 @@
 <section class="services" id="services">
   <h2>
     {{ services_section.section_title }}
-    <span class="alchemy-symbol gold" aria-hidden="true">🝆</span>
+
+    <!-- prettier-ignore -->
+    {% if services_section.title_symbol%}
+    <span
+      class="alchemy-symbol {{ services_section.title_symbol_color }}"
+      aria-hidden="true"
+    >
+      {{services_section.title_symbol}}
+    </span>
+    {% endif %}
   </h2>
 
   {% for service in services_section.services %}

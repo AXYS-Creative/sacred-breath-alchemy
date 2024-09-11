@@ -138,6 +138,21 @@ collections:
             label: "Section Title"
             widget: "string"
             required: true
+          - {
+              name: "title_symbol",
+              label: "Section Title Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "title_symbol_color",
+              label: "Section Title Symbol Color",
+              widget: "select",
+              multiple: false,
+              options: ["gold", "pink"],
+              default: ["gold"],
+            }
           - name: "services"
             label: "Services"
             label_singular: "Service"
@@ -241,6 +256,21 @@ collections:
             label: "Section Title"
             widget: "string"
             required: true
+          - {
+              name: "title_symbol",
+              label: "Section Title Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "title_symbol_color",
+              label: "Section Title Symbol Color",
+              widget: "select",
+              multiple: false,
+              options: ["gold", "pink"],
+              default: ["gold"],
+            }
           - name: "price_cards"
             label: "Price Cards"
             label_singular: "Card"
@@ -311,6 +341,21 @@ collections:
             label: "Section Title"
             widget: "string"
             required: true
+          - {
+              name: "title_symbol",
+              label: "Section Title Symbol",
+              widget: "string",
+              required: false,
+              hint: "Optional alchemy symbol at the end of the title. https://glyphy.io/cool-symbols/alchemy",
+            }
+          - {
+              name: "title_symbol_color",
+              label: "Section Title Symbol Color",
+              widget: "select",
+              multiple: false,
+              options: ["gold", "pink"],
+              default: ["gold"],
+            }
           - name: "team_members"
             label: "Team Members"
             label_singular: "Team Member"
@@ -413,7 +458,7 @@ collections:
             label: "Section Title"
             widget: "string"
             required: true
-          - name: "section_title_symbol"
+          - name: "title_symbol"
             label: "Section Title Symbol"
             widget: "string"
             required: false

@@ -3,9 +3,13 @@
   <div class="faq-title-wrapper">
     <h2>
       {{ faq.section_title }}
+
+      <!-- prettier-ignore -->
+      {% if faq.title_symbol%}
       <span class="alchemy-symbol {{ faq.title_symbol_color }}">
-        {{ faq.section_title_symbol }}
+        {{ faq.title_symbol }}
       </span>
+      {% endif %}
     </h2>
 
     <p>

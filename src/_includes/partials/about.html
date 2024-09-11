@@ -1,6 +1,14 @@
 <section class="about" id="about">
   <h2>
-    <span class="alchemy-symbol gold">🝢</span>
+    {% if about.title_symbol%}
+    <span
+      class="alchemy-symbol {{ about.title_symbol_color }}"
+      aria-hidden="true"
+    >
+      {{about.title_symbol}}
+    </span>
+    {% endif %}
+    <!-- prettier-ignore -->
     {{ about.section_title }}
   </h2>
 
