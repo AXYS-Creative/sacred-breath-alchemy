@@ -180,7 +180,7 @@ $min-breakpoints: (
 
 // Hero & Prefooter
 .h1 {
-  @include heading(96px, 6vw, 6vw, 8vw, 9vw);
+  @include heading(96px, 6vw, 6vw, 8vw, 8.4vw);
   font-family: $font-family-heading;
 
   // // Optional - make text "thicker"
